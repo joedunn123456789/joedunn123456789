@@ -1,12 +1,44 @@
-- 👋 Hi, I’m @joedunn123456789
-- 👀 I’m interested in Federal Government IT jobs
-- 🌱 I’m currently learning how to be a better person.
-- 💞️ I’m looking to collaborate on nothing at the moment.
-- 📫 How to reach me email jdunn0423@gmail.com
-- 😄 Pronouns: Sleep Till Noon
-- ⚡ Fun fact: I like animals better than people.
+# 👋 Hi, I'm Joseph Dunn
 
-<!---
-joedunn123456789/joedunn123456789 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+💻 **Aspiring Federal Government IT Professional** | 🌐 Tech Enthusiast | 🔐 Security-Minded
+
+---
+
+## 🚀 About Me
+- 🎯 Currently focused on building skills for a career in **Federal Government IT**
+- 📚 Learning more about **cloud computing, networking, and cybersecurity**
+- 🛠️ Exploring open-source projects and contributing where I can
+- 🌟 Passionate about using technology to solve real-world problems
+
+---
+
+## 🧰 Tech Toolbox
+![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
+![Linux](https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black)
+![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white)
+![Networking](https://img.shields.io/badge/-Networking-0078D7?logo=cisco&logoColor=white)
+![Cloud](https://img.shields.io/badge/-Cloud-4285F4?logo=googlecloud&logoColor=white)
+
+---
+
+## 📂 Featured Projects
+- 🔒 **[Cybersecurity Lab](#)** – Hands-on practice with firewalls, intrusion detection, and secure configs
+- ☁️ **[Cloud Sandbox](#)** – Experimenting with AWS and Azure services
+- 🖥️ **[Networking Playground](#)** – Configuring routers, switches, and virtual networks
+
+---
+
+## 📊 GitHub Stats
+![Joseph's GitHub stats](https://github-readme-stats.vercel.app/api?username=joedunn123456789&show_icons=true&theme=tokyonight)
+
+---
+
+## 🌐 Connect With Me
+- 💼 [LinkedIn](#)  
+- 📧 Email: jdunn0423@gmail.com  
+- 📝 [Portfolio Website](#)  
+
+---
+
+<p align="center">⚔️<br>
+<em>“Push thou not on Friday’s eve, lest chaos reign.”</em></p>
