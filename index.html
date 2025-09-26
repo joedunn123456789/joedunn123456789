@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joseph Dunn | Cloud Automation & Security</title>
+  <title>Joseph Dunn | AI Developer & Jack of All Trades</title>
   <style>
     body {
       margin: 0; font-family: 'Segoe UI', sans-serif;
@@ -15,7 +15,7 @@
       animation: fadeIn 2s ease-in;
     }
     h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-    .tagline { font-size: 1.2rem; font-style: italic; color: #ddd; }
+    .tagline { font-size: 1.2rem; font-style: italic; color: #00d4ff; min-height: 1.5rem; }
     nav a {
       margin: 0 1rem; color: #00d4ff; text-decoration: none; font-weight: bold;
     }
@@ -40,9 +40,10 @@
 <body>
   <header>
     <h1>👋 Hi, I’m Joseph Dunn</h1>
-    <p class="tagline">Cloud Automation • Security • Creative Branding</p>
+    <p class="tagline"><span id="typing"></span></p>
     <nav>
       <a href="#about">About</a>
+      <a href="#ai">AI Focus</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#connect">Connect</a>
@@ -55,8 +56,15 @@
        My mission: blend technical rigor with creative flair to deliver secure, automated solutions.</p>
   </section>
 
+  <section id="ai">
+    <h2>🧠 AI Development</h2>
+    <p>I’m branching into AI as my primary focus—experimenting with machine learning, 
+       automation pipelines, and creative applications of large language models. 
+       My goal: build intelligent systems that solve real-world problems while staying versatile across tech domains.</p>
+  </section>
+
   <section id="skills" class="skills">
-    <h2>🧰 Tech Toolbox</h2>
+    <h2>🛠️ Jack of All Trades</h2>
     <span>AWS</span><span>Python</span><span>APIs</span>
     <span>macOS Troubleshooting</span><span>SSH & Passkeys</span>
     <span>GitHub Branding</span>
@@ -65,7 +73,7 @@
   <section id="projects">
     <h2>💡 Featured Projects</h2>
     <p><a href="https://github.com/joedunn123456789">Check out my GitHub repos</a> for automation pipelines, 
-       security experiments, and creative README designs.</p>
+       security experiments, AI explorations, and creative README designs.</p>
   </section>
 
   <section id="connect">
@@ -81,5 +89,35 @@
     <p>⚔️ “Push thou not on Friday’s eve, lest chaos reign.”</p>
     <p>© 2025 Joseph Dunn</p>
   </footer>
+
+  <!-- Typing animation script -->
+  <script>
+    const roles = [
+      "AI Developer",
+      "Cloud Automator",
+      "Security Explorer",
+      "Jack of All Trades"
+    ];
+    let i = 0, j = 0, current = "", isDeleting = false;
+
+    function type() {
+      current = roles[i];
+      let display = current.substring(0, j);
+      document.getElementById("typing").textContent = display;
+
+      if (!isDeleting && j < current.length) {
+        j++;
+        setTimeout(type, 120);
+      } else if (isDeleting && j > 0) {
+        j--;
+        setTimeout(type, 60);
+      } else {
+        isDeleting = !isDeleting;
+        if (!isDeleting) i = (i + 1) % roles.length;
+        setTimeout(type, 1000);
+      }
+    }
+    type();
+  </script>
 </body>
 </html>
