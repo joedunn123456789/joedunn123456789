@@ -4,87 +4,102 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joseph Dunn | AI Developer & Jack of All Trades</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
+
   <style>
     body {
-      margin: 0; font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff; text-align: center;
+      color: #fff;
     }
-    header {
-      padding: 4rem 2rem;
-      animation: fadeIn 2s ease-in;
-    }
-    h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-    .tagline { font-size: 1.2rem; font-style: italic; color: #00d4ff; min-height: 1.5rem; }
-    nav a {
-      margin: 0 1rem; color: #00d4ff; text-decoration: none; font-weight: bold;
-    }
-    nav a:hover { text-decoration: underline; }
-    section {
-      padding: 3rem 2rem;
-      max-width: 800px; margin: auto;
-    }
-    .skills span {
-      display: inline-block; margin: 0.5rem; padding: 0.5rem 1rem;
-      background: rgba(255,255,255,0.1); border-radius: 20px;
+    .tagline {
+      font-style: italic;
+      color: #00d4ff;
+      min-height: 1.5rem;
     }
     footer {
-      padding: 2rem; font-size: 0.9rem; background: rgba(0,0,0,0.3);
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+      background: rgba(0,0,0,0.3);
+      padding: 1rem;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>👋 Hi, I’m Joseph Dunn</h1>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Joseph Dunn</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ai">AI Focus</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#connect">Connect</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="text-center py-5">
+    <h1 class="display-4">👋 Hi, I’m Joseph Dunn</h1>
     <p class="tagline"><span id="typing"></span></p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#ai">AI Focus</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#connect">Connect</a>
-    </nav>
   </header>
 
-  <section id="about">
+  <!-- About -->
+  <section id="about" class="container py-5 text-center">
     <h2>🚀 About Me</h2>
-    <p>I architect cloud pipelines, troubleshoot with precision, and design GitHub profiles that stand out. 
+    <p class="lead">I architect cloud pipelines, troubleshoot with precision, and design GitHub profiles that stand out. 
        My mission: blend technical rigor with creative flair to deliver secure, automated solutions.</p>
   </section>
 
-  <section id="ai">
+  <!-- AI Focus -->
+  <section id="ai" class="container py-5 text-center">
     <h2>🧠 AI Development</h2>
     <p>I’m branching into AI as my primary focus—experimenting with machine learning, 
        automation pipelines, and creative applications of large language models. 
        My goal: build intelligent systems that solve real-world problems while staying versatile across tech domains.</p>
   </section>
 
-  <section id="skills" class="skills">
+  <!-- Skills -->
+  <section id="skills" class="container py-5 text-center">
     <h2>🛠️ Jack of All Trades</h2>
-    <span>AWS</span><span>Python</span><span>APIs</span>
-    <span>macOS Troubleshooting</span><span>SSH & Passkeys</span>
-    <span>GitHub Branding</span>
+    <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+      <span class="badge bg-info text-dark">AWS</span>
+      <span class="badge bg-info text-dark">Python</span>
+      <span class="badge bg-info text-dark">APIs</span>
+      <span class="badge bg-info text-dark">macOS Troubleshooting</span>
+      <span class="badge bg-info text-dark">SSH & Passkeys</span>
+      <span class="badge bg-info text-dark">GitHub Branding</span>
+    </div>
   </section>
 
-  <section id="projects">
+  <!-- Projects -->
+  <section id="projects" class="container py-5 text-center">
     <h2>💡 Featured Projects</h2>
-    <p><a href="https://github.com/joedunn123456789">Check out my GitHub repos</a> for automation pipelines, 
-       security experiments, AI explorations, and creative README designs.</p>
+    <p><a href="https://github.com/joedunn123456789" class="link-info">Check out my GitHub repos</a> 
+       for automation pipelines, security experiments, AI explorations, and creative README designs.</p>
   </section>
 
-  <section id="connect">
+  <!-- Connect -->
+  <section id="connect" class="container py-5 text-center">
     <h2>🌐 Connect</h2>
     <p>
-      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a> | 
-      <a href="mailto:jdunn0423@gmail.com">Email</a> | 
-      <a href="https://github.com/joedunn123456789">GitHub</a>
+      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" class="link-light">LinkedIn</a> | 
+      <a href="mailto:jdunn0423@gmail.com" class="link-light">Email</a> | 
+      <a href="https://github.com/joedunn123456789" class="link-light">GitHub</a>
     </p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>⚔️ “Push thou not on Friday’s eve, lest chaos reign.”</p>
     <p>© 2025 Joseph Dunn</p>
@@ -119,5 +134,8 @@
     }
     type();
   </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
