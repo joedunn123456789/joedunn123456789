@@ -1,9 +1,11 @@
 /* variables.css */
-/* Light theme (default) */
+/* Dark theme (primary) */
 :root {
-  --color-text: #222;
-  --color-background: #ffffff;
-  --color-accent: #004466;
+  --color-text: #f8f9fa;
+  --color-background: #0f2027;
+  --color-accent: #00d4ff;
+  --color-link: #00d4ff;
+  --color-footer-bg: #111;
 
   /* Fonts */
   --font-body: 'Roboto', sans-serif;
@@ -12,13 +14,17 @@
 
   /* Font sizes */
   --font-size-base: 16px;
-  --font-size-heading: 2rem;
-  --font-size-subheading: 1.5rem;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
+  --font-size-subheading: 1.25rem;
 }
 
-/* Dark theme */
-body.dark {
-  --color-text: #f8f9fa;
-  --color-background: #0f2027;
-  --color-accent: #00d4ff;
+/* Light theme (optional toggle) */
+body.light {
+  --color-text: #222;
+  --color-background: #ffffff;
+  --color-accent: #004466;
+  --color-link: #004466;
+  --color-footer-bg: #f1f1f1;
 }
