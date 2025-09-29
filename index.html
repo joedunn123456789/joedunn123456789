@@ -20,6 +20,30 @@
       overflow-x: hidden;
     }
 
+    /* 🔹 Base parallax style */
+    .parallax-bg {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      will-change: transform;
+      transition: transform 0.05s linear;
+    }
+
+    /* Layer 1: main city background */
+    .layer1 {
+      background-image: url("images/Copilot_20250928_211206.png");
+      z-index: -2;
+    }
+
+    /* Layer 2: rain overlay */
+    .layer2 {
+      background-image: url("images/Copilot_20250928_221206.png");
+      opacity: 0.35;
+      z-index: -1;
+    }
+
     .tagline {
       font-style: italic;
       color: var(--color-accent);
@@ -47,6 +71,10 @@
   </style>
 </head>
 <body>
+  <!-- 🔹 Parallax Layers -->
+  <div class="parallax-bg layer1"></div>
+  <div class="parallax-bg layer2"></div>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
@@ -64,7 +92,7 @@
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#connect">Connect</a></li>
         </ul>
-        <!-- 🔹 Theme Toggle Button -->
+        <!-- Theme Toggle Button -->
         <button id="themeToggle" class="btn btn-sm btn-outline-light ms-3">Toggle Theme</button>
       </div>
     </div>
@@ -180,6 +208,25 @@
       } else {
         localStorage.setItem('theme', 'light');
       }
+    });
+  </script>
+
+    <!-- Parallax scroll script -->
+  <script>
+    const layer1 = document.querySelector('.layer1');
+    const layer2 = document.querySelector('.layer2');
+
+    window.addEventListener('scroll', () => {
+      let offset = window.pageYOffset;
+
+      // Layer 1: main background (slower, zooms out)
+      let translateY1 = offset * -0.2;
+      let scale1 = 1 + offset * 0.0005;
+      layer1.style.transform = `translateY(${translateY1}px) scale(${scale1})`;
+
+      // Layer 2: rain overlay (moves faster, no zoom)
+      let translateY2 = offset * -0.5;
+      layer2.style.transform = `translateY(${translateY2}px)`;
     });
   </script>
 </body>
