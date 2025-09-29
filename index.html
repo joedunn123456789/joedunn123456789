@@ -24,7 +24,9 @@
   background: url("images/Copilot_20250928_211206.png") center/cover no-repeat;
   z-index: -1; /* keeps it behind everything */
   will-change: transform;
+  transition: transform 0.05s linear; /* smooth movement */
 }
+
 
     .tagline {
       font-style: italic;
@@ -169,8 +171,15 @@
   const bg = document.querySelector('.parallax-bg');
   window.addEventListener('scroll', () => {
     let offset = window.pageYOffset;
-    // Adjust multiplier (0.3 = slower scroll, 1 = normal speed)
-    bg.style.transform = `translateY(${offset * -0.3}px)`;
+
+    // Slide upward
+    let translateY = offset * -0.2;
+
+    // Zoom out slowly
+    let scale = 1 + offset * 0.0005;
+
+    // Apply both
+    bg.style.transform = `translateY(${translateY}px) scale(${scale})`;
   });
 </script>
 </body>
