@@ -9,63 +9,45 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
         rel="stylesheet">
 
+  <!-- Theme Variables -->
+  <link rel="stylesheet" href="css/variables.css">
+
   <!-- Custom CSS -->
   <style>
     body {
       margin: 0;
-      color: #fff;
-      background: linear-gradient(135deg, rgba(15,32,39,0.7), rgba(32,58,67,0.7), rgba(44,83,100,0.7));
+      color: var(--color-text);
+      background-color: var(--color-background);
       overflow-x: hidden;
-    }
-
-    /* 🔹 Base parallax style */
-    .parallax-bg {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      will-change: transform;
-      transition: transform 0.05s linear;
-    }
-
-    /* Layer 1: main city background */
-    .layer1 {
-      background-image: url("images/Copilot_20250928_211206.png");
-      z-index: -2;
-    }
-
-    /* Layer 2: rain overlay */
-    .layer2 {
-      background-image: url("images/Copilot_20250928_221206.png"); /* replace with your generated rain texture */
-      opacity: 0.35;
-      z-index: -1;
     }
 
     .tagline {
       font-style: italic;
-      color: #00d4ff;
+      color: var(--color-accent);
       min-height: 1.5rem;
     }
+
+    a {
+      color: var(--color-link);
+    }
+
     footer {
-      background: rgba(0,0,0,0.3);
+      background: var(--color-footer-bg);
       padding: 1rem;
       text-align: center;
+      color: var(--color-text);
     }
+
     blockquote {
       font-size: 1.2rem;
       font-style: italic;
       margin: 2rem auto;
       max-width: 700px;
-      color: #f8f9fa;
+      color: var(--color-text);
     }
   </style>
 </head>
 <body>
-  <!-- 🔹 Parallax Layers -->
-  <div class="parallax-bg layer1"></div>
-  <div class="parallax-bg layer2"></div>
-
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
@@ -83,6 +65,8 @@
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#connect">Connect</a></li>
         </ul>
+        <!-- 🔹 Theme Toggle Button -->
+        <button id="themeToggle" class="btn btn-sm btn-outline-light ms-3">Toggle Theme</button>
       </div>
     </div>
   </nav>
@@ -93,7 +77,7 @@
     <p class="tagline"><span id="typing"></span></p>
     <blockquote>
       “The person who says it can’t be done is always interrupted by the one who just did it.”  
-      <footer class="blockquote-footer text-light">Chief Wilson, <cite>Daylight (1996)</cite></footer>
+      <footer class="blockquote-footer">Chief Wilson, <cite>Daylight (1996)</cite></footer>
     </blockquote>
   </header>
 
@@ -102,16 +86,14 @@
     <h2>🚀 About Me</h2>
     <p class="lead">I don’t just solve problems — I solve the ones people call <em>unsolvable</em>. 
        My strength is thinking outside the box, blending technical rigor with creative vision to deliver 
-       solutions that others say can’t be done. From cloud pipelines to polished digital branding, 
-       I thrive on turning “impossible” into “delivered.”</p>
+       solutions that others say can’t be done.</p>
   </section>
 
   <!-- AI Focus -->
   <section id="ai" class="container py-5 text-center">
     <h2>🧠 AI Development</h2>
     <p>AI is where I push boundaries the hardest. I experiment with machine learning, automation, 
-       and applied AI systems to prove that “undeliverable” is just another word for “not yet attempted.” 
-       My focus is building intelligent, adaptable systems that challenge assumptions and create real-world impact.</p>
+       and applied AI systems to prove that “undeliverable” is just another word for “not yet attempted.”</p>
   </section>
 
   <!-- Skills -->
@@ -130,17 +112,16 @@
   <!-- Projects -->
   <section id="projects" class="container py-5 text-center">
     <h2>💡 Featured Projects</h2>
-    <p><a href="https://github.com/joedunn123456789" class="link-info">Check out my GitHub repos</a> 
-       for automation pipelines, security experiments, AI explorations, and creative README designs.</p>
+    <p><a href="https://github.com/joedunn123456789" class="link-info">Check out my GitHub repos</a></p>
   </section>
 
   <!-- Connect -->
   <section id="connect" class="container py-5 text-center">
     <h2>🌐 Connect</h2>
     <p>
-      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" class="link-light">LinkedIn</a> | 
-      <a href="mailto:jdunn0423@gmail.com" class="link-light">Email</a> | 
-      <a href="https://github.com/joedunn123456789" class="link-light">GitHub</a>
+      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" class="link-dark">LinkedIn</a> | 
+      <a href="mailto:jdunn0423@gmail.com" class="link-dark">Email</a> | 
+      <a href="https://github.com/joedunn123456789" class="link-dark">GitHub</a>
     </p>
   </section>
 
@@ -183,22 +164,23 @@
     type();
   </script>
 
-  <!-- Parallax scroll script -->
+  <!-- Theme toggle script with persistence -->
   <script>
-    const layer1 = document.querySelector('.layer1');
-    const layer2 = document.querySelector('.layer2');
+    const toggleBtn = document.getElementById('themeToggle');
 
-    window.addEventListener('scroll', () => {
-      let offset = window.pageYOffset;
+    // Load saved theme from localStorage
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
 
-      // Layer 1: main background (slower, zooms out)
-      let translateY1 = offset * -0.2;
-      let scale1 = 1 + offset * 0.0005;
-      layer1.style.transform = `translateY(${translateY1}px) scale(${scale1})`;
-
-      // Layer 2: rain overlay (moves faster, no zoom)
-      let translateY2 = offset * -0.5;
-      layer2.style.transform = `translateY(${translateY2}px)`;
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      // Save preference
+      if (document.body.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
     });
   </script>
 </body>

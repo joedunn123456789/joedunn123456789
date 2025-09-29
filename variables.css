@@ -1,0 +1,14 @@
+/* variables.css */
+/* Light theme (default) */
+:root {
+  --color-text: #222;
+  --color-background: #ffffff;
+  --color-accent: #004466;
+}
+
+/* Dark theme */
+body.dark {
+  --color-text: #f8f9fa;
+  --color-background: #0f2027;
+  --color-accent: #00d4ff;
+}
