@@ -12,13 +12,25 @@
   <!-- Theme Variables -->
   <link rel="stylesheet" href="css/variables.css">
 
+  <!-- Load Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Roboto:wght@400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
   <!-- Custom CSS -->
   <style>
-    body {
-      margin: 0;
-      color: var(--color-text);
-      overflow-x: hidden;
-    }
+   body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-heading);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 
     /* 🔹 Base parallax style */
     .parallax-bg {
@@ -44,11 +56,10 @@
       z-index: -1;
     }
 
-    .tagline {
-      font-style: italic;
-      color: var(--color-accent);
-      min-height: 1.5rem;
-    }
+  .tagline, blockquote {
+  font-family: var(--font-tagline);
+  font-style: italic;
+}
 
     a {
       color: var(--color-link);
