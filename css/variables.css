@@ -4,6 +4,16 @@
   --color-text: #222;
   --color-background: #ffffff;
   --color-accent: #004466;
+
+  /* Fonts */
+  --font-body: 'Roboto', sans-serif;
+  --font-heading: 'Oswald', sans-serif;
+  --font-tagline: 'Playfair Display', serif;
+
+  /* Font sizes */
+  --font-size-base: 16px;
+  --font-size-heading: 2rem;
+  --font-size-subheading: 1.5rem;
 }
 
 /* Dark theme */
