@@ -28,16 +28,10 @@
 
 ---
 
-## 📊 GitHub Stats
-![Joseph's GitHub stats](https://github-readme-stats.vercel.app/api?username=joedunn123456789&show_icons=true&theme=tokyonight)
-
----
-
 ## 🌐 Connect With Me
 - 💼 [LinkedIn](#)  
 - 📧 Email: jdunn0423@gmail.com  
 - 📝 [Portfolio Website](https://joedunn123456789.github.io/joedunn123456789)
-
 
 ---
 
