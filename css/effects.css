@@ -18,12 +18,12 @@
    🏙️ Parallax Layers
 ──────────────────────────────── */
 .layer1 {
-  background-image: url("images/Copilot_20250928_211206.png");
+  background-image: url("../images/Copilot_20250928_211206.png");
   z-index: -2;
 }
 
 .layer2 {
-  background-image: url("images/Copilot_20250928_221206.png");
+  background-image: url("../images/Copilot_20250928_221206.png");
   opacity: 0.35;
   z-index: -1;
 }
