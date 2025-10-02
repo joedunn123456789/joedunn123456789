@@ -1,95 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joseph Dunn | Delivering the Undeliverable</title>
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-        rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Theme Variables -->
-  <link rel="stylesheet" href="css/variables.css">
+  <!-- Theme Tokens -->
+  <link rel="stylesheet" href="css/variables.css" />
 
-  <!-- Load Fonts -->
-   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Roboto:wght@400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <!-- Modular Styles -->
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/effects.css" />
 
-  <!-- Custom CSS -->
-  <style>
-    body {
-    font-family: var(--font-body);
-    font-size: var(--font-size-base);
-    line-height: 1.6;
-    color: var(--color-text);
-    background: var(--color-background);
-    }
-
-    h1 {
-    font-family: var(--font-heading);
-    font-size: var(--font-size-h1);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    }
-
-    h2 {
-    font-family: var(--font-heading);
-    font-size: var(--font-size-h2);
-    }
-
-    h3 {
-    font-family: var(--font-heading);
-    font-size: var(--font-size-h3);
-    }
-
-    /* 🔹 Base parallax style */
-    .parallax-bg {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      will-change: transform;
-      transition: transform 0.05s linear;
-    }
-
-    /* Layer 1: main city background */
-    .layer1 {
-      background-image: url("images/Copilot_20250928_211206.png");
-      z-index: -2;
-    }
-
-    /* Layer 2: rain overlay */
-    .layer2 {
-      background-image: url("images/Copilot_20250928_221206.png");
-      opacity: 0.35;
-      z-index: -1;
-    }
-
-    .tagline, blockquote {
-    font-family: var(--font-tagline);
-    font-style: italic;
-    }
-
-    a {
-      color: var(--color-link);
-    }
-
-    footer {
-      background: var(--color-footer-bg);
-      padding: 1rem;
-      text-align: center;
-      color: var(--color-text);
-    }
-
-    blockquote {
-      font-size: 1.2rem;
-      font-style: italic;
-      margin: 2rem auto;
-      max-width: 700px;
-      color: var(--color-text);
-    }
-  </style>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Roboto:wght@400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
 </head>
 <body>
   <!-- 🔹 Parallax Layers -->
@@ -114,7 +43,6 @@
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#connect">Connect</a></li>
         </ul>
-        <!-- Theme Toggle Button -->
         <button id="themeToggle" class="btn btn-sm btn-outline-light ms-3">Toggle Theme</button>
       </div>
     </div>
@@ -165,30 +93,29 @@
   </section>
 
   <!-- Resume -->
-<section id="resume" class="container py-5 text-center">
-  <h2>📄 Resume</h2>
-  <p class="lead">Download my resume or preview key highlights below.</p>
-  <a href="assets/JosephDunn_Resume.pdf" class="btn btn-outline-info mb-3" download>
-    ⬇️ Download PDF
-  </a>
-  <div class="text-start mx-auto" style="max-width: 700px;">
-    <h3>Core Strengths</h3>
-    <ul>
-      <li>Asset Management & UI Layout (Godot, GIMP, Inkscape)</li>
-      <li>Modular CSS & Bootstrap-first Design</li>
-      <li>Advanced JS Effects: Parallax, Gradients, Responsive Tweaks</li>
-      <li>Federal Resume Optimization & Theming</li>
-      <li>Node.js Troubleshooting via Homebrew & nvm</li>
-    </ul>
-    <h3>Recent Wins</h3>
-    <ul>
-      <li>Unified theme tokens for scalable design</li>
-      <li>Optimized Lighthouse scores across performance & SEO</li>
-      <li>Streamlined VS Code & Finder defaults for recruiter clarity</li>
-    </ul>
-  </div>
-</section>
-
+  <section id="resume" class="container py-5 text-center">
+    <h2>📄 Resume</h2>
+    <p class="lead">Download my resume or preview key highlights below.</p>
+    <a href="assets/JosephDunn_Resume.pdf" class="btn btn-outline-info mb-3" download>
+      ⬇️ Download PDF
+    </a>
+    <div class="text-start mx-auto" style="max-width: 700px;">
+      <h3>Core Strengths</h3>
+      <ul>
+        <li>Asset Management & UI Layout (Godot, GIMP, Inkscape)</li>
+        <li>Modular CSS & Bootstrap-first Design</li>
+        <li>Advanced JS Effects: Parallax, Gradients, Responsive Tweaks</li>
+        <li>Federal Resume Optimization & Theming</li>
+        <li>Node.js Troubleshooting via Homebrew & nvm</li>
+      </ul>
+      <h3>Recent Wins</h3>
+      <ul>
+        <li>Unified theme tokens for scalable design</li>
+        <li>Optimized Lighthouse scores across performance & SEO</li>
+        <li>Streamlined VS Code & Finder defaults for recruiter clarity</li>
+      </ul>
+    </div>
+  </section>
 
   <!-- Connect -->
   <section id="connect" class="container py-5 text-center">
@@ -209,72 +136,20 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Typing animation script -->
-  <script>
-    const roles = [
-      "AI Developer",
-      "Automation Architect",
-      "Creative Problem Solver",
-      "Delivering the Undeliverable"
-    ];
-    let i = 0, j = 0, current = "", isDeleting = false;
-
-    function type() {
-      current = roles[i];
-      let display = current.substring(0, j);
-      document.getElementById("typing").textContent = display;
-
-      if (!isDeleting && j < current.length) {
-        j++;
-        setTimeout(type, 120);
-      } else if (isDeleting && j > 0) {
-        j--;
-        setTimeout(type, 60);
-      } else {
-        isDeleting = !isDeleting;
-        if (!isDeleting) i = (i + 1) % roles.length;
-        setTimeout(type, 1000);
-      }
-    }
-    type();
-  </script>
-
-  <!-- Theme toggle script with persistence -->
+  <!-- Theme Toggle Script -->
   <script>
     const toggleBtn = document.getElementById('themeToggle');
+    const body = document.body;
 
-    // Load saved theme from localStorage
-    if (localStorage.getItem('theme') === 'dark') {
-      document.body.classList.add('dark');
+    // Load saved preference
+    if (localStorage.getItem('theme') === 'light') {
+      body.classList.add('light');
     }
 
+    // Toggle theme on click
     toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      // Save preference
-      if (document.body.classList.contains('dark')) {
-        localStorage.setItem('theme', 'dark');
-      } else {
-        localStorage.setItem('theme', 'light');
-      }
-    });
-  </script>
-
-    <!-- Parallax scroll script -->
-  <script>
-    const layer1 = document.querySelector('.layer1');
-    const layer2 = document.querySelector('.layer2');
-
-    window.addEventListener('scroll', () => {
-      let offset = window.pageYOffset;
-
-      // Layer 1: main background (slower, zooms out)
-      let translateY1 = offset * -0.2;
-      let scale1 = 1 + offset * 0.0005;
-      layer1.style.transform = `translateY(${translateY1}px) scale(${scale1})`;
-
-      // Layer 2: rain overlay (moves faster, no zoom)
-      let translateY2 = offset * -0.5;
-      layer2.style.transform = `translateY(${translateY2}px)`;
+      const isLight = body.classList.toggle('light');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
     });
   </script>
 </body>
