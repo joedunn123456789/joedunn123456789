@@ -28,8 +28,7 @@
 
 ---
 
-## 🌐 Connect With Me
-- 💼 [LinkedIn](#)  
+## 🌐 Connect With Me  
 - 📧 Email: jdunn0423@gmail.com  
 - 📝 [Portfolio Website](https://joedunn123456789.github.io/joedunn123456789)
 
