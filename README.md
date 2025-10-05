@@ -13,18 +13,15 @@
 ---
 
 ## 🧰 Tech Toolbox
-![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
 ![Linux](https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black)
-![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white)
-![Networking](https://img.shields.io/badge/-Networking-0078D7?logo=cisco&logoColor=white)
-![Cloud](https://img.shields.io/badge/-Cloud-4285F4?logo=googlecloud&logoColor=white)
-![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white)
-![Cybersecurity](https://img.shields.io/badge/-Cybersecurity-8B0000?logo=security&logoColor=white)
-![GIMP](https://img.shields.io/badge/-GIMP-5C5543?logo=gimp&logoColor=white)
-![Inkscape](https://img.shields.io/badge/-Inkscape-000000?logo=inkscape&logoColor=white)
 ![MacOS](https://img.shields.io/badge/-macOS-000000?logo=apple&logoColor=white)
 ![Windows](https://img.shields.io/badge/-Windows-0078D6?logo=windows&logoColor=white)
+![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
+![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white)
+![GIMP](https://img.shields.io/badge/-GIMP-5C5543?logo=gimp&logoColor=white)
+![Inkscape](https://img.shields.io/badge/-Inkscape-000000?logo=inkscape&logoColor=white)
 
 ---
 
