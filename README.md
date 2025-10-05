@@ -13,18 +13,27 @@
 ---
 
 ## 🧰 Tech Toolbox
-![Linux](https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black)
-![MacOS](https://img.shields.io/badge/-macOS-000000?logo=apple&logoColor=white)
-![Windows](https://img.shields.io/badge/-Windows-0078D6?logo=windows&logoColor=white)
-![C](https://img.shields.io/badge/-C-A8B9CC?logo=c&logoColor=white)
-![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white)
-![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
-![Ruby on Rails](https://img.shields.io/badge/-Ruby%20on%20Rails-CC0000?logo=rubyonrails&logoColor=white)
-![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white)
-![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)
-![GIMP](https://img.shields.io/badge/-GIMP-5C5543?logo=gimp&logoColor=white)
-![Inkscape](https://img.shields.io/badge/-Inkscape-000000?logo=inkscape&logoColor=white)
+
+### 🔒 Cybersecurity
+![Wireshark](https://img.shields.io/badge/Wireshark-007ACC?style=for-the-badge&logo=wireshark&logoColor=white)
+![Snort](https://img.shields.io/badge/Snort-CC0000?style=for-the-badge&logo=snort&logoColor=white)
+![pfSense](https://img.shields.io/badge/pfSense-003366?style=for-the-badge&logo=pfSense&logoColor=white)
+
+### ☁️ Cloud Computing
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![EC2](https://img.shields.io/badge/EC2-F8991D?style=for-the-badge&logo=amazonaws&logoColor=white)
+![S3](https://img.shields.io/badge/S3-569A31?style=for-the-badge&logo=amazonaws&logoColor=white)
+
+### 🖥️ Networking
+![Cisco Packet Tracer](https://img.shields.io/badge/Cisco%20Packet%20Tracer-1D1D1D?style=for-the-badge&logo=cisco&logoColor=white)
+![GNS3](https://img.shields.io/badge/GNS3-00599C?style=for-the-badge&logo=gns3&logoColor=white)
+
+### 🧪 Dev & Automation
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![DDEV](https://img.shields.io/badge/DDEV-0A0A0A?style=for-the-badge&logo=ddev&logoColor=white)
+![CI/CD](https://img.shields.io/badge/CI/CD-FF6F00?style=for-the-badge&logo=git&logoColor=white)
 
 ---
 
