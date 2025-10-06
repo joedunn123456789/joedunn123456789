@@ -33,8 +33,8 @@
 
 ### 🧪 Dev & Automation
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 ![DDEV](https://img.shields.io/badge/DDEV-0A0A0A?style=for-the-badge&logo=ddev&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 ![CI/CD](https://img.shields.io/badge/CI/CD-FF6F00?style=for-the-badge&logo=git&logoColor=white)
 
 ### 🧑‍💻 Languages
