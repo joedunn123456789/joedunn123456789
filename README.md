@@ -30,6 +30,7 @@
 ### 🖥️ Networking
 ![Cisco Packet Tracer](https://img.shields.io/badge/Cisco%20Packet%20Tracer-1D1D1D?style=for-the-badge&logo=cisco&logoColor=white)
 ![GNS3](https://img.shields.io/badge/GNS3-00599C?style=for-the-badge&logo=gns3&logoColor=white)
+![Extreme Networks](https://img.shields.io/badge/Extreme%20Networks-purple?style=for-the-badge)
 
 ### 🧪 Dev & Automation
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
