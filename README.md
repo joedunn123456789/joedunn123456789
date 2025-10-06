@@ -24,6 +24,8 @@
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![EC2](https://img.shields.io/badge/EC2-F8991D?style=for-the-badge&logo=amazonaws&logoColor=white)
 ![S3](https://img.shields.io/badge/S3-569A31?style=for-the-badge&logo=amazonaws&logoColor=white)
+![Google Workspace](https://img.shields.io/badge/Google%20Workspace-4285F4?style=for-the-badge&logo=googleworkspace&logoColor=white)
+
 
 ### 🖥️ Networking
 ![Cisco Packet Tracer](https://img.shields.io/badge/Cisco%20Packet%20Tracer-1D1D1D?style=for-the-badge&logo=cisco&logoColor=white)
