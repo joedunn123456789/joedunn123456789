@@ -16,6 +16,7 @@
 
 ### 🔒 Cybersecurity
 ![Wireshark](https://img.shields.io/badge/Wireshark-007ACC?style=for-the-badge&logo=wireshark&logoColor=white)
+![Angry IP Scanner](https://img.shields.io/badge/Angry%20IP%20Scanner-1F6FEB?style=for-the-badge)
 ![Snort](https://img.shields.io/badge/Snort-CC0000?style=for-the-badge&logo=snort&logoColor=white)
 ![pfSense](https://img.shields.io/badge/pfSense-003366?style=for-the-badge&logo=pfSense&logoColor=white)
 
