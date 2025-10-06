@@ -54,6 +54,10 @@
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![Drupal](https://img.shields.io/badge/Drupal-0678BE?style=for-the-badge&logo=drupal&logoColor=white)
 
+### 🎮 Game Development
+![GDScript](https://img.shields.io/badge/GDScript-478CBF?style=for-the-badge)
+![Godot](https://img.shields.io/badge/Godot-478CBF?style=for-the-badge&logo=godotengine&logoColor=white)
+
 ---
 
 ## 📂 Featured Projects
