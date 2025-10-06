@@ -55,8 +55,10 @@
 ![Drupal](https://img.shields.io/badge/Drupal-0678BE?style=for-the-badge&logo=drupal&logoColor=white)
 
 ### 🎮 Game Development
-![GDScript](https://img.shields.io/badge/GDScript-478CBF?style=for-the-badge)
 ![Godot](https://img.shields.io/badge/Godot-478CBF?style=for-the-badge&logo=godotengine&logoColor=white)
+![GDScript](https://img.shields.io/badge/GDScript-478CBF?style=for-the-badge)
+![Unity](https://img.shields.io/badge/Made%20with-Unity-57b9d3?style=for-the-badge&logo=unity)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
 
 ---
 
