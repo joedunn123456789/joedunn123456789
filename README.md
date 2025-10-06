@@ -35,6 +35,12 @@
 ![DDEV](https://img.shields.io/badge/DDEV-0A0A0A?style=for-the-badge&logo=ddev&logoColor=white)
 ![CI/CD](https://img.shields.io/badge/CI/CD-FF6F00?style=for-the-badge&logo=git&logoColor=white)
 
+### 🧑‍💻 Languages
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=white)
+
 ---
 
 ## 📂 Featured Projects
