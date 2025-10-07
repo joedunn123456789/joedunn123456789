@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <header className="bg-brand text-white shadow">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-        {/* Brand */}
+        {/* Brand / Logo */}
         <Link to="/" className="text-xl font-bold tracking-wide">
           Joseph Dunn
         </Link>
@@ -22,7 +22,7 @@ export default function Header() {
           <Link to="/analytics" className="hover:text-gray-200">Analytics</Link>
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Hamburger */}
         <button
           className="block md:hidden text-2xl"
           onClick={() => setOpen(!open)}

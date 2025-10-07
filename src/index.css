@@ -1,7 +1,11 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Optional: add your custom theme tokens */
+/* Define your theme here */
 @theme {
   --color-brand: #4f46e5;
-  --font-display: "Inter", sans-serif;
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --breakpoint-md: 48rem; /* 768px */
+  --breakpoint-lg: 64rem; /* 1024px */
 }
