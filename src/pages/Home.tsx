@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Home() {
   const modules = [
     {
@@ -67,14 +69,14 @@ export default function Home() {
         ))}
       </div>
 
-      {/* Featured Modules */}
+      {/* Featured Modules - FIXED: Changed <a> to <Link> */}
       <div>
         <h2 className="text-2xl font-bold mb-6 text-center">Professional Suite</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {modules.map((module, index) => (
-            <a
+            <Link
               key={index}
-              href={module.link}
+              to={module.link}
               className="block p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 hover:scale-105 group"
             >
               <div className="flex items-start gap-4">
@@ -99,7 +101,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
@@ -123,21 +125,21 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Call to Action */}
+      {/* Call to Action - FIXED: Changed <a> to <Link> */}
       <div className="text-center space-y-4">
         <div className="inline-flex gap-3">
-          <a
-            href="/resume"
+          <Link
+            to="/resume"
             className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
             View My Résumé
-          </a>
-          <a
-            href="/store"
+          </Link>
+          <Link
+            to="/store"
             className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
           >
             Browse Services
-          </a>
+          </Link>
         </div>
         <p className="text-sm text-gray-500">
           Ready to discuss your next project? Let's connect!
