@@ -17,6 +17,7 @@ export default function Header() {
         <nav className="hidden md:flex gap-6 font-medium">
           <Link to="/" className="hover:text-gray-200">Home</Link>
           <Link to="/resume" className="hover:text-gray-200">Résumé</Link>
+          <Link to="/resume-builder" className="hover:text-gray-200">Resume Builder</Link> 
           <Link to="/crm" className="hover:text-gray-200">CRM</Link>
           <Link to="/store" className="hover:text-gray-200">Store</Link>
           <Link to="/analytics" className="hover:text-gray-200">Analytics</Link>
@@ -37,6 +38,7 @@ export default function Header() {
         <nav className="md:hidden flex flex-col gap-4 px-6 pb-4 font-medium bg-brand/95">
           <Link to="/" onClick={() => setOpen(false)}>Home</Link>
           <Link to="/resume" onClick={() => setOpen(false)}>Résumé</Link>
+          <Link to="/resume-builder" onClick={() => setOpen(false)}>Resume Builder</Link>
           <Link to="/crm" onClick={() => setOpen(false)}>CRM</Link>
           <Link to="/store" onClick={() => setOpen(false)}>Store</Link>
           <Link to="/analytics" onClick={() => setOpen(false)}>Analytics</Link>
