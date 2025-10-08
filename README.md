@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Joseph Dunn
 
-💻 **Aspiring Federal Government IT Professional** | 🌐 Tech Enthusiast | 🔐 Security-Minded
+💻 **Aspiring Federal Government IT Professional** | 🌐 Tech Enthusiast & Leader | 🔐 Security-Minded
 
 ---
 
