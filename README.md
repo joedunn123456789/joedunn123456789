@@ -1,11 +1,11 @@
 # 👋 Hi, I'm Joseph Dunn
 
-💻 **Aspiring Federal Government IT Professional** | 🌐 Tech Enthusiast & Leader | 🔐 Security-Minded
+💻 **Aspiring IT Professional** | 🌐 Tech Enthusiast & Leader | 🔐 Security-Minded
 
 ---
 
 ## 🚀 About Me
-- 🎯 Currently focused on building skills for a career in **Federal Government IT**
+- 🎯 Currently focused on building skills for a career in **IT**
 - 📚 Learning more about **cloud computing, networking, and cybersecurity**
 - 🛠️ Exploring open-source projects and contributing where I can
 - 🌟 Passionate about using technology to solve real-world problems
