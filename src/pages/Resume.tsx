@@ -1,15 +1,29 @@
 import { experiences, skills, certifications, education } from '../data/resumeData';
+import { usePDFExport } from '../hooks/ResumePage/usePDFExport';
 
 const Resume: React.FC = () => {
+  const { exportToPDF, isGenerating } = usePDFExport();
+
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="container mx-auto px-4">
+        {/* PDF Export Button */}
+        <div className="flex justify-end mb-6">
+          <button
+            onClick={exportToPDF}
+            disabled={isGenerating}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+          >
+            {isGenerating ? 'Generating PDF...' : 'Export as PDF'}
+          </button>
+        </div>
+
         <main className="mx-auto max-w-4xl px-8 py-10 space-y-10 text-black bg-white rounded-lg shadow-lg">
           {/* Header */}
           <header className="space-y-1">
             <h1 className="text-3xl font-bold">Joseph Henry Dunn II</h1>
             <p className="text-sm text-gray-700">
-              Fully Remote (Wildomar, CA) • 830-666-2525 • jdunn0423@gmail.com
+              Wildomar, CA • 830-666-2525 • jdunn0423@gmail.com
             </p>
           </header>
 
