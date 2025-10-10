@@ -122,7 +122,7 @@ export default function Resume() {
       <header className="space-y-1">
         <h1 className="text-3xl font-bold">Joseph Henry Dunn II</h1>
         <p className="text-sm text-gray-700">
-          33772 Windmill Rd Wildomar, CA 92595 • 830-666-2525 • jdunn0423@gmail.com
+          Wildomar, CA 92595 • 830-666-2525 • jdunn0423@gmail.com
         </p>
       </header>
 
