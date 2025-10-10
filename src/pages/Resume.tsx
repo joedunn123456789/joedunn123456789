@@ -14,6 +14,7 @@ const experiences: Experience[] = [
       "Reduced ticket resolution time by 30% by designing and deploying an integrated ServiceNow and NICE CXOne solution.",
       "Improved incident response time by 25% and enhanced threat visibility by building an Azure Sentinel compliance program.",
       "Increased customer satisfaction by 35% by engineering custom integrations between NICE CXOne and Zendesk using REST APIs.",
+      "Optimized Atlassian suite (Jira, Confluence, Bitbucket), driving 25% issue resolution, 30% sprint predictability, and 99.9% uptime for 75+ users.",
       "Reduced downtime by 25% through hybrid Azure Active Directory and Microsoft 365 infrastructure management.",
       "Boosted throughput by scripting automated task flows in PowerShell & Python for onboarding, patching, & identity provisioning.",
       "Led disaster recovery planning, validating business continuity via quarterly failover testing with 99.9% system availability SLAs.",
