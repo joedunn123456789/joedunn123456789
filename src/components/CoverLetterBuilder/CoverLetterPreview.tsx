@@ -37,8 +37,8 @@ const CoverLetterPreview: React.FC<CoverLetterPreviewProps> = ({ data }) => {
       {/* Employer's Contact Info */}
       <div className="mb-8">
         <p className="text-gray-600">
-          {employerInfo.hiringManagerName && `${employerInfo.hiringManagerName}<br />`}
-          {employerInfo.hiringManagerTitle && `${employerInfo.hiringManagerTitle}<br />`}
+          {employerInfo.hiringManagerName && (<>{employerInfo.hiringManagerName}<br /></>)}
+          {employerInfo.hiringManagerTitle && (<>{employerInfo.hiringManagerTitle}<br /></>)}
           {employerInfo.companyName}<br />
           {employerInfo.companyAddress}<br />
           {employerInfo.companyCityStateZip}

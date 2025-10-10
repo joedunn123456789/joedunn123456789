@@ -10,8 +10,8 @@ const CoverLetterBuilder: React.FC = () => {
   const [coverLetterData, setCoverLetterData] = useState<CoverLetterData>(initialCoverLetterData);
   const [activeSection, setActiveSection] = useState<CoverLetterSection>('contact');
   const [isGeneratingPDF, setIsGeneratingPDF] = useState(false);
-
-  const updateCoverLetterData = (section: keyof CoverLetterData, data: any) => {
+  
+  const updateCoverLetterData = <K extends keyof CoverLetterData>(section: K, data: CoverLetterData[K]) => {
     setCoverLetterData(prev => ({
       ...prev,
       [section]: data

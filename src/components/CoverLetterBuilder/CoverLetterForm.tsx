@@ -11,7 +11,7 @@ import type { CoverLetterData, CoverLetterSection } from '../../types/coverLette
 interface CoverLetterFormProps {
   data: CoverLetterData;
   activeSection: CoverLetterSection;
-  onUpdate: (section: keyof CoverLetterData, data: any) => void;
+  onUpdate: <K extends keyof CoverLetterData>(section: K, data: CoverLetterData[K]) => void;
   onSectionChange: (section: CoverLetterSection) => void;
 }
 
