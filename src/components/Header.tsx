@@ -16,6 +16,7 @@ export default function Header() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-6 font-medium">
           <Link to="/" className="hover:text-gray-200">Home</Link>
+          <Link to="/projects" className="hover:text-gray-200">Projects</Link>
           <Link to="/resume" className="hover:text-gray-200">Résumé</Link>
           <Link to="/resume-builder" className="hover:text-gray-200">Resume Builder</Link>
           <Link to="/cover-letter-builder" className="hover:text-gray-200">Cover Letter Builder</Link> 
@@ -38,6 +39,7 @@ export default function Header() {
       {open && (
         <nav className="md:hidden flex flex-col gap-4 px-6 pb-4 font-medium bg-brand/95">
           <Link to="/" onClick={() => setOpen(false)}>Home</Link>
+          <Link to="/projects" onClick={() => setOpen(false)}>Projects</Link>
           <Link to="/resume" onClick={() => setOpen(false)}>Résumé</Link>
           <Link to="/resume-builder" onClick={() => setOpen(false)}>Resume Builder</Link>
           <Link to="/cover-letter-builder" onClick={() => setOpen(false)}>Cover Letter Builder</Link>

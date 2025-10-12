@@ -7,6 +7,7 @@ import CoverLetterBuild from "./pages/CoverLetterBuild" // Add this
 import CRM from "./pages/CRM"
 import Store from "./pages/Store"
 import Analytics from "./pages/Analytics"
+import Projects from "./pages/Projects"
 
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Shell />}>
         <Route index element={<Home />} />
+        <Route path="projects" element={<Projects />} />
         <Route path="resume" element={<Resume />} />
         <Route path="resume-builder" element={<ResumeBuild />} /> {/* Add this line */}
         <Route path="cover-letter-builder" element={<CoverLetterBuild />} /> {/* Add this */}
