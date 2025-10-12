@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-import Header from "./components/Header"
+import Header from "./components/Header/Header"
 
 export default function Shell() {
   return (
@@ -11,7 +11,7 @@ export default function Shell() {
       </main>
 
       <footer className="p-4 bg-gray-800 text-gray-200 text-center">
-        © {new Date().getFullYear()} Joseph Dunn — All Rights Reserved
+        © {new Date().getFullYear()} Joseph H Dunn II — All Rights Reserved
       </footer>
     </div>
   )
