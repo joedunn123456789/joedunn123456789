@@ -11,13 +11,13 @@ export const projects: Project[] = [
     title: "Kanban Board",
     repoUrl: "https://github.com/joedunn123456789/angular-kanban-board",
     liveUrl: "https://joedunn123456789.github.io/angular-kanban-board/",
-    description: "Modular Angular Kanban board with mobile-first UX and Azure deployment."
+    description: "Modular Angular Kanban board with mobile-first UX"
   },
   {
     title: "CRM Dashboard",
     repoUrl: "https://github.com/joedunn123456789/angular-project-1",
     liveUrl: "https://joedunn123456789.github.io/angular-project-1/",
-    description: "Modular Angular CRM Dashboard with mobile-first UX and Azure deployment."
+    description: "Modular Angular CRM Dashboard with mobile-first UX"
   },
   {
     title: "React Markdown Previewer",
