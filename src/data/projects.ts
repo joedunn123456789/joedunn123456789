@@ -20,6 +20,24 @@ export const projects: Project[] = [
     description: "Modular Angular CRM Dashboard with mobile-first UX"
   },
   {
+    title: "My Resume In CSS3",
+    repoUrl: "https://github.com/joedunn123456789/CSS-Resume",
+    liveUrl: "https://joedunn123456789.github.io/CSS-Resume/",
+    description: "Modular Resume built in CSS3"
+  },
+  {
+    title: "My Resume In Bootstrap5",
+    repoUrl: "https://github.com/joedunn123456789/Bootstrap5-Resume",
+    liveUrl: "https://joedunn123456789.github.io/Bootstrap5-Resume/",
+    description: "Modular Resume built in Bootstrap5"
+  },
+  {
+    title: "My Resume In Bootstrap5",
+    repoUrl: "https://github.com/joedunn123456789/tailwindcss-mobile-resume",
+    liveUrl: "https://joedunn123456789.github.io/tailwindcss-mobile-resume/",
+    description: "Modular Resume, Tailwinds V3 CSS Mobile First UX"
+  },
+  {
     title: "React Markdown Previewer",
     repoUrl: "https://github.com/joedunn123456789/react-markdown-previewer",
     liveUrl: "https://joedunn123456789.github.io/react-markdown-previewer/",
