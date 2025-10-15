@@ -25,6 +25,9 @@ const Resume: React.FC = () => {
             <p className="text-sm text-gray-700">
               Wildomar, CA • 830-666-2525 • jdunn0423@gmail.com
             </p>
+            <p className="text-sm text-gray-700">
+              LinkedIn: <a href="https://www.linkedin.com/in/joe-d-80b388358/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">linkedin.com/in/joe-d-80b388358</a> • GitHub: <a href="https://github.com/joedunn123456789" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">github.com/joedunn123456789</a>
+            </p>
           </header>
 
           {/* Summary */}
