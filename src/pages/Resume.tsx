@@ -318,11 +318,16 @@ const Resume: React.FC = () => {
               {Object.entries(certificationCategories).map(([category, categoryCerts]) => (
                 <div key={category}>
                   <h3 className="font-semibold text-gray-800 mb-2">{category}:</h3>
-                  <ul className="list-disc pl-5 space-y-1 text-gray-800">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     {categoryCerts.map((cert) => (
-                      <li key={cert}>{cert}</li>
+                      <span
+                        key={cert}
+                        className="px-3 py-2 rounded-full bg-gray-100 text-sm border border-gray-200 text-center"
+                      >
+                        {cert}
+                      </span>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               ))}
             </div>
