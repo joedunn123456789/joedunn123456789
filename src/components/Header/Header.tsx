@@ -2,6 +2,17 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { HiMenu, HiX } from "react-icons/hi" // npm install react-icons
 
+const navLinks = [
+  { to: "/", label: "Home" },
+  { to: "/projects", label: "Projects" },
+  { to: "/resume", label: "Résumé" },
+  { to: "/resume-builder", label: "Resume Builder" },
+  { to: "/cover-letter-builder", label: "Cover Letter Builder" },
+  { to: "/crm", label: "CRM" },
+  { to: "/store", label: "Store" },
+  { to: "/analytics", label: "Analytics" },
+]
+
 export default function Header() {
   const [open, setOpen] = useState(false)
 
@@ -15,14 +26,11 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-6 font-medium">
-          <Link to="/" className="hover:text-gray-200">Home</Link>
-          <Link to="/projects" className="hover:text-gray-200">Projects</Link>
-          <Link to="/resume" className="hover:text-gray-200">Résumé</Link>
-          <Link to="/resume-builder" className="hover:text-gray-200">Resume Builder</Link>
-          <Link to="/cover-letter-builder" className="hover:text-gray-200">Cover Letter Builder</Link> 
-          <Link to="/crm" className="hover:text-gray-200">CRM</Link>
-          <Link to="/store" className="hover:text-gray-200">Store</Link>
-          <Link to="/analytics" className="hover:text-gray-200">Analytics</Link>
+          {navLinks.map((link) => (
+            <Link key={link.to} to={link.to} className="hover:text-gray-200">
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
         {/* Mobile Hamburger */}
@@ -38,14 +46,11 @@ export default function Header() {
       {/* Mobile Nav */}
       {open && (
         <nav className="md:hidden flex flex-col gap-4 px-6 pb-4 font-medium bg-brand/95">
-          <Link to="/" onClick={() => setOpen(false)}>Home</Link>
-          <Link to="/projects" onClick={() => setOpen(false)}>Projects</Link>
-          <Link to="/resume" onClick={() => setOpen(false)}>Résumé</Link>
-          <Link to="/resume-builder" onClick={() => setOpen(false)}>Resume Builder</Link>
-          <Link to="/cover-letter-builder" onClick={() => setOpen(false)}>Cover Letter Builder</Link>
-          <Link to="/crm" onClick={() => setOpen(false)}>CRM</Link>
-          <Link to="/store" onClick={() => setOpen(false)}>Store</Link>
-          <Link to="/analytics" onClick={() => setOpen(false)}>Analytics</Link>
+          {navLinks.map((link) => (
+            <Link key={link.to} to={link.to} onClick={() => setOpen(false)}>
+              {link.label}
+            </Link>
+          ))}
         </nav>
       )}
     </header>
