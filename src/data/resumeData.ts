@@ -1,9 +1,49 @@
+export interface PersonalInfo {
+  name: string;
+  location: string;
+  phone: string;
+  email: string;
+  linkedin: {
+    display: string;
+    url: string;
+  };
+  github: {
+    display: string;
+    url: string;
+  };
+}
+
+export interface Summary {
+  main: string;
+  whyICode: string;
+}
+
 export interface Experience {
   company: string;
   role: string;
   date: string;
   bullets: string[];
 }
+
+export const personalInfo: PersonalInfo = {
+  name: "Joseph Henry Dunn II",
+  location: "Wildomar, CA",
+  phone: "830-666-2525",
+  email: "jdunn0423@gmail.com",
+  linkedin: {
+    display: "linkedin.com/in/joe-d-80b388358",
+    url: "https://www.linkedin.com/in/joe-d-80b388358/"
+  },
+  github: {
+    display: "github.com/joedunn123456789",
+    url: "https://github.com/joedunn123456789"
+  }
+};
+
+export const summary: Summary = {
+  main: "Systems Administrator transitioning to software development, with hands-on coding experience building automation tools, REST API integrations, and web applications in production environments. Developed proficiency in Python, JavaScript, PHP, and PowerShell through solving real-world infrastructure challenges. Seeking to leverage systems knowledge and programming skills in a developer role where understanding infrastructure is an asset.",
+  whyICode: "Started automating repetitive tasks to save time, discovered I love solving problems through code, and have progressively taken on more development-focused projects including API integrations, web applications, and custom tooling."
+};
 
 export const experiences: Experience[] = [
   {
