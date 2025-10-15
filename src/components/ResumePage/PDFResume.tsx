@@ -226,7 +226,7 @@ const PDFResume = () => (
         </View>
 
         {/* API Integration Developer */}
-        <View style={styles.experienceCard} break>
+        <View style={styles.experienceCard}>
           <Text style={styles.jobRole}>API Integration Developer | Tactis LLC | Remote</Text>
           <Text style={styles.jobDate}>Aug 2022 – Oct 2025</Text>
           <Text style={styles.company}>Built custom integrations when off-the-shelf solutions didn't meet requirements</Text>
@@ -376,7 +376,7 @@ const PDFResume = () => (
       </View>
 
       {/* Systems Administration Experience */}
-      <View style={styles.section} break>
+      <View style={styles.section}>
         <Text style={styles.sectionTitle}>SYSTEMS ADMINISTRATION EXPERIENCE</Text>
 
         {/* Systems Engineer */}
