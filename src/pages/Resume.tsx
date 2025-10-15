@@ -37,16 +37,11 @@ const Resume: React.FC = () => {
             </h2>
             <div className="space-y-3 text-gray-800">
               <p>
-                Cloud Systems Engineer | Infrastructure Manager | Automation Leader with 10+ years of experience specializing in cloud architecture, enterprise IT infrastructure, and secure system automation across federal, defense, and corporate environments.
+                Systems Administrator transitioning to software development, with hands-on coding experience building automation tools, REST API integrations, and web applications in production environments. Developed proficiency in Python, JavaScript, PHP, and PowerShell through solving real-world infrastructure challenges. Seeking to leverage systems knowledge and programming skills in a developer role where understanding infrastructure is an asset.
               </p>
               <p>
-                Leads hybrid teams of engineers, developers, and cybersecurity analysts to design, deploy, and support fault-tolerant cloud environments in Azure and AWS, often under tight compliance constraints tied to public and DoD-grade security standards.
-              </p>
-              <p>
-                Spearheads automation of IT workflows and repetitive system tasks using PowerShell, Python, Power Automate, and ServiceNow, freeing up hundreds of team hours annually while reducing error rates in mission-critical environments.
-              </p>
-              <p>
-                Drives end-to-end execution of enterprise IT rollouts, migrating legacy infrastructure to the cloud, aligning architecture with NIST SP 800-53 and FedRAMP standards, and delivering uptime SLAs above 99.9% across Microsoft 365 and custom platforms.
+                <span className="font-semibold">Why I Code:</span><br />
+                Started automating repetitive tasks to save time, discovered I love solving problems through code, and have progressively taken on more development-focused projects including API integrations, web applications, and custom tooling.
               </p>
             </div>
           </section>
