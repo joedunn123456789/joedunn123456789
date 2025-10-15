@@ -82,9 +82,36 @@ export const experiences: Experience[] = [
   }
 ];
 
+export const skillCategories = {
+  "System Administrator": [
+    "Azure Administration",
+    "AWS Administration",
+    "Active Directory",
+    "Microsoft 365",
+    "ServiceNow",
+    "Salesforce",
+    "PowerShell",
+    "Bash Scripting",
+    "Docker",
+    "Cybersecurity & Compliance"
+  ],
+  "Full Stack Developer": [
+    "React",
+    "Angular",
+    "Tailwind CSS",
+    "Node.js",
+    "Drupal",
+    "Python",
+    "JavaScript",
+    "PHP",
+    "REST API Integration",
+    "Git/Version Control"
+  ]
+};
+
 export const skills: string[] = [
   "ServiceNow Install and Development",
-  "Salesforce Install and Development", 
+  "Salesforce Install and Development",
   "Strategic Infrastructure Planning",
   "Cloud Architecture Design",
   "Disaster Recovery Strategy",
