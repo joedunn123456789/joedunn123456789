@@ -124,6 +124,19 @@ export const skills: string[] = [
   "Scrum Project Execution & Reporting"
 ];
 
+export const certificationCategories = {
+  "Development-Focused": [
+    "Certified Application Developer - ServiceNow",
+    "Salesforce Certified Platform Developer II"
+  ],
+  "Cloud & Infrastructure": [
+    "Microsoft 365 Certified: Administrator Expert",
+    "CompTIA Security+",
+    "AWS Certified SysOps Administrator - Associate",
+    "Professional Google Workspace Administrator (Legacy)"
+  ]
+};
+
 export const certifications: string[] = [
   "Microsoft Certified: Azure Fundamentals",
   "Azure Administrator Associate",
