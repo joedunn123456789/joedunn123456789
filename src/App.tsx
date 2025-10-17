@@ -8,6 +8,7 @@ import CRM from "./pages/CRM"
 import Store from "./pages/Store"
 import Analytics from "./pages/Analytics"
 import Projects from "./pages/Projects"
+import About from "./pages/About"
 
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="crm" element={<CRM />} />
         <Route path="store" element={<Store />} />
         <Route path="analytics" element={<Analytics />} />
+        <Route path="about" element={<About />} />
       </Route>
     </Routes>
   )

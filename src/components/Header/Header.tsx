@@ -4,6 +4,7 @@ import { HiMenu, HiX } from "react-icons/hi" // npm install react-icons
 
 const navLinks = [
   { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
   { to: "/projects", label: "Projects" },
   { to: "/resume", label: "Résumé" },
   { to: "/resume-builder", label: "Resume Builder" },
