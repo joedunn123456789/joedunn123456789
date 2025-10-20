@@ -1,4 +1,4 @@
-import { skillCategories, certificationCategories, education } from '../data/resumeData';
+import { skillCategories, certificationCategories, education, summary, personalInfo } from '../data/resumeData';
 import { usePDFExport } from '../hooks/ResumePage/usePDFExport';
 
 const Resume: React.FC = () => {
@@ -21,12 +21,12 @@ const Resume: React.FC = () => {
         <main className="mx-auto max-w-4xl px-8 py-10 space-y-10 text-black bg-white rounded-lg shadow-lg">
           {/* Header */}
           <header className="space-y-1">
-            <h1 className="text-3xl font-bold">Joseph Henry Dunn II</h1>
+            <h1 className="text-3xl font-bold">{personalInfo.name}</h1>
             <p className="text-sm text-gray-700">
-              Wildomar, CA • 830-666-2525 • jdunn0423@gmail.com
+              {personalInfo.location} • {personalInfo.phone} • {personalInfo.email}
             </p>
             <p className="text-sm text-gray-700">
-              LinkedIn: <a href="https://www.linkedin.com/in/joe-d-80b388358/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">linkedin.com/in/joe-d-80b388358</a> • GitHub: <a href="https://github.com/joedunn123456789" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">github.com/joedunn123456789</a>
+              LinkedIn: <a href={personalInfo.linkedin.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">{personalInfo.linkedin.display}</a> • GitHub: <a href={personalInfo.github.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">{personalInfo.github.display}</a>
             </p>
           </header>
 
@@ -37,11 +37,11 @@ const Resume: React.FC = () => {
             </h2>
             <div className="space-y-3 text-gray-800">
               <p>
-                Systems Administrator transitioning to software development, with hands-on coding experience building automation tools, REST API integrations, and web applications in production environments. Developed proficiency in Python, JavaScript, PHP, and PowerShell through solving real-world infrastructure challenges. Seeking to leverage systems knowledge and programming skills in a developer role where understanding infrastructure is an asset.
+                {summary.main}
               </p>
               <p>
                 <span className="font-semibold">Why I Code:</span><br />
-                Started automating repetitive tasks to save time, discovered I love solving problems through code, and have progressively taken on more development-focused projects including API integrations, web applications, and custom tooling.
+                {summary.whyICode}
               </p>
             </div>
           </section>

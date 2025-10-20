@@ -41,8 +41,8 @@ export const personalInfo: PersonalInfo = {
 };
 
 export const summary: Summary = {
-  main: "Systems Administrator transitioning to software development, with hands-on coding experience building automation tools, REST API integrations, and web applications in production environments. Developed proficiency in Python, JavaScript, PHP, and PowerShell through solving real-world infrastructure challenges. Seeking to leverage systems knowledge and programming skills in a developer role where understanding infrastructure is an asset.",
-  whyICode: "Started automating repetitive tasks to save time, discovered I love solving problems through code, and have progressively taken on more development-focused projects including API integrations, web applications, and custom tooling."
+  main: "Systems Engineer with 10+ years of experience leveraging AI-assisted workflows to design, deploy, and manage enterprise IT infrastructure at accelerated velocity. Expert in cloud platforms (Azure, AWS), automation scripting, and integrating complex enterprise systems. Hand-selected by CTO to lead AI adoption initiative, achieving 8x productivity gains through strategic use of AI tools for infrastructure automation, code generation, and technical problem-solving. Proven ability to lead technical projects, reduce operational costs, and maintain high-availability systems under strict compliance requirements.",
+  whyICode: "AI-Augmented Infrastructure Engineering: Pioneered the use of AI tools in infrastructure engineering workflows, demonstrating how Systems Engineers can leverage LLMs for script generation, debugging, documentation, and problem-solving. Proven track record of 8x productivity gains while maintaining code quality and security standards. Advocate for responsible AI adoption in enterprise IT environments."
 };
 
 export const experiences: Experience[] = [
@@ -51,60 +51,68 @@ export const experiences: Experience[] = [
     role: "Systems Engineer (Promoted from System Administrator)",
     date: "Aug 2022 – Oct 2025",
     bullets: [
-      "Reduced ticket resolution time by 30% by designing and deploying an integrated ServiceNow and NICE CXOne solution.",
-      "Improved incident response time by 25% and enhanced threat visibility by building an Azure Sentinel compliance program.",
-      "Increased customer satisfaction by 35% by engineering custom integrations between NICE CXOne and Zendesk using REST APIs.",
-      "Optimized Atlassian suite (Jira, Confluence, Bitbucket), driving 25% issue resolution, 30% sprint predictability, and 99.9% uptime for 75+ users.",
-      "Reduced downtime by 25% through hybrid Azure Active Directory and Microsoft 365 infrastructure management.",
-      "Boosted throughput by scripting automated task flows in PowerShell & Python for onboarding, patching, & identity provisioning.",
-      "Led disaster recovery planning, validating business continuity via quarterly failover testing with 99.9% system availability SLAs.",
-      "Owned cloud governance and cybersecurity enforcement using Azure Policies, conditional access, and Sentinel analytics rules.",
-      "Built workflow automation in Power Automate and ServiceNow Flow Designer to eliminate redundant manual interventions.",
-      "Engaged Security, Ops, and Dev teams to enforce and support IT governance, change controls, and FedRAMP compliance audits.",
-      "Automated internal service requests and approval workflows, reducing average processing time by 35%.",
-      "Led Drupal/PHP website modernization with Acquia Cloud support, improving scalability and maintainability.",
-      "Built and maintained local dev environments with Docker/DDEV; managed source control with Bitbucket.",
-      "Refactored SCSS and Twig templates using Bootstrap 5, mobile-first methodology with desktop overrides.",
-      "Configured Drupal Views and Block Embeds to enhance homepage functionality.",
-      "Developed custom reusable components for content authors, expanding publishing flexibility.",
-      "Translated Figma designs into pixel-accurate, production-ready code.",
-      "Increased Lighthouse performance scores from 70 → 90, boosting speed, accessibility, and SEO."
+      "Hand-selected by CTO to lead AI adoption initiative for infrastructure engineering team",
+      "Achieved 8x productivity increase by implementing AI-assisted workflows for automation development, documentation, and technical problem-solving",
+      "Completed 120+ hours of infrastructure work in under 14 days using AI-augmented development techniques",
+      "Pioneered use of AI tools (Claude, ChatGPT) for rapid PowerShell/Python script generation, debugging, and optimization",
+      "Trained team members on effective prompt engineering and AI-assisted infrastructure workflows",
+      "Demonstrated ROI of AI adoption to leadership, leading to company-wide AI tool deployment",
+      "Reduced downtime by 25% through hybrid Azure Active Directory and Microsoft 365 infrastructure management for 75+ users",
+      "Built Azure Sentinel compliance program, improving incident response time by 25% and enhancing threat visibility",
+      "Implemented Azure governance framework using Policies, conditional access controls, and Sentinel analytics rules",
+      "Led disaster recovery planning with quarterly failover testing, maintaining 99.9% system availability SLA",
+      "Owned cloud governance and cybersecurity enforcement supporting FedRAMP compliance audits",
+      "Reduced ticket resolution time by 30% by designing and deploying integrated ServiceNow and NICE CXOne solution",
+      "Increased customer satisfaction by 35% by engineering custom REST API integrations between NICE CXOne and Zendesk",
+      "Automated internal service requests and approval workflows, reducing average processing time by 35%",
+      "Built workflow automation in Power Automate and ServiceNow Flow Designer using AI-assisted development",
+      "Scripted automated task flows in PowerShell and Python for onboarding, patching, and identity provisioning",
+      "Optimized Atlassian suite (Jira, Confluence, Bitbucket) driving 25% faster issue resolution, 30% improved sprint predictability, and 99.9% uptime",
+      "Administered ServiceNow platform including user management, integrations, and workflow configuration",
+      "Managed NICE CXOne contact center platform with Zendesk integration for seamless customer support",
+      "Led Drupal/PHP website modernization with Acquia Cloud support, improving scalability and maintainability",
+      "Leveraged AI tools for rapid code generation and debugging of SCSS, Twig, and JavaScript components",
+      "Built and maintained local development environments with Docker/DDEV; managed source control with Bitbucket",
+      "Increased Lighthouse performance scores from 70 to 90 through AI-assisted optimization recommendations",
+      "Translated Figma designs into production-ready code using AI-powered code generation",
+      "Engaged Security, Operations, and Development teams to enforce IT governance and change controls",
+      "Evangelized AI adoption across technical teams, demonstrating productivity benefits",
+      "Documented AI-assisted workflows and best practices for team knowledge sharing"
     ],
   },
   {
-    company: "Tlingit Haida Tribal Business Corporation (Government Contracting, Tribal-owned Business Solutions)",
+    company: "Tlingit Haida Tribal Business Corporation",
     role: "Information Technology Manager",
     date: "Apr 2021 – Apr 2022",
     bullets: [
-      "Led end-to-end Salesforce deployment, including external data migration, and workflow automation, resulting in a 25% increase in sales and ticketing pipelines visibility",
+      "Led end-to-end Salesforce deployment including external data migration and workflow automation, resulting in 25% increase in sales and ticketing pipeline visibility",
       "Customized and integrated Salesforce with existing business systems, reducing manual reporting time by 10 hours per week",
-      "Guided Salesforce adoption by designing dashboards and training sessions, boosting the user adoption rate to 100% within 2 months",
-      "Developed with customizations, Service Cloud case management workflows, reducing ticket resolution time by 25% through automated routing and escalation rules",
-      "Integrated Salesforce with external ticketing platform Jira, enabling bi-directional sync and improving cross-teams collaboration",
-      "Fine-tuned knowledge base article suggestions within Service Console, boosting the first-contact resolution rates by 15%",
-      "Increased operational efficiency by standardizing IT workflows and modernizing cross-site network architecture for 2 locations.",
-      "Improved system reliability by 20% by migrating 10 on-prem servers and 35TB of structured data to VMware ESXi 7.7.",
-      "Reduced downtime by 40% by leading full-stack cloud migrations to Microsoft 365 and Azure for 100 users.",
-      "Drove a 20% boost in user productivity by upgrading Active Directory and email services with modern access controls & policies.",
-      "Owned a $1M IT budget, aligning procurement, vendor selections, and resource planning with business objectives.",
-      "Enforced network security posture and enforced compliance controls tied to DoD STIGs, NIST, and agency-specific frameworks.",
-      "Managed IT operations staff across service desk, network, and systems teams, supporting 24/7 operations & project execution.",
-      "Created disaster recovery plans to protect data integrity & restore services during unplanned outages."
+      "Achieved 100% user adoption within 2 months through comprehensive dashboard design and training programs",
+      "Developed Service Cloud case management workflows, reducing ticket resolution time by 25% through automated routing",
+      "Integrated Salesforce with Jira for bi-directional sync, improving cross-team collaboration",
+      "Reduced downtime by 40% by leading full-stack cloud migration to Microsoft 365 and Azure for 100 users",
+      "Improved system reliability by 20% by migrating 10 on-premise servers and 35TB of data to VMware ESXi 7.7",
+      "Upgraded Active Directory and email services with modern access controls, driving 20% boost in user productivity",
+      "Standardized IT workflows and modernized cross-site network architecture for 2 locations",
+      "Managed $1M IT budget, aligning procurement, vendor selection, and resource planning with business objectives",
+      "Led IT operations staff across service desk, network, and systems teams supporting 24/7 operations",
+      "Enforced network security posture and compliance controls tied to DoD STIGs, NIST, and agency-specific frameworks",
+      "Created disaster recovery plans to protect data integrity and restore services during unplanned outages"
     ],
   },
   {
-    company: "Crystal Management (Cybersecurity, IT, Transformation, Veteran-owned Services Provider)",
+    company: "Crystal Management",
     role: "System Administrator",
     date: "Feb 2021 – Apr 2021",
     bullets: [
-      "Supported the Air Force's ACAS compliance reporting by generating authenticated scans and remediating findings.",
-      "Migrated security center by configuring Tenable SC and integrating ACAS data feeds into vulnerability management dashboards.",
-      "Led Red Hat Enterprise Linux 7.x upgrades, scripting deployment tasks and rollback contingencies for zero downtime transitions.",
-      "Improved system updates and audits by automating routine tasks using Bash scripting and security scan scheduling workflows.",
-      "Partnered with base cyber teams to uphold Information Assurance standards, applying DISA STIGs and implementation guides.",
-      "Drove system hardening and patch management on DoD-classified networks in accordance with RMF & NIST 800-53 policies.",
-      "Monitored system logs and IDS alerts to identify anomalies and support incident response escalations with cybersecurity staff.",
-      "Documented system changes and compliance actions in alignment with Change Control Board (CCB) and DoD standards."
+      "Supported Air Force ACAS compliance reporting by generating authenticated scans and remediating findings",
+      "Configured Tenable Security Center and integrated ACAS data feeds into vulnerability management dashboards",
+      "Partnered with base cyber teams to uphold Information Assurance standards, applying DISA STIGs",
+      "Drove system hardening and patch management on DoD-classified networks per RMF and NIST 800-53 policies",
+      "Led Red Hat Enterprise Linux 7.x upgrades, scripting deployment tasks and rollback contingencies for zero-downtime transitions",
+      "Automated routine tasks using Bash scripting and security scan scheduling workflows",
+      "Monitored system logs and IDS alerts to identify anomalies and support incident response escalations",
+      "Documented system changes and compliance actions in alignment with Change Control Board standards"
     ],
   },
   {
@@ -112,68 +120,75 @@ export const experiences: Experience[] = [
     role: "Information Management Director",
     date: "Jan 2018 – Apr 2021",
     bullets: [
-      "Directed large-scale IT initiatives, including GFEBS (Army Salesforce) system enhancements and full SharePoint Online migration.",
-      "Cut costs 25% and increased user adoption by leading architecture redesign, permissions, and training for SharePoint migration.",
-      "Integrated network security policies across 500+ classified and unclassified systems, applying RMF controls & threat mitigation.",
-      "Led help desk, systems, and communications teams of 70+ personnel across cross-functional IT support and logistics operations.",
-      "Established continuity of operations, backup strategy, and system uptime assurance during deployed and garrison operations.",
-      "Delivered executive briefings and technical reports to senior leadership, aligning IT infrastructure goals with mission priorities."
+      "Directed enterprise IT projects including GFEBS (Army Salesforce) system enhancements and SharePoint Online migration",
+      "Cut costs 25% and increased user adoption by leading architecture redesign, permissions configuration, and training",
+      "Integrated network security policies across 500+ classified and unclassified systems, applying RMF controls",
+      "Established continuity of operations, backup strategy, and system uptime assurance during deployed operations",
+      "Led help desk, systems, and communications teams of 70+ personnel across cross-functional IT operations",
+      "Delivered executive briefings and technical reports to senior leadership",
+      "Aligned IT infrastructure goals with mission priorities and operational requirements",
+      "Managed complex projects in high-stakes, time-sensitive environments"
     ],
   }
 ];
 
 export const skillCategories = {
-  "System Administrator": [
-    "Azure Administration",
-    "AWS Administration",
-    "Active Directory",
-    "Microsoft 365",
-    "ServiceNow",
-    "Salesforce",
-    "PowerShell",
-    "Bash Scripting",
-    "Docker",
-    "Cybersecurity & Compliance"
+  "AI & Productivity Tools": [
+    "AI-Assisted Development (ChatGPT, Claude, GitHub Copilot)",
+    "Prompt Engineering for Infrastructure Automation",
+    "AI-Powered Code Generation & Debugging",
+    "Workflow Acceleration using LLMs"
   ],
-  "Full Stack Developer": [
-    "React",
-    "Angular",
-    "Tailwind CSS",
-    "Node.js",
-    "Drupal",
-    "Python",
-    "JavaScript",
-    "PHP",
-    "REST API Integration",
-    "Git/Version Control"
+  "Cloud & Infrastructure": [
+    "Microsoft Azure: Azure AD, Azure Sentinel, App Services, Policies, Conditional Access",
+    "AWS: EC2, S3, IAM, solutions architecture",
+    "Microsoft 365: Exchange Online, SharePoint, Teams, security & compliance",
+    "Virtualization: VMware ESXi, Hyper-V, Docker",
+    "Active Directory: User management, Group Policy, hybrid environments"
+  ],
+  "Automation & Scripting": [
+    "PowerShell: Azure automation, AD management, AI-assisted script generation",
+    "Python: API integration, data processing, workflow automation",
+    "Bash: Linux system administration, deployment scripts"
+  ],
+  "Enterprise Platforms": [
+    "ServiceNow: Platform administration, Flow Designer, custom integrations",
+    "Salesforce: Platform configuration, API integration, workflow automation",
+    "Atlassian Suite: Jira, Confluence, Bitbucket administration"
+  ],
+  "Development & Integration": [
+    "REST API integration and development",
+    "Git version control and collaboration",
+    "Web technologies: HTML, CSS/SCSS, JavaScript, PHP (Drupal)",
+    "AI-assisted debugging and code optimization"
+  ],
+  "Security & Compliance": [
+    "Azure Sentinel, Tenable Security Center",
+    "FedRAMP, NIST SP 800-53, DoD STIGs, RMF",
+    "Identity and Access Management",
+    "Vulnerability management and remediation"
   ]
 };
 
 export const skills: string[] = [
-  "ServiceNow Install and Development",
-  "Salesforce Install and Development",
-  "Strategic Infrastructure Planning",
-  "Cloud Architecture Design",
-  "Disaster Recovery Strategy",
-  "Cybersecurity Frameworks",
-  "IT Governance & Compliance",
-  "Cross-Functional Team Leadership",
-  "Workflow Process Optimization",
-  "Incident Response Coordination",
-  "Vendor Relationship Management",
-  "Scrum Project Execution & Reporting"
+  "placeholder1",
+  "placeholder2",
+  "placeholder3",
+  "placeholder4",
+  "placeholder5",
+  "placeholder6"
 ];
 
 export const certificationCategories = {
-  "Development-Focused": [
-    "Certified Application Developer - ServiceNow",
-    "Salesforce Certified Platform Developer II"
-  ],
   "Cloud & Infrastructure": [
     "Microsoft 365 Certified: Administrator Expert",
-    "CompTIA Security+",
     "AWS Certified SysOps Administrator - Associate",
-    "Professional Google Workspace Administrator (Legacy)"
+    "CompTIA Security+",
+    "Professional Google Workspace Administrator"
+  ],
+  "Development & Platforms": [
+    "Certified Application Developer - ServiceNow",
+    "Salesforce Certified Platform Developer II"
   ]
 };
 
