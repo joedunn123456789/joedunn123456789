@@ -18,6 +18,9 @@
 ![Claude](https://img.shields.io/badge/Claude-191919?style=for-the-badge&logo=anthropic&logoColor=white)
 ![ChatGPT](https://img.shields.io/badge/ChatGPT-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-000000?style=for-the-badge&logo=githubcopilot&logoColor=white)
+![DeepSeek](https://img.shields.io/badge/DeepSeek-1C1C1C?style=for-the-badge)
+![Microsoft Copilot](https://img.shields.io/badge/Microsoft%20Copilot-00A4EF?style=for-the-badge&logo=microsoft&logoColor=white)
+![Microsoft Copilot Studio](https://img.shields.io/badge/Microsoft%20Copilot%20Studio-5E5E5E?style=for-the-badge&logo=microsoft&logoColor=white)
 
 ### 🔒 Cybersecurity
 ![Wireshark](https://img.shields.io/badge/Wireshark-007ACC?style=for-the-badge&logo=wireshark&logoColor=white)
