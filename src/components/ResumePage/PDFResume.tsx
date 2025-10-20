@@ -1,5 +1,5 @@
 import { Page, Text, View, Document, StyleSheet, Link } from '@react-pdf/renderer';
-import { skillCategories, certificationCategories, education, personalInfo, summary, experiences } from '../../data/resumeData';
+import { skillCategories, certificationCategories, education, personalInfo, summary, experiences, keyAchievements } from '../../data/resumeData';
 
 const styles = StyleSheet.create({
   page: {
@@ -159,6 +159,16 @@ const PDFResume = () => (
           <Text style={styles.summaryLabel}>Why I Code:</Text>{'\n'}
           {summary.whyICode}
         </Text>
+      </View>
+
+      {/* Key Achievements */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>KEY ACHIEVEMENTS</Text>
+        {keyAchievements.map((achievement, index) => (
+          <View key={index} style={styles.bullet}>
+            <Text style={styles.bulletText}>• {achievement}</Text>
+          </View>
+        ))}
       </View>
 
       {/* Skills */}

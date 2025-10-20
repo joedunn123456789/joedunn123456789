@@ -1,4 +1,4 @@
-import { skillCategories, certificationCategories, education, summary, personalInfo } from '../data/resumeData';
+import { skillCategories, certificationCategories, education, summary, personalInfo, keyAchievements } from '../data/resumeData';
 import { usePDFExport } from '../hooks/ResumePage/usePDFExport';
 
 const Resume: React.FC = () => {
@@ -44,6 +44,18 @@ const Resume: React.FC = () => {
                 {summary.whyICode}
               </p>
             </div>
+          </section>
+
+          {/* Key Achievements */}
+          <section>
+            <h2 className="text-xl font-semibold border-b border-gray-300 pb-1 mb-3">
+              KEY ACHIEVEMENTS
+            </h2>
+            <ul className="list-disc pl-5 space-y-2 text-gray-800">
+              {keyAchievements.map((achievement, index) => (
+                <li key={index}>{achievement}</li>
+              ))}
+            </ul>
           </section>
 
           {/* Skills */}

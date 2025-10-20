@@ -45,6 +45,14 @@ export const summary: Summary = {
   whyICode: "AI-Augmented Infrastructure Engineering: Pioneered the use of AI tools in infrastructure engineering workflows, demonstrating how Systems Engineers can leverage LLMs for script generation, debugging, documentation, and problem-solving. Proven track record of 8x productivity gains while maintaining code quality and security standards. Advocate for responsible AI adoption in enterprise IT environments."
 };
 
+export const keyAchievements: string[] = [
+  "Hand-selected by CTO to pioneer AI adoption initiative - Led company's transition to AI-augmented infrastructure workflows, achieving 8x productivity increase and completing 120+ hours of work in under 14 days",
+  "Reduced ticket resolution time by 30% through integrated ServiceNow and NICE CXOne deployment with custom REST API integrations",
+  "Maintained 99.9% system availability across hybrid Azure/Microsoft 365 infrastructure supporting 75+ users while meeting FedRAMP compliance standards",
+  "Increased customer satisfaction by 35% by engineering seamless API integrations between enterprise platforms",
+  "Improved incident response time by 25% by building comprehensive Azure Sentinel compliance and monitoring program"
+];
+
 export const experiences: Experience[] = [
   {
     company: "Tactis LLC (Remote, HQ Washington, D.C.)",
