@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Joseph Dunn
 
-💻 **Aspiring IT Professional** | 🌐 Tech Enthusiast & Leader | 🔐 Security-Minded
+💻 **Systems Engineer** | 🌐 Tech Enthusiast & Leader | 🔐 Security-Minded
 
 ---
 
