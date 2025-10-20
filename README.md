@@ -14,6 +14,11 @@
 
 ## 🧰 Tech Toolbox
 
+### 🤖 AI Assistant
+![Claude](https://img.shields.io/badge/Claude-191919?style=for-the-badge&logo=anthropic&logoColor=white)
+![ChatGPT](https://img.shields.io/badge/ChatGPT-412991?style=for-the-badge&logo=openai&logoColor=white)
+![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-000000?style=for-the-badge&logo=githubcopilot&logoColor=white)
+
 ### 🔒 Cybersecurity
 ![Wireshark](https://img.shields.io/badge/Wireshark-007ACC?style=for-the-badge&logo=wireshark&logoColor=white)
 ![Angry IP Scanner](https://img.shields.io/badge/Angry%20IP%20Scanner-1F6FEB?style=for-the-badge)
@@ -79,5 +84,5 @@
 
 ---
 
-<p align="center">⚔️<br>
-<em>“Push thou not on Friday’s eve, lest chaos reign.”</em></p>
+<p align="center">🤖<br>
+<em>"Skynet became self-aware at 2:14 AM EDT on August 29, 1997."</em></p>
