@@ -86,6 +86,12 @@ const styles = StyleSheet.create({
     marginBottom: 4,
     fontStyle: 'italic',
   },
+  administeredSystems: {
+    fontSize: 8,
+    color: '#4B5563',
+    marginBottom: 4,
+    fontWeight: 'bold',
+  },
   bullet: {
     flexDirection: 'row',
     marginBottom: 2,
@@ -198,6 +204,11 @@ const PDFResume = () => (
               <Text style={styles.jobDate}>{exp.date}</Text>
             </View>
             <Text style={styles.company}>{exp.company}</Text>
+            {exp.administeredSystems && (
+              <Text style={styles.administeredSystems}>
+                Administered Systems: {exp.administeredSystems}
+              </Text>
+            )}
             {exp.bullets.map((bullet, bulletIndex) => (
               <View key={bulletIndex} style={styles.bullet}>
                 <Text style={styles.bulletText}>• {bullet}</Text>

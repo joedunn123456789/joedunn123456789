@@ -22,6 +22,7 @@ export interface Experience {
   company: string;
   role: string;
   date: string;
+  administeredSystems?: string;
   bullets: string[];
 }
 
@@ -58,6 +59,7 @@ export const experiences: Experience[] = [
     company: "Tactis LLC (Remote, HQ Washington, D.C.)",
     role: "Systems Engineer (Promoted from System Administrator)",
     date: "Aug 2022 – Oct 2025",
+    administeredSystems: "Nice CXone, Microsoft 365 Tenant, ServiceNow, Zendesk, Google Workspace",
     bullets: [
       "Hand-selected by CTO to lead AI adoption initiative for infrastructure engineering team",
       "Achieved 8x productivity increase by implementing AI-assisted workflows for automation development, documentation, and technical problem-solving",
@@ -68,6 +70,8 @@ export const experiences: Experience[] = [
       "Reduced downtime by 25% through hybrid Azure Active Directory and Microsoft 365 infrastructure management for 75+ users",
       "Built Azure Sentinel compliance program, improving incident response time by 25% and enhancing threat visibility",
       "Implemented Azure governance framework using Policies, conditional access controls, and Sentinel analytics rules",
+      "Served as Security Administrator for Microsoft 365 Tenant, implemented and deployed custom Microsoft Sentinel solution",
+      "Managed security operations including user onboarding, off-boarding, access reviews, and identity lifecycle management",
       "Led disaster recovery planning with quarterly failover testing, maintaining 99.9% system availability SLA",
       "Owned cloud governance and cybersecurity enforcement supporting FedRAMP compliance audits",
       "Reduced ticket resolution time by 30% by designing and deploying integrated ServiceNow and NICE CXOne solution",
@@ -92,6 +96,7 @@ export const experiences: Experience[] = [
     company: "Tlingit Haida Tribal Business Corporation",
     role: "Information Technology Manager",
     date: "Apr 2021 – Apr 2022",
+    administeredSystems: "Microsoft 365 Tenant, Phone Plan Administrator, Vehicle GPS Administrator",
     bullets: [
       "Led end-to-end Salesforce deployment including external data migration and workflow automation, resulting in 25% increase in sales and ticketing pipeline visibility",
       "Customized and integrated Salesforce with existing business systems, reducing manual reporting time by 10 hours per week",
@@ -105,6 +110,7 @@ export const experiences: Experience[] = [
       "Managed $1M IT budget, aligning procurement, vendor selection, and resource planning with business objectives",
       "Led IT operations staff across service desk, network, and systems teams supporting 24/7 operations",
       "Enforced network security posture and compliance controls tied to DoD STIGs, NIST, and agency-specific frameworks",
+      "Managed security operations including user onboarding, off-boarding, access provisioning, and identity lifecycle management",
       "Created disaster recovery plans to protect data integrity and restore services during unplanned outages"
     ],
   },
@@ -112,6 +118,7 @@ export const experiences: Experience[] = [
     company: "Crystal Management",
     role: "System Administrator",
     date: "Feb 2021 – Apr 2021",
+    administeredSystems: "ACAS, Red Hat Enterprise Linux",
     bullets: [
       "Supported Air Force ACAS compliance reporting by generating authenticated scans and remediating findings",
       "Configured Tenable Security Center and integrated ACAS data feeds into vulnerability management dashboards",
@@ -120,13 +127,15 @@ export const experiences: Experience[] = [
       "Led Red Hat Enterprise Linux 7.x upgrades, scripting deployment tasks and rollback contingencies for zero-downtime transitions",
       "Automated routine tasks using Bash scripting and security scan scheduling workflows",
       "Monitored system logs and IDS alerts to identify anomalies and support incident response escalations",
-      "Documented system changes and compliance actions in alignment with Change Control Board standards"
+      "Documented system changes and compliance actions in alignment with Change Control Board standards",
+      "Managed security operations including user onboarding, off-boarding, access control, and account lifecycle management"
     ],
   },
   {
     company: "United States Army",
     role: "Information Management Director",
     date: "Jan 2018 – Apr 2021",
+    administeredSystems: "Microsoft 365 Tenant, Legacy Microsoft Active Directory",
     bullets: [
       "Directed enterprise IT projects including GFEBS (Army Salesforce) system enhancements and SharePoint Online migration",
       "Cut costs 25% and increased user adoption by leading architecture redesign, permissions configuration, and training",
@@ -135,7 +144,8 @@ export const experiences: Experience[] = [
       "Led help desk, systems, and communications teams of 70+ personnel across cross-functional IT operations",
       "Delivered executive briefings and technical reports to senior leadership",
       "Aligned IT infrastructure goals with mission priorities and operational requirements",
-      "Managed complex projects in high-stakes, time-sensitive environments"
+      "Managed complex projects in high-stakes, time-sensitive environments",
+      "Managed security operations including user onboarding, off-boarding, access control, and identity lifecycle management for 500+ users"
     ],
   }
 ];
