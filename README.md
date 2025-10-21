@@ -25,12 +25,13 @@ This is a multifunctional professional suite combining a personal portfolio show
 - Synchronized web view (Resume.tsx) and PDF export (PDFResume.tsx) to pull from single data source
 
 **Latest Updates:**
-- Refactored Resume.tsx to import all content from resumeData.ts (no more hardcoding)
-- Added keyAchievements array with 5 major career highlights
-- Updated all job experience bullets to emphasize AI leadership and innovation
-- Reorganized skills categories to showcase AI-assisted workflows and tools
-- Updated certifications section with clearer categorization
-- Ensured PDF export fully reflects all resume data changes
+- Added "Administered Systems" field to Experience interface for better visibility of platform expertise
+- Enhanced resume with administered systems for each role (Nice CXone, Microsoft 365, ServiceNow, Zendesk, Google Workspace, ACAS, Red Hat)
+- Added security-focused bullets across all positions highlighting user onboarding, off-boarding, and identity lifecycle management
+- Replaced 230+ lines of hardcoded experience content with dynamic rendering from resumeData.ts
+- Unified web view and PDF export to use single data source - eliminated code duplication
+- PDF export now properly displays administered systems between company name and bullet points
+- Reduced Resume.tsx from 363 lines to 132 lines through centralized data architecture
 
 ### Core Features Implemented
 
