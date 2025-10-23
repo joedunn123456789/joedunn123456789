@@ -8,6 +8,11 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Email to Excel/Sheets Exporter",
+    repoUrl: "https://github.com/joedunn123456789/EmailToSheet",
+    description: "Python and Google Apps Script tools to export emails from Gmail and Outlook to Excel/Google Sheets using OAuth2 authentication"
+  },
+  {
     title: "Kanban Board",
     repoUrl: "https://github.com/joedunn123456789/angular-kanban-board",
     liveUrl: "https://joedunn123456789.github.io/angular-kanban-board/",
