@@ -66,7 +66,7 @@ export const experiences: Experience[] = [
       "Completed 120+ hours of infrastructure work in under 14 days using AI-augmented development techniques",
       "Led end-to-end implementation of Microsoft Copilot for Business via Copilot Studio, including prompt engineering, workflow design, and cross-departmental user training",
       "Maintained and optimized Copilot Studio knowledge bases and backend data sources, ensuring accuracy, relevance, and continuous alignment with evolving business needs",
-      "Integrated LangChain and LangTool to extend Copilot functionality, enabling dynamic retrieval-augmented generation (RAG), tool calling, and context-aware automation",
+      "Integrated LangChain, LangTool and Pytorch to extend Copilot functionality, enabling dynamic retrieval-augmented generation (RAG), tool calling, and context-aware automation",
       "Pioneered use of AI tools (Copilot, Claude, ChatGPT) for rapid PowerShell/Python script generation, debugging, and optimization",
       "Trained team members on effective prompt engineering and AI-assisted infrastructure workflows",
       "Demonstrated ROI of AI adoption to leadership, leading to company-wide AI tool deployment",
