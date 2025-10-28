@@ -67,6 +67,7 @@ export const experiences: Experience[] = [
       "Pioneered use of AI tools (Claude, ChatGPT) for rapid PowerShell/Python script generation, debugging, and optimization",
       "Trained team members on effective prompt engineering and AI-assisted infrastructure workflows",
       "Demonstrated ROI of AI adoption to leadership, leading to company-wide AI tool deployment",
+      "Single-handedly architected and deployed company's first AWS cloud infrastructure in 6 weeks, implementing 8+ core services (EC2, ECS, RDS, S3, VPC, IAM, CloudWatch, ELB) to support 100+ users; enhanced security posture, reduced operational costs through service optimization, and enabled scalable application deployment capabilities",
       "Reduced downtime by 25% through hybrid Azure Active Directory and Microsoft 365 infrastructure management for 75+ users",
       "Built Azure Sentinel compliance program, improving incident response time by 25% and enhancing threat visibility",
       "Implemented Azure governance framework using Policies, conditional access controls, and Sentinel analytics rules",
