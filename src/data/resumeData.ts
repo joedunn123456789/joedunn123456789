@@ -75,8 +75,7 @@ export const experiences: Experience[] = [
       "Built workflow automation in Power Automate and ServiceNow Flow Designer using AI-assisted development",
       "Leveraged AI tools for rapid code generation and debugging of SCSS, Twig, and JavaScript components",
       "Increased Lighthouse performance scores from 70 to 90 through AI-assisted optimization recommendations",
-      "Translated Figma designs into production-ready code using AI-powered code generation",
-      "Led Drupal/PHP website modernization with Acquia Cloud support, improving scalability and maintainability"
+      "Utilized MCP server Claude integration to translate Figma designs into production-ready code, accelerating development cycles and ensuring design fidelity"
     ],
   },
   {
@@ -94,8 +93,12 @@ export const experiences: Experience[] = [
       "Owned cloud governance and cybersecurity enforcement supporting FedRAMP compliance audits",
       "Reduced ticket resolution time by 30% by designing and deploying integrated ServiceNow and NICE CXOne solution",
       "Increased customer satisfaction by 35% by engineering custom REST API integrations between NICE CXOne and Zendesk",
+      "Developed bidirectional REST API in ServiceNow to synchronize tables with NIH's DRC source of truth, implementing Git-based change detection logic to optimize data push/pull operations and maintain data integrity",
+      "Engineered automated voice analytics pipeline pulling call recordings from NICE CXOne to Google Cloud Storage buckets, integrating Google Speech-to-Text API for transcription, storing logs in Firebase, and pushing completed data to BigQuery for reporting and analysis",
       "Automated internal service requests and approval workflows, reducing average processing time by 35%",
       "Scripted automated task flows in PowerShell and Python for onboarding, patching, and identity provisioning",
+      "Led Drupal/PHP website modernization with Acquia Cloud support, conducting modern redesign based on Figma mockups and improving scalability and maintainability",
+      "Leveraged Docker containerization with DDEV to establish isolated development environments, ensuring consistent deployments and streamlined local-to-production workflows",
       "Engaged Security, Operations, and Development teams to enforce IT governance and change controls"
     ],
   },
