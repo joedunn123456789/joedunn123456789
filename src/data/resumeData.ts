@@ -192,40 +192,57 @@ export const experiences: Experience[] = [
 ];
 
 export const skillCategories = {
-  "AI & Productivity Tools": [
-    "AI-Assisted Development (ChatGPT, Claude, GitHub Copilot)",
-    "Prompt Engineering for Infrastructure Automation",
-    "AI-Powered Code Generation & Debugging",
-    "Workflow Acceleration using LLMs"
+  "AI & Automation": [
+    "ChatGPT",
+    "Claude",
+    "GitHub Copilot",
+    "Prompt Engineering",
+    "LangChain",
+    "PyTorch",
+    "Retrieval-Augmented Generation (RAG)",
+    "Amazon Q Developer",
+    "Amazon Bedrock",
+    "Amazon SageMaker",
+    "Microsoft Copilot Studio"
   ],
-  "Cloud & Infrastructure": [
-    "Microsoft Azure: Azure AD, Azure Sentinel, App Services, Policies, Conditional Access",
-    "AWS: EC2, S3, IAM, solutions architecture",
-    "Microsoft 365: Exchange Online, SharePoint, Teams, security & compliance",
-    "Virtualization: VMware ESXi, Hyper-V, Docker",
-    "Active Directory: User management, Group Policy, hybrid environments"
+  "Cloud & Infrastructure Administration": [
+    "Microsoft Azure (Azure AD, Azure Sentinel, App Services, Policies, Conditional Access)",
+    "AWS (EC2, S3, RDS, IAM, CloudWatch, VPC, ECS, ELB)",
+    "Microsoft 365 (Exchange Online, SharePoint, Teams, Security & Compliance)",
+    "Active Directory",
+    "VMware ESXi",
+    "Hyper-V",
+    "Docker"
   ],
-  "Automation & Scripting": [
-    "PowerShell: Azure automation, AD management, AI-assisted script generation",
-    "Python: API integration, data processing, workflow automation",
-    "Bash: Linux system administration, deployment scripts"
+  "Scripting & Development": [
+    "PowerShell",
+    "Python",
+    "Bash",
+    "REST API Development",
+    "Git",
+    "JavaScript",
+    "HTML/CSS",
+    "PHP",
+    "Drupal"
   ],
-  "Enterprise Platforms": [
-    "ServiceNow: Platform administration, Flow Designer, custom integrations",
-    "Salesforce: Platform configuration, API integration, workflow automation",
-    "Atlassian Suite: Jira, Confluence, Bitbucket administration"
-  ],
-  "Development & Integration": [
-    "REST API integration and development",
-    "Git version control and collaboration",
-    "Web technologies: HTML, CSS/SCSS, JavaScript, PHP (Drupal)",
-    "AI-assisted debugging and code optimization"
+  "Enterprise Platform Administration": [
+    "ServiceNow (Platform Administration, Flow Designer, Custom Integrations)",
+    "Salesforce (Configuration, API Integration, Workflow Automation)",
+    "NICE CXone",
+    "Zendesk",
+    "Atlassian Suite (Jira, Confluence, Bitbucket)",
+    "Google Workspace"
   ],
   "Security & Compliance": [
-    "Azure Sentinel, Tenable Security Center",
-    "FedRAMP, NIST SP 800-53, DoD STIGs, RMF",
+    "Azure Sentinel",
+    "Tenable Security Center",
+    "FedRAMP",
+    "NIST SP 800-53",
+    "DoD STIGs",
+    "RMF",
     "Identity and Access Management",
-    "Vulnerability management and remediation"
+    "Vulnerability Management",
+    "Security Operations"
   ]
 };
 
