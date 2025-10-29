@@ -238,31 +238,6 @@ export const skills: string[] = [
   "placeholder6"
 ];
 
-export const certificationCategories = {
-  "Cloud & Infrastructure": [
-    "Microsoft 365 Certified: Administrator Expert",
-    "AWS Certified SysOps Administrator - Associate",
-    "CompTIA Security+",
-    "Professional Google Workspace Administrator"
-  ],
-  "Development & Platforms": [
-    "Certified Application Developer - ServiceNow",
-    "Salesforce Certified Platform Developer II"
-  ]
-};
-
-export const certifications: string[] = [
-  "Microsoft Certified: Azure Fundamentals",
-  "Azure Administrator Associate",
-  "AWS Solutions Architect – Associate",
-  "CompTIA Security+",
-  "Microsoft 365 Fundamentals",
-  "ServiceNow Developer",
-  "ServiceNow System Administrator",
-  "SalesForce Developer",
-  "SalesForce System Administrator"
-];
-
 export const education = {
   degree: "Bachelor of Science (BS), Computer Science",
   institution: "Full Sail University",

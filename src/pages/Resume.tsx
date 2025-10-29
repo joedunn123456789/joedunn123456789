@@ -1,4 +1,4 @@
-import { skillCategories, certificationCategories, education, summary, personalInfo, keyAchievements, experiences } from '../data/resumeData';
+import { skillCategories, education, summary, personalInfo, keyAchievements, experiences } from '../data/resumeData';
 import { usePDFExport } from '../hooks/ResumePage/usePDFExport';
 
 const Resume: React.FC = () => {
@@ -105,30 +105,6 @@ const Resume: React.FC = () => {
                       <li key={bulletIndex} className="text-sm">{bullet}</li>
                     ))}
                   </ul>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Certifications */}
-          <section>
-            <h2 className="text-xl font-semibold border-b border-gray-300 pb-1 mb-3">
-              CERTIFICATIONS
-            </h2>
-            <div className="space-y-4">
-              {Object.entries(certificationCategories).map(([category, categoryCerts]) => (
-                <div key={category}>
-                  <h3 className="font-semibold text-gray-800 mb-2">{category}:</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                    {categoryCerts.map((cert) => (
-                      <span
-                        key={cert}
-                        className="px-3 py-2 rounded-full bg-gray-100 text-sm border border-gray-200 text-center"
-                      >
-                        {cert}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               ))}
             </div>
