@@ -5,26 +5,26 @@ const styles = StyleSheet.create({
   page: {
     flexDirection: 'column',
     backgroundColor: '#FFFFFF',
-    padding: 40,
-    fontSize: 10,
-    lineHeight: 1.3,
+    padding: 35,
+    fontSize: 9,
+    lineHeight: 1.2,
   },
   section: {
-    marginBottom: 12,
+    marginBottom: 8,
   },
   name: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: 'bold',
-    marginBottom: 7,
+    marginBottom: 4,
   },
   contact: {
-    fontSize: 9,
-    marginBottom: 2,
+    fontSize: 8,
+    marginBottom: 1,
     color: '#666666',
   },
   contactLinks: {
-    fontSize: 9,
-    marginBottom: 12,
+    fontSize: 8,
+    marginBottom: 6,
     color: '#666666',
   },
   link: {
@@ -32,26 +32,26 @@ const styles = StyleSheet.create({
     textDecoration: 'none',
   },
   sectionTitle: {
-    fontSize: 12,
+    fontSize: 11,
     fontWeight: 'bold',
-    marginBottom: 6,
+    marginBottom: 4,
     borderBottom: '1pt solid #E5E7EB',
-    paddingBottom: 2,
+    paddingBottom: 1,
   },
   summaryText: {
-    fontSize: 9,
-    marginBottom: 6,
+    fontSize: 8.5,
+    marginBottom: 3,
     textAlign: 'justify',
   },
   summaryLabel: {
     fontWeight: 'bold',
-    fontSize: 9,
+    fontSize: 8.5,
   },
   categoryTitle: {
-    fontSize: 9,
+    fontSize: 8.5,
     fontWeight: 'bold',
-    marginBottom: 2,
-    marginTop: 4,
+    marginBottom: 1,
+    marginTop: 2,
   },
   experienceCard: {
     marginBottom: 8,
@@ -62,43 +62,43 @@ const styles = StyleSheet.create({
     wrap: false,
   },
   subsectionTitle: {
-    fontSize: 9,
+    fontSize: 8.5,
     fontWeight: 'bold',
-    marginTop: 4,
-    marginBottom: 2,
+    marginTop: 2,
+    marginBottom: 1,
   },
   jobHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 3,
+    marginBottom: 2,
   },
   jobRole: {
-    fontSize: 10,
+    fontSize: 9.5,
     fontWeight: 'bold',
   },
   jobDate: {
-    fontSize: 8,
+    fontSize: 7.5,
     color: '#666666',
   },
   company: {
-    fontSize: 9,
+    fontSize: 8.5,
     color: '#374151',
-    marginBottom: 4,
+    marginBottom: 2,
     fontStyle: 'italic',
   },
   administeredSystems: {
-    fontSize: 8,
+    fontSize: 7.5,
     color: '#4B5563',
-    marginBottom: 4,
+    marginBottom: 2,
     fontWeight: 'bold',
   },
   bullet: {
     flexDirection: 'row',
-    marginBottom: 2,
+    marginBottom: 1,
     paddingLeft: 5,
   },
   bulletText: {
-    fontSize: 8,
+    fontSize: 7.5,
     flex: 1,
     textAlign: 'justify',
   },
@@ -165,10 +165,6 @@ const PDFResume = () => (
         <Text style={styles.summaryText}>
           {summary.main}
         </Text>
-        <Text style={styles.summaryText}>
-          <Text style={styles.summaryLabel}>Why I Code:</Text>{'\n'}
-          {summary.whyICode}
-        </Text>
       </View>
 
       {/* Key Achievements */}
@@ -185,16 +181,9 @@ const PDFResume = () => (
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Skills</Text>
         {Object.entries(skillCategories).map(([category, categorySkills]) => (
-          <View key={category}>
-            <Text style={styles.categoryTitle}>{category}</Text>
-            <View style={styles.skillsContainer}>
-              {categorySkills.map((skill, index) => (
-                <View key={index} style={styles.skillTag}>
-                  <Text style={styles.skillText}>{skill}</Text>
-                </View>
-              ))}
-            </View>
-          </View>
+          <Text key={category} style={styles.summaryText}>
+            <Text style={styles.summaryLabel}>{category}:</Text> {categorySkills.join(', ')}
+          </Text>
         ))}
       </View>
 
@@ -202,7 +191,7 @@ const PDFResume = () => (
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>EXPERIENCE</Text>
         {experiences.map((exp, index) => (
-          <View key={index} style={styles.experienceCard}>
+          <View key={index} style={{ marginBottom: 8 }}>
             <View style={styles.jobHeader}>
               <Text style={styles.jobRole}>{exp.role}</Text>
               <Text style={styles.jobDate}>{exp.date}</Text>

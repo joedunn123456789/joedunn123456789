@@ -35,15 +35,9 @@ const Resume: React.FC = () => {
             <h2 className="text-xl font-semibold border-b border-gray-300 pb-1 mb-3">
               Summary
             </h2>
-            <div className="space-y-3 text-gray-800">
-              <p>
-                {summary.main}
-              </p>
-              <p>
-                <span className="font-semibold">Why I Code:</span><br />
-                {summary.whyICode}
-              </p>
-            </div>
+            <p className="text-gray-800">
+              {summary.main}
+            </p>
           </section>
 
           {/* Key Achievements */}
@@ -63,21 +57,11 @@ const Resume: React.FC = () => {
             <h2 className="text-xl font-semibold border-b border-gray-300 pb-1 mb-3">
               Skills
             </h2>
-            <div className="space-y-4">
+            <div className="space-y-2 text-sm text-gray-800">
               {Object.entries(skillCategories).map(([category, categorySkills]) => (
-                <div key={category}>
-                  <h3 className="font-semibold text-gray-800 mb-2">{category}</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {categorySkills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1 rounded-full bg-gray-100 text-sm border border-gray-200"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                <p key={category}>
+                  <span className="font-semibold">{category}:</span> {categorySkills.join(', ')}
+                </p>
               ))}
             </div>
           </section>

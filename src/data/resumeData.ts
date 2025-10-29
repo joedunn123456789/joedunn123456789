@@ -15,7 +15,6 @@ export interface PersonalInfo {
 
 export interface Summary {
   main: string;
-  whyICode: string;
 }
 
 export interface Experience {
@@ -42,8 +41,7 @@ export const personalInfo: PersonalInfo = {
 };
 
 export const summary: Summary = {
-  main: "Systems Engineer with 10+ years of experience leveraging AI-assisted workflows to design, deploy, and manage enterprise IT infrastructure at accelerated velocity. Expert in cloud platforms (Azure, AWS), automation scripting, and integrating complex enterprise systems. Hand-selected by CTO to lead AI adoption initiative, achieving 8x productivity gains through strategic use of AI tools for infrastructure automation, code generation, and technical problem-solving. Proven ability to lead technical projects, reduce operational costs, and maintain high-availability systems under strict compliance requirements.",
-  whyICode: "AI-Augmented Infrastructure Engineering: Pioneered the use of AI tools in infrastructure engineering workflows, demonstrating how Systems Engineers can leverage LLMs for script generation, debugging, documentation, and problem-solving. Proven track record of 8x productivity gains while maintaining code quality and security standards. Advocate for responsible AI adoption in enterprise IT environments."
+  main: "Systems Engineer with 10+ years of experience leveraging AI-assisted workflows to design, deploy, and manage enterprise IT infrastructure at accelerated velocity. Expert in cloud platforms (Azure, AWS), automation scripting, and integrating complex enterprise systems. Hand-selected by CTO to lead AI adoption initiative, achieving 8x productivity gains through strategic use of AI tools for infrastructure automation, code generation, and technical problem-solving. Proven ability to lead technical projects, reduce operational costs, and maintain high-availability systems under strict compliance requirements."
 };
 
 export const keyAchievements: string[] = [
@@ -61,25 +59,13 @@ export const experiences: Experience[] = [
     date: "Jan 2024 – Oct 2025",
     administeredSystems: "Microsoft 365 Tenant, Azure, Microsoft Copilot Studio",
     bullets: [
-      "Hand-selected by CTO to lead AI adoption initiative for infrastructure engineering team",
-      "Achieved 8x productivity increase by implementing AI-assisted workflows for automation development, documentation, and technical problem-solving",
-      "Completed 120+ hours of infrastructure work in under 14 days using AI-augmented development techniques",
-      "Architected and deployed ChatGPT integration for ServiceNow platform, enabling AI-powered ticket resolution, automated workflow suggestions, and intelligent knowledge base search capabilities",
-      "Enhanced Google Gemini functionality within Google Workspace ecosystem, implementing advanced search optimization, context-aware response improvements, and multi-modal AI capabilities for enhanced productivity",
-      "Deployed AWS AI development platform including Amazon Q Developer, Bedrock, and SageMaker to enable custom AI model development and intelligent automation; conducted technical training to empower teams with enterprise AI capabilities",
-      "Implemented Retrieval-Augmented Generation (RAG) capabilities for Amazon Q in AWS instance, integrating company knowledge bases and documentation to improve AI response accuracy and enable context-aware enterprise search",
-      "Led end-to-end implementation of Microsoft Copilot for Business via Copilot Studio, including prompt engineering, workflow design, and cross-departmental user training",
-      "Maintained and optimized Copilot Studio knowledge bases and backend data sources, ensuring accuracy, relevance, and continuous alignment with evolving business needs",
-      "Integrated LangChain, LangTool and Pytorch to extend Copilot functionality, enabling dynamic retrieval-augmented generation (RAG), tool calling, and context-aware automation",
-      "Pioneered use of AI tools (Copilot, Claude, ChatGPT) for rapid PowerShell/Python script generation, debugging, and optimization",
-      "Trained team members on effective prompt engineering and AI-assisted infrastructure workflows",
-      "Demonstrated ROI of AI adoption to leadership, leading to company-wide AI tool deployment",
-      "Evangelized AI adoption across technical teams, demonstrating productivity benefits",
-      "Documented AI-assisted workflows and best practices for team knowledge sharing",
-      "Built workflow automation in Power Automate and ServiceNow Flow Designer using AI-assisted development",
-      "Leveraged AI tools for rapid code generation and debugging of SCSS, Twig, and JavaScript components",
-      "Increased Lighthouse performance scores from 70 to 90 through AI-assisted optimization recommendations",
-      "Utilized MCP server Claude integration to translate Figma designs into production-ready code, accelerating development cycles and ensuring design fidelity"
+      "Hand-selected by CTO to lead AI adoption initiative, achieving 8x productivity increase through AI-assisted workflows for automation development, documentation, and technical problem-solving; completed 120+ hours of infrastructure work in under 14 days",
+      "Architected and deployed enterprise AI platform integrations including ChatGPT for ServiceNow (AI-powered ticket resolution and workflow automation), enhanced Google Gemini within Workspace ecosystem, and AWS AI suite (Amazon Q Developer, Bedrock, SageMaker) enabling custom model development and intelligent automation",
+      "Implemented Retrieval-Augmented Generation (RAG) capabilities for Amazon Q, integrating company knowledge bases to improve AI response accuracy and enable context-aware enterprise search",
+      "Led end-to-end Microsoft Copilot for Business implementation via Copilot Studio, including prompt engineering, workflow design, knowledge base optimization, and cross-departmental user training",
+      "Extended Copilot functionality by integrating LangChain, LangTool, and PyTorch, enabling dynamic RAG, tool calling, and context-aware automation capabilities",
+      "Pioneered AI-assisted development workflows for rapid PowerShell/Python script generation, debugging, and optimization; trained team members on prompt engineering and demonstrated ROI to leadership, leading to company-wide AI tool deployment",
+      "Leveraged AI-assisted development to build Power Automate and ServiceNow Flow Designer automation, optimize web performance (Lighthouse scores 70→90), accelerate code generation for SCSS/Twig/JavaScript, and translate Figma designs to production code via MCP Claude integration"
     ],
   },
   {
@@ -88,22 +74,14 @@ export const experiences: Experience[] = [
     date: "Aug 2023 – Jan 2024",
     administeredSystems: "Microsoft 365 Tenant, Azure, AWS, ServiceNow, Nice CXone, Zendesk",
     bullets: [
-      "Single-handedly architected and deployed company's first AWS cloud infrastructure in 6 weeks, implementing 8+ core services (EC2, ECS, RDS, S3, VPC, IAM, CloudWatch, ELB) to support 100+ users; enhanced security posture, reduced operational costs through service optimization, and enabled scalable application deployment capabilities",
-      "Reduced downtime by 25% through hybrid Azure Active Directory and Microsoft 365 infrastructure management for 75+ users",
-      "Built Azure Sentinel compliance program, improving incident response time by 25% and enhancing threat visibility",
-      "Implemented Azure governance framework using Policies, conditional access controls, and Sentinel analytics rules",
-      "Served as Security Administrator for Microsoft 365 Tenant, implemented and deployed custom Microsoft Sentinel solution",
-      "Led disaster recovery planning with quarterly failover testing, maintaining 99.9% system availability SLA",
-      "Owned cloud governance and cybersecurity enforcement supporting FedRAMP compliance audits",
-      "Reduced ticket resolution time by 30% by designing and deploying integrated ServiceNow and NICE CXOne solution",
-      "Increased customer satisfaction by 35% by engineering custom REST API integrations between NICE CXOne and Zendesk",
-      "Developed bidirectional REST API in ServiceNow to synchronize tables with NIH's DRC source of truth, implementing Git-based change detection logic to optimize data push/pull operations and maintain data integrity",
-      "Engineered automated voice analytics pipeline pulling call recordings from NICE CXOne to Google Cloud Storage buckets, integrating Google Speech-to-Text API for transcription, storing logs in Firebase, and pushing completed data to BigQuery for reporting and analysis",
-      "Automated internal service requests and approval workflows, reducing average processing time by 35%",
-      "Scripted automated task flows in PowerShell and Python for onboarding, patching, and identity provisioning",
-      "Led Drupal/PHP website modernization with Acquia Cloud support, conducting modern redesign based on Figma mockups and improving scalability and maintainability",
-      "Leveraged Docker containerization with DDEV to establish isolated development environments, ensuring consistent deployments and streamlined local-to-production workflows",
-      "Engaged Security, Operations, and Development teams to enforce IT governance and change controls"
+      "Single-handedly architected and deployed company's first AWS cloud infrastructure in 6 weeks, implementing 8+ core services (EC2, ECS, RDS, S3, VPC, IAM, CloudWatch, ELB) to support 100+ users; enhanced security posture, reduced operational costs, and enabled scalable application deployment",
+      "Managed hybrid Azure Active Directory and Microsoft 365 infrastructure for 75+ users, implementing comprehensive governance framework (Policies, conditional access, Sentinel analytics rules) and maintaining 99.9% availability while meeting FedRAMP compliance requirements",
+      "Built Azure Sentinel compliance program with quarterly disaster recovery testing, improving incident response time by 25% and reducing downtime by 25%",
+      "Reduced ticket resolution time by 30% by designing and deploying integrated ServiceNow and NICE CXOne solution; increased customer satisfaction by 35% through custom REST API integrations between NICE CXOne and Zendesk",
+      "Developed bidirectional REST API in ServiceNow to synchronize tables with NIH's DRC source of truth, implementing Git-based change detection logic to optimize data operations and maintain integrity",
+      "Engineered automated voice analytics pipeline (NICE CXOne → Google Cloud Storage → Speech-to-Text API → Firebase → BigQuery) for call transcription, logging, and reporting analysis",
+      "Automated internal workflows, onboarding, patching, and identity provisioning using PowerShell and Python scripting, reducing average processing time by 35%",
+      "Led Drupal/PHP website modernization leveraging Docker containerization with DDEV and Acquia Cloud, improving scalability and streamlined local-to-production workflows"
     ],
   },
   {
@@ -112,14 +90,9 @@ export const experiences: Experience[] = [
     date: "Aug 2022 – Aug 2023",
     administeredSystems: "Nice CXone, Microsoft 365 Tenant, ServiceNow, Zendesk, Google Workspace",
     bullets: [
-      "Managed security operations including user onboarding, off-boarding, access reviews, and identity lifecycle management",
-      "Administered ServiceNow platform including user management, integrations, and workflow configuration",
-      "Managed NICE CXOne contact center platform with Zendesk integration for seamless customer support",
+      "Administered enterprise platforms including ServiceNow (user management, integrations, workflow configuration), NICE CXOne/Zendesk integration, Microsoft 365 (Exchange, SharePoint, Teams), and Google Workspace, maintaining 99.9% system availability",
       "Optimized Atlassian suite (Jira, Confluence, Bitbucket) driving 25% faster issue resolution, 30% improved sprint predictability, and 99.9% uptime",
-      "Built and maintained local development environments with Docker/DDEV; managed source control with Bitbucket",
-      "Administered Microsoft 365 Tenant including Exchange Online, SharePoint, Teams, and security configuration",
-      "Performed day-to-day system administration tasks ensuring 99.9% system availability",
-      "Managed Google Workspace administration for cross-platform collaboration and productivity"
+      "Built and maintained local development environments with Docker/DDEV; managed source control with Bitbucket"
     ],
   },
   {
@@ -128,20 +101,12 @@ export const experiences: Experience[] = [
     date: "Apr 2021 – Apr 2022",
     administeredSystems: "Microsoft 365 Tenant, Phone Plan Administrator, Vehicle GPS Administrator",
     bullets: [
-      "Led end-to-end Salesforce deployment including external data migration and workflow automation, resulting in 25% increase in sales and ticketing pipeline visibility",
-      "Customized and integrated Salesforce with existing business systems, reducing manual reporting time by 10 hours per week",
-      "Achieved 100% user adoption within 2 months through comprehensive dashboard design and training programs",
-      "Developed Service Cloud case management workflows, reducing ticket resolution time by 25% through automated routing",
-      "Integrated Salesforce with Jira for bi-directional sync, improving cross-team collaboration",
-      "Reduced downtime by 40% by leading full-stack cloud migration to Microsoft 365 and Azure for 100 users",
-      "Improved system reliability by 20% by migrating 10 on-premise servers and 35TB of data to VMware ESXi 7.7",
-      "Upgraded Active Directory and email services with modern access controls, driving 20% boost in user productivity",
-      "Standardized IT workflows and modernized cross-site network architecture for 2 locations",
-      "Managed $1M IT budget, aligning procurement, vendor selection, and resource planning with business objectives",
-      "Led IT operations staff across service desk, network, and systems teams supporting 24/7 operations",
-      "Enforced network security posture and compliance controls tied to DoD STIGs, NIST, and agency-specific frameworks",
-      "Managed security operations including user onboarding, off-boarding, access provisioning, and identity lifecycle management",
-      "Created disaster recovery plans to protect data integrity and restore services during unplanned outages"
+      "Led end-to-end Salesforce deployment with external data migration and workflow automation, achieving 25% increase in sales and ticketing pipeline visibility, 100% user adoption within 2 months, and reducing manual reporting time by 10 hours per week",
+      "Developed Service Cloud case management workflows and integrated Salesforce with Jira for bi-directional sync, reducing ticket resolution time by 25% through automated routing",
+      "Reduced downtime by 40% by leading full-stack cloud migration to Microsoft 365 and Azure for 100 users; improved system reliability by 20% through VMware ESXi 7.7 migration of 10 servers and 35TB of data",
+      "Upgraded Active Directory and email services with modern access controls, driving 20% boost in user productivity; standardized IT workflows and modernized network architecture for 2 locations",
+      "Managed $1M IT budget and led IT operations staff across service desk, network, and systems teams supporting 24/7 operations",
+      "Enforced network security posture and compliance controls tied to DoD STIGs, NIST, and agency-specific frameworks; created disaster recovery plans to protect data integrity"
     ],
   },
   {
@@ -150,15 +115,9 @@ export const experiences: Experience[] = [
     date: "Feb 2021 – Apr 2021",
     administeredSystems: "ACAS, Red Hat Enterprise Linux",
     bullets: [
-      "Supported Air Force ACAS compliance reporting by generating authenticated scans and remediating findings",
-      "Configured Tenable Security Center and integrated ACAS data feeds into vulnerability management dashboards",
-      "Partnered with base cyber teams to uphold Information Assurance standards, applying DISA STIGs",
-      "Drove system hardening and patch management on DoD-classified networks per RMF and NIST 800-53 policies",
-      "Led Red Hat Enterprise Linux 7.x upgrades, scripting deployment tasks and rollback contingencies for zero-downtime transitions",
-      "Automated routine tasks using Bash scripting and security scan scheduling workflows",
-      "Monitored system logs and IDS alerts to identify anomalies and support incident response escalations",
-      "Documented system changes and compliance actions in alignment with Change Control Board standards",
-      "Managed security operations including user onboarding, off-boarding, access control, and account lifecycle management"
+      "Supported Air Force ACAS compliance reporting by generating authenticated scans, remediating findings, and configuring Tenable Security Center with integrated vulnerability management dashboards",
+      "Partnered with base cyber teams to uphold Information Assurance standards, applying DISA STIGs and driving system hardening and patch management on DoD-classified networks per RMF and NIST 800-53 policies",
+      "Led Red Hat Enterprise Linux 7.x upgrades, scripting deployment tasks and rollback contingencies for zero-downtime transitions; automated routine tasks using Bash scripting"
     ],
   },
   {
@@ -167,26 +126,13 @@ export const experiences: Experience[] = [
     date: "Apr 2008 – Apr 2021",
     administeredSystems: "Microsoft 365 Tenant, Legacy Microsoft Active Directory",
     bullets: [
-      "Managed and maintained Microsoft-based IT infrastructure including Windows Server, Windows 11, Active Directory, Entra ID, Intune, Exchange, and Office 365 across 500+ classified and unclassified systems",
-      "Coordinated with DISA and higher commands to receive technical guidance, STIG requirements, and directives for implementation across post-level IT operations",
-      "Coordinated with subordinate commands to plan and execute deployment, configuration, and migration of Microsoft technologies ensuring seamless integration and minimal disruption during tactical operations",
-      "Performed regular updates, backups, and troubleshooting to maintain system stability, security, and performance across enterprise computing environment",
-      "Administered user roles, permissions, and access controls ensuring secure IT environment in compliance with RMF controls and DoD security policies",
-      "Orchestrated collaborative training initiatives between signal sections, IT teams, and stakeholders to support OCIO initiatives, GFEBS (Army Salesforce) enhancements, and SharePoint Online migration projects",
-      "Provided technical expertise and signal staff guidance ensuring Microsoft servers, endpoints, and services were effectively integrated into unit operations and mission command systems",
-      "Monitored system performance, resolved technical complications, proactively addressed issues, and maintained operational efficiency reducing costs 25% while increasing user adoption",
-      "Implemented and enforced security policies and compliance standards aligned with AR 25-2, DISA STIGs, NIST 800-53, and regulatory requirements across communication infrastructure",
-      "Developed and maintained system configuration and procedural documentation for IT operations, standard operating procedures (SOPs), and signal support planning",
-      "Delivered technical support and guidance to end users and IT staff on Microsoft services and computing environment operating systems, peripherals, and applications",
-      "Planned unit participation in disaster recovery exercises, testing, and incident response ensuring business continuity and continuity of operations during deployed environments",
-      "Managed software deployment and updates using SCCM, Intune, and related tools maintaining system availability across multiple echelons and command levels",
-      "Implemented and maintained system monitoring solutions for proactive and reactive support of IT networks and cable/wire communication systems",
-      "Supported on-call schedules, patching cycles, and rotations maintaining continuous system availability and uptime assurance",
-      "Configured and managed Microsoft 365 Conditional Access Policies and security controls to strengthen enterprise security posture and information assurance",
-      "Commanded and directed help desk, systems, and communications teams of 70+ personnel across cross-functional IT operations at battalion and higher levels",
-      "Delivered executive briefings and technical reports to senior leadership aligning IT infrastructure goals with mission priorities and operational requirements",
-      "Coordinated employment of signal and IT personnel at all levels of command ensuring mission-critical communication and information systems support",
-      "Arranged transportation logistics and resource planning for equipment assets valued in millions of dollars during deployment operations"
+      "Managed Microsoft-based IT infrastructure (Windows Server, Active Directory, Entra ID, Intune, Exchange, Office 365) across 500+ classified and unclassified systems supporting battalion-level tactical operations",
+      "Commanded and directed help desk, systems, and communications teams of 70+ personnel across cross-functional IT operations; delivered executive briefings to senior leadership aligning IT infrastructure with mission priorities",
+      "Coordinated with DISA and higher commands to implement STIG requirements and technical directives; enforced security policies and compliance standards aligned with AR 25-2, DISA STIGs, NIST 800-53, and RMF controls",
+      "Orchestrated collaborative training initiatives for OCIO initiatives, GFEBS (Army Salesforce) enhancements, and SharePoint Online migration projects; provided technical expertise ensuring Microsoft services integrated into mission command systems",
+      "Managed software deployment and updates using SCCM and Intune across multiple echelons; configured Microsoft 365 Conditional Access Policies to strengthen enterprise security posture",
+      "Monitored system performance and maintained operational efficiency reducing costs 25% while increasing user adoption; planned disaster recovery exercises ensuring business continuity during deployed environments",
+      "Coordinated employment of signal and IT personnel at all command levels; arranged transportation logistics and resource planning for equipment assets valued in millions of dollars during deployment operations"
     ],
   }
 ];
