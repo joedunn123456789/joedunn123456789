@@ -22,9 +22,9 @@
 ![Microsoft Copilot](https://img.shields.io/badge/Microsoft%20Copilot-00A4EF?style=for-the-badge&logo=microsoft&logoColor=white)
 
 ### 🤖 AI Tools
-![RAG](https://img.shields.io/badge/Wireshark-007ACC?style=for-the-badge&logo=RAG&logoColor=white)
-![LangChain](https://img.shields.io/badge/Wireshark-007ACC?style=for-the-badge&logo=LangChain&logoColor=white)
-![LangTool](https://img.shields.io/badge/Wireshark-007ACC?style=for-the-badge&logo=LangTool&logoColor=white)
+![RAG](https://img.shields.io/badge/RAG-007ACC?style=for-the-badge&logo=RAG&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-007ACC?style=for-the-badge&logo=LangChain&logoColor=white)
+![LangTool](https://img.shields.io/badge/LangTool-007ACC?style=for-the-badge&logo=LangTool&logoColor=white)
 ![Microsoft Copilot Studio](https://img.shields.io/badge/Microsoft%20Copilot%20Studio-5E5E5E?style=for-the-badge&logo=microsoft&logoColor=white)
 
 ### 🔒 Cybersecurity
