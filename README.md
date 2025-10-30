@@ -25,6 +25,8 @@ Creating compelling narratives through AI video generation and visual media tool
 ![Claude](https://img.shields.io/badge/Claude-191919?style=for-the-badge&logo=anthropic&logoColor=white)
 ![ChatGPT](https://img.shields.io/badge/ChatGPT-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-007ACC?style=for-the-badge&logo=LangChain&logoColor=white)
+![RAG](https://img.shields.io/badge/RAG-007ACC?style=for-the-badge&logo=RAG&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 
 ### 🖥️ Systems & Infrastructure
