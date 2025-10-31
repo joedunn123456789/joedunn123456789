@@ -31,8 +31,8 @@ export const personalInfo: PersonalInfo = {
   phone: "830-666-2525",
   email: "jdunn0423@gmail.com",
   linkedin: {
-    display: "linkedin.com/in/joe-d-80b388358",
-    url: "https://www.linkedin.com/in/joe-d-80b388358/"
+    display: "linkedin.com/in/JoeVisualStoryteller",
+    url: "https://www.linkedin.com/in/JoeVisualStoryteller/"
   },
   github: {
     display: "github.com/joedunn123456789",
