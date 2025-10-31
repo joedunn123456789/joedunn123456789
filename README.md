@@ -9,13 +9,13 @@ Building intelligent systems, managing infrastructure, and crafting stories thro
 ## 🚀 What I Do
 
 **AI Systems Engineering**
-Working with cutting-edge AI tools and systems to automate, innovate, and solve complex problems.
+:Working with cutting-edge AI tools and systems to automate, innovate, and solve complex problems.
 
 **System Administration**
-Designing and maintaining secure, scalable infrastructure across cloud and on-premise environments.
+:Designing and maintaining secure, scalable infrastructure across cloud and on-premise environments.
 
 **Visual Storytelling**
-Creating compelling narratives through AI video generation and visual media tools.
+:Creating compelling narratives through AI video generation and visual media tools.
 
 ---
 
@@ -43,13 +43,6 @@ Creating compelling narratives through AI video generation and visual media tool
 ### 🎬 Creative Tools
 ![Sora](https://img.shields.io/badge/Sora-000000?style=for-the-badge)
 ![Adobe](https://img.shields.io/badge/Adobe-FF0000?style=for-the-badge&logo=adobe&logoColor=white)
-
----
-
-## 📂 Featured Projects
-- 🤖 **AI Infrastructure Lab** – Building and deploying AI systems in cloud environments
-- 🔒 **Secure Network Design** – Enterprise-grade firewall configs and intrusion detection
-- 🎬 **AI Visual Stories** – Experimental video content using Sora and other AI tools
 
 ---
 
