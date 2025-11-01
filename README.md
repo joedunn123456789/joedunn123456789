@@ -6,19 +6,6 @@ Building intelligent systems, managing infrastructure, and crafting stories thro
 
 ---
 
-## 🚀 What I Do
-
-**AI Systems Engineering**
-:Working with cutting-edge AI tools and systems to automate, innovate, and solve complex problems.
-
-**System Administration**
-:Designing and maintaining secure, scalable infrastructure across cloud and on-premise environments.
-
-**Visual Storytelling**
-:Creating compelling narratives through AI video generation and visual media tools.
-
----
-
 ## 🧰 Tech Stack
 
 ### 🤖 AI & Automation
