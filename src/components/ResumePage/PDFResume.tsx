@@ -1,4 +1,4 @@
-import { Page, Text, View, Document, StyleSheet, Link } from '@react-pdf/renderer';
+import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 import { skillCategories, education, personalInfo, summary, experiences, keyAchievements } from '../../data/resumeData';
 
 const styles = StyleSheet.create({
@@ -16,27 +16,25 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     marginBottom: 4,
+    textTransform: 'uppercase',
   },
   contact: {
     fontSize: 8,
     marginBottom: 1,
-    color: '#666666',
+    color: '#333333',
   },
   contactLinks: {
     fontSize: 8,
     marginBottom: 6,
-    color: '#666666',
-  },
-  link: {
-    color: '#2563eb',
-    textDecoration: 'none',
+    color: '#333333',
   },
   sectionTitle: {
     fontSize: 11,
     fontWeight: 'bold',
     marginBottom: 4,
-    borderBottom: '1pt solid #E5E7EB',
+    borderBottom: '2pt solid #1F2937',
     paddingBottom: 1,
+    textTransform: 'uppercase',
   },
   summaryText: {
     fontSize: 8.5,
@@ -149,19 +147,19 @@ const PDFResume = () => (
   <Document>
     <Page size="LETTER" style={styles.page}>
       {/* Header */}
-      <View style={styles.section}>
+      <View style={[styles.section, { borderBottom: '2pt solid #1F2937', paddingBottom: 6 }]}>
         <Text style={styles.name}>{personalInfo.name}</Text>
         <Text style={styles.contact}>
-          {personalInfo.location} • {personalInfo.phone} • <Link src={`mailto:${personalInfo.email}`} style={styles.link}>{personalInfo.email}</Link>
+          {personalInfo.location} | {personalInfo.phone} | {personalInfo.email}
         </Text>
         <Text style={styles.contactLinks}>
-          LinkedIn: <Link src={personalInfo.linkedin.url} style={styles.link}>{personalInfo.linkedin.display}</Link> • GitHub: <Link src={personalInfo.github.url} style={styles.link}>{personalInfo.github.display}</Link>
+          {personalInfo.linkedin.display} | {personalInfo.github.display}
         </Text>
       </View>
 
       {/* Summary */}
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Summary</Text>
+        <Text style={styles.sectionTitle}>Professional Summary</Text>
         <Text style={styles.summaryText}>
           {summary.main}
         </Text>
@@ -169,7 +167,7 @@ const PDFResume = () => (
 
       {/* Key Achievements */}
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>KEY ACHIEVEMENTS</Text>
+        <Text style={styles.sectionTitle}>Key Achievements</Text>
         {keyAchievements.map((achievement, index) => (
           <View key={index} style={styles.bullet}>
             <Text style={styles.bulletText}>• {achievement}</Text>
@@ -179,7 +177,7 @@ const PDFResume = () => (
 
       {/* Skills */}
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Skills</Text>
+        <Text style={styles.sectionTitle}>Technical Skills</Text>
         {Object.entries(skillCategories).map(([category, categorySkills]) => (
           <Text key={category} style={styles.summaryText}>
             <Text style={styles.summaryLabel}>{category}:</Text> {categorySkills.join(', ')}
@@ -189,9 +187,9 @@ const PDFResume = () => (
 
       {/* Experience */}
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>EXPERIENCE</Text>
+        <Text style={styles.sectionTitle}>Professional Experience</Text>
         {experiences.map((exp, index) => (
-          <View key={index} style={{ marginBottom: 8 }}>
+          <View key={index} style={{ marginBottom: 8, borderBottom: index < experiences.length - 1 ? '0.5pt solid #D1D5DB' : 'none', paddingBottom: 6 }}>
             <View style={styles.jobHeader}>
               <Text style={styles.jobRole}>{exp.role}</Text>
               <Text style={styles.jobDate}>{exp.date}</Text>
@@ -216,7 +214,7 @@ const PDFResume = () => (
         <Text style={styles.sectionTitle}>Education</Text>
         <Text style={styles.certificationText}>
           <Text style={{ fontWeight: 'bold' }}>{education.degree}</Text>{'\n'}
-          {education.institution} • {education.date}
+          {education.institution} | {education.date}
         </Text>
       </View>
     </Page>
