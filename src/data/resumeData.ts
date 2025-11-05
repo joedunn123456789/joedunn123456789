@@ -55,7 +55,7 @@ export const experiences: Experience[] = [
     company: "Tactis LLC (Remote, HQ Washington, D.C.)",
     role: "AI Systems Engineer",
     date: "January 2024 – October 2025",
-    administeredSystems: "Microsoft 365 Tenant, Azure, Microsoft Copilot Studio",
+    administeredSystems: "Microsoft 365 Tenant, Azure, Microsoft Copilot Studio, MacOS",
     bullets: [
       "Hand-selected by CTO to lead AI adoption initiative, achieving 8x productivity increase through AI-assisted workflows for automation development, documentation, and technical problem-solving; completed 120+ hours of infrastructure work in under 14 days",
       "Architected and deployed enterprise AI platform integrations including ChatGPT for ServiceNow (AI-powered ticket resolution and workflow automation), enhanced Google Gemini within Workspace ecosystem, and AWS AI suite (Amazon Q Developer, Bedrock, SageMaker) enabling custom model development and intelligent automation",
@@ -70,10 +70,11 @@ export const experiences: Experience[] = [
     company: "Tactis LLC (Remote, HQ Washington, D.C.)",
     role: "Systems Engineer (Promoted from Systems Administrator)",
     date: "August 2022 – January 2024",
-    administeredSystems: "Microsoft 365 Tenant, Azure, AWS, ServiceNow, Nice CXone, Zendesk, Google Workspace",
+    administeredSystems: "Microsoft 365 Tenant, Azure, AWS, ServiceNow, Nice CXone, Zendesk, Google Workspace, MacOS",
     bullets: [
       "Single-handedly architected and deployed company's first AWS cloud infrastructure in 6 weeks, implementing 8+ core services (EC2, ECS, RDS, S3, VPC, IAM, CloudWatch, ELB) to support 100+ users; enhanced security posture, reduced operational costs, and enabled scalable application deployment",
       "Managed hybrid Azure Active Directory and Microsoft 365 infrastructure for 75+ users, implementing comprehensive governance framework and maintaining 99.9% availability while meeting FedRAMP compliance requirements",
+      "Administered MacOS fleet using JumpCloud MDM platform for device provisioning, mobile device management (MDM), endpoint security, patch management, and policy enforcement; automated imaging workflows and security updates across 50+ MacOS endpoints",
       "Reduced ticket resolution time by 30% by designing and deploying integrated ServiceNow and NICE CXOne solution; increased customer satisfaction by 35% through custom REST API integrations",
       "Built Azure Sentinel compliance program with quarterly disaster recovery testing, improving incident response time by 25%",
       "Automated internal workflows, onboarding, patching, and identity provisioning using PowerShell and Python scripting, reducing average processing time by 35%"
@@ -83,10 +84,11 @@ export const experiences: Experience[] = [
     company: "Tlingit Haida Tribal Business Corporation",
     role: "Information Technology Manager",
     date: "April 2021 – April 2022",
-    administeredSystems: "Microsoft 365 Tenant, Salesforce, VMware ESXi",
+    administeredSystems: "Microsoft 365 Tenant, Salesforce, VMware ESXi, MacOS",
     bullets: [
       "Led end-to-end Salesforce deployment with external data migration and workflow automation, achieving 25% increase in sales pipeline visibility and 100% user adoption within 2 months",
       "Reduced downtime by 40% by leading full-stack cloud migration to Microsoft 365 and Azure for 100 users; improved system reliability by 20% through VMware ESXi migration of 10 servers and 35TB of data",
+      "Deployed JumpCloud MDM solution for MacBook fleet management including device enrollment, remote desktop support, endpoint configuration management, and zero-touch provisioning; reduced imaging time by 30% and troubleshooting time by 40% through centralized administration",
       "Managed $1M IT budget and led IT operations staff across service desk, network, and systems teams supporting 24/7 operations",
       "Enforced network security posture and compliance controls tied to DoD STIGs, NIST, and agency-specific frameworks"
     ],
@@ -125,6 +127,16 @@ export const skillCategories = {
     "Active Directory",
     "VMware ESXi",
     "Docker"
+  ],
+  "Operating Systems & Endpoint Management": [
+    "Windows Server Administration",
+    "Linux Administration (RHEL, Ubuntu, CentOS)",
+    "MacOS Administration",
+    "Microsoft Intune",
+    "JumpCloud MDM",
+    "Ansible",
+    "Mobile Device Management (MDM)",
+    "Endpoint Security & Patch Management"
   ],
   "Scripting & Development": [
     "PowerShell",
