@@ -1,30 +1,35 @@
 import { Routes, Route } from "react-router-dom"
+import { lazy, Suspense } from "react"
 import Shell from "./Shell"
-import Home from "./pages/Home"
-import Resume from "./pages/Resume"
-import ResumeBuild from "./pages/ResumeBuild" // Add this import
-import CoverLetterBuild from "./pages/CoverLetterBuild" // Add this
-import CRM from "./pages/CRM"
-import Store from "./pages/Store"
-import Analytics from "./pages/Analytics"
-import Projects from "./pages/Projects"
-import About from "./pages/About"
+
+// Lazy load all page components for better code splitting
+const Home = lazy(() => import("./pages/Home"))
+const Resume = lazy(() => import("./pages/Resume"))
+const ResumeBuild = lazy(() => import("./pages/ResumeBuild"))
+const CoverLetterBuild = lazy(() => import("./pages/CoverLetterBuild"))
+const CRM = lazy(() => import("./pages/CRM"))
+const Store = lazy(() => import("./pages/Store"))
+const Analytics = lazy(() => import("./pages/Analytics"))
+const Projects = lazy(() => import("./pages/Projects"))
+const About = lazy(() => import("./pages/About"))
 
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Shell />}>
-        <Route index element={<Home />} />
-        <Route path="projects" element={<Projects />} />
-        <Route path="resume" element={<Resume />} />
-        <Route path="resume-builder" element={<ResumeBuild />} /> {/* Add this line */}
-        <Route path="cover-letter-builder" element={<CoverLetterBuild />} /> {/* Add this */}
-        <Route path="crm" element={<CRM />} />
-        <Route path="store" element={<Store />} />
-        <Route path="analytics" element={<Analytics />} />
-        <Route path="about" element={<About />} />
-      </Route>
-    </Routes>
+    <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
+      <Routes>
+        <Route path="/" element={<Shell />}>
+          <Route index element={<Home />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="resume" element={<Resume />} />
+          <Route path="resume-builder" element={<ResumeBuild />} />
+          <Route path="cover-letter-builder" element={<CoverLetterBuild />} />
+          <Route path="crm" element={<CRM />} />
+          <Route path="store" element={<Store />} />
+          <Route path="analytics" element={<Analytics />} />
+          <Route path="about" element={<About />} />
+        </Route>
+      </Routes>
+    </Suspense>
   )
 }
