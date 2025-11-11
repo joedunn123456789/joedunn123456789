@@ -53,7 +53,7 @@ export const keyAchievements: string[] = [
 export const experiences: Experience[] = [
   {
     company: "Tactis LLC (Remote, HQ Washington, D.C.)",
-    role: "AI Systems Engineer",
+    role: "Systems Engineer, AI",
     date: "January 2024 – October 2025",
     administeredSystems: "Microsoft 365 Tenant, Azure, Microsoft Copilot Studio, MacOS",
     bullets: [
@@ -68,7 +68,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "Tactis LLC (Remote, HQ Washington, D.C.)",
-    role: "Systems Engineer (Promoted from Systems Administrator)",
+    role: "Systems Engineer, Infrastructure (Promoted from Systems Administrator)",
     date: "August 2022 – January 2024",
     administeredSystems: "Microsoft 365 Tenant, Azure, AWS, ServiceNow, Nice CXone, Zendesk, Google Workspace, MacOS",
     bullets: [
