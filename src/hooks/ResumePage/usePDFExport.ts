@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
-import { pdf } from '@react-pdf/renderer';
-import PDFResume from '../../components/ResumePage/PDFResume';
 
 export const usePDFExport = (fileName: string = 'Joseph-Dunn-Resume.pdf') => {
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
 
   const exportToPDF = async (): Promise<void> => {
     setIsGenerating(true);
-    
+
     try {
+      // Dynamically import the PDF libraries only when needed
+      const [{ pdf }, { default: PDFResume }] = await Promise.all([
+        import('@react-pdf/renderer'),
+        import('../../components/ResumePage/PDFResume')
+      ]);
+
       // Use createElement instead of JSX to avoid erasable syntax error
       const blob = await pdf(React.createElement(PDFResume)).toBlob();
       const url = URL.createObjectURL(blob);
@@ -24,8 +28,8 @@ export const usePDFExport = (fileName: string = 'Joseph-Dunn-Resume.pdf') => {
     }
   };
 
-  return { 
-    exportToPDF, 
-    isGenerating 
+  return {
+    exportToPDF,
+    isGenerating
   };
 };
