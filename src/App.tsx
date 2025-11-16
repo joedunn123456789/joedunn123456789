@@ -12,6 +12,8 @@ const Store = lazy(() => import("./pages/Store"))
 const Analytics = lazy(() => import("./pages/Analytics"))
 const Projects = lazy(() => import("./pages/Projects"))
 const About = lazy(() => import("./pages/About"))
+const KnowledgeBase = lazy(() => import("./pages/KnowledgeBase"))
+const ArticleDetail = lazy(() => import("./pages/ArticleDetail"))
 
 
 export default function App() {
@@ -28,6 +30,8 @@ export default function App() {
           <Route path="store" element={<Store />} />
           <Route path="analytics" element={<Analytics />} />
           <Route path="about" element={<About />} />
+          <Route path="knowledge-base" element={<KnowledgeBase />} />
+          <Route path="knowledge-base/:slug" element={<ArticleDetail />} />
         </Route>
       </Routes>
     </Suspense>

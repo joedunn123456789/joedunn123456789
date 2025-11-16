@@ -6,6 +6,7 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/projects", label: "Projects" },
+  { to: "/knowledge-base", label: "Knowledge Base" },
   { to: "/resume", label: "Résumé" },
   { to: "/resume-builder", label: "Resume Builder" },
   { to: "/cover-letter-builder", label: "Cover Letter Builder" },

@@ -11,6 +11,14 @@ export default function Home() {
       color: "from-blue-500 to-blue-600"
     },
     {
+      title: "Knowledge Base",
+      description: "Technical guides, best practices, and IT insights",
+      icon: "📚",
+      link: "/knowledge-base",
+      stats: "3 Articles",
+      color: "from-indigo-500 to-indigo-600"
+    },
+    {
       title: "CRM Dashboard",
       description: "Manage leads, contacts, and business opportunities",
       icon: "👥",
@@ -72,7 +80,7 @@ export default function Home() {
       {/* Featured Modules - FIXED: Changed <a> to <Link> */}
       <div>
         <h2 className="text-2xl font-bold mb-6 text-center">Professional Suite</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {modules.map((module, index) => (
             <Link
               key={index}
