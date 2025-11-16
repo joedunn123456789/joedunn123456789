@@ -37,15 +37,20 @@ export const projects: Project[] = [
     description: "Modular Resume built in Bootstrap5"
   },
   {
-    title: "My Resume In Bootstrap5",
+    title: "Mobile-First Resume in Tailwind CSS",
     repoUrl: "https://github.com/joedunn123456789/tailwindcss-mobile-resume",
     liveUrl: "https://joedunn123456789.github.io/tailwindcss-mobile-resume/",
-    description: "Modular Resume, Tailwinds V3 CSS Mobile First UX"
+    description: "Modern, responsive resume built with Tailwind CSS v3, optimized for mobile-first user experience"
   },
   {
     title: "React Markdown Previewer",
     repoUrl: "https://github.com/joedunn123456789/react-markdown-previewer",
     liveUrl: "https://joedunn123456789.github.io/react-markdown-previewer/",
     description: "Responsive markdown preview built with React, Vite, and Tailwind CSS v3."
+  },
+  {
+    title: "Custom LLM",
+    repoUrl: "https://github.com/joedunn123456789/myFirstLLM",
+    description: "Educational project demonstrating the fundamentals of building a Large Language Model from scratch"
   }
 ];
