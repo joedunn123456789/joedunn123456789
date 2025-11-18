@@ -15,7 +15,7 @@ export default function Home() {
       description: "Technical guides, best practices, and IT insights",
       icon: "📚",
       link: "/knowledge-base",
-      stats: "3 Articles",
+      stats: "4 Articles",
       color: "from-indigo-500 to-indigo-600"
     },
     {
