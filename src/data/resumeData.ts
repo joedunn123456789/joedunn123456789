@@ -168,6 +168,15 @@ export const skillCategories = {
     "RMF",
     "Identity and Access Management (IAM)",
     "Vulnerability Management"
+  ],
+  "Frameworks & Standards": [
+    "DoD 8570",
+    "DoD 8140",
+    "ISO 27000",
+    "NIST",
+    "FedRAMP Medium",
+    "FedRAMP High",
+    "HIPAA"
   ]
 };
 
