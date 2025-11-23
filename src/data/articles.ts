@@ -860,5 +860,534 @@ catch {
         content: 'Pro tip: Combine timeline views with Outlook rules, Quick Steps, and categories for a complete email management system that saves hours each week.'
       }
     ]
+  },
+  {
+    id: '5',
+    slug: 'sharepoint-migration-best-practices',
+    title: 'SharePoint Migration Best Practices: A Comprehensive Guide',
+    description: 'Essential strategies, tools, and techniques for successfully migrating content to SharePoint Online with minimal disruption and maximum data integrity.',
+    category: 'SharePoint',
+    tags: ['SharePoint', 'Migration', 'Microsoft 365', 'Cloud Migration', 'Data Management'],
+    datePublished: '2025-11-23',
+    readTime: '18 min',
+    author: {
+      name: 'Joseph H Dunn II',
+      title: 'Cloud Systems Engineer'
+    },
+    content: [
+      {
+        type: 'paragraph',
+        content: 'Migrating to SharePoint Online is a transformative step for organizations modernizing their collaboration infrastructure. However, migrations can be complex, involving legacy data, permissions, customizations, and potential downtime. This comprehensive guide outlines proven best practices to ensure a successful migration with minimal business disruption and maximum data integrity.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Pre-Migration Planning'
+      },
+      {
+        type: 'paragraph',
+        content: 'Proper planning is the foundation of any successful SharePoint migration. Rushing into migration without adequate preparation is the primary cause of project failures, data loss, and user frustration.'
+      },
+      {
+        type: 'callout',
+        calloutType: 'tip',
+        content: 'Allocate at least 30% of your total project timeline to planning and assessment. This upfront investment prevents costly issues during migration execution.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: '1. Conduct a Comprehensive Content Audit'
+      },
+      {
+        type: 'paragraph',
+        content: 'Before migrating anything, understand exactly what you have. A thorough content audit reveals the scope, complexity, and challenges of your migration project.'
+      },
+      {
+        type: 'list',
+        content: [
+          'Inventory all sites, libraries, lists, and subsites across your environment',
+          'Identify total data volume, file counts, and largest files',
+          'Document custom solutions, web parts, and workflows',
+          'Map out permission structures and sharing settings',
+          'Identify unused or outdated content for archival or deletion',
+          'Check for files with special characters, long paths, or unsupported formats',
+          'Review metadata schemas and content types',
+          'Document any third-party integrations or customizations'
+        ]
+      },
+      {
+        type: 'code',
+        language: 'powershell',
+        content: '# PowerShell script to audit SharePoint site collection\nConnect-PnPOnline -Url "https://contoso.sharepoint.com/sites/sitename" -Interactive\n\n# Get site collection storage statistics\n$site = Get-PnPTenantSite -Identity "https://contoso.sharepoint.com/sites/sitename"\nWrite-Host "Storage Used: $($site.StorageUsageCurrent) MB"\nWrite-Host "Storage Quota: $($site.StorageQuota) MB"\n\n# Inventory all document libraries\n$lists = Get-PnPList | Where-Object {$_.BaseTemplate -eq 101}\nforeach ($list in $lists) {\n    $itemCount = $list.ItemCount\n    Write-Host "Library: $($list.Title) - Items: $itemCount"\n}\n\n# Check for large files\n$largeFiles = Get-PnPListItem -List "Documents" -PageSize 1000 |\n    Where-Object {$_["File_x0020_Size"] -gt 100MB} |\n    Select-Object @{Name="FileName";Expression={$_["FileLeafRef"]}},\n                  @{Name="Size(MB)";Expression={[math]::Round($_["File_x0020_Size"]/1MB,2)}}\n$largeFiles | Format-Table -AutoSize'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: '2. Define Clear Migration Objectives'
+      },
+      {
+        type: 'paragraph',
+        content: 'Establish specific, measurable goals for your migration project. Clear objectives guide decision-making and help measure success.'
+      },
+      {
+        type: 'list',
+        content: [
+          'Business drivers: Why are you migrating? (modernization, cost reduction, security)',
+          'Timeline: Set realistic deadlines with buffer periods',
+          'Success metrics: Define what success looks like (uptime %, user adoption, data integrity)',
+          'Budget constraints: Determine available resources for tools and personnel',
+          'Compliance requirements: Ensure migration meets regulatory standards',
+          'User experience goals: Maintain or improve productivity during transition'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: '3. Choose the Right Migration Strategy'
+      },
+      {
+        type: 'paragraph',
+        content: 'Different migration approaches suit different scenarios. Selecting the appropriate strategy impacts timeline, cost, and risk.'
+      },
+      {
+        type: 'callout',
+        calloutType: 'info',
+        content: 'Most organizations benefit from a hybrid approach: phased migration for critical content, big bang for smaller sites, and scheduled migrations for less critical data.'
+      },
+      {
+        type: 'list',
+        content: [
+          'Big Bang Migration: Migrate everything at once (high risk, minimal dual-maintenance)',
+          'Phased Migration: Migrate in stages by department, site, or priority (lower risk, extended timeline)',
+          'Hybrid Approach: Combination of strategies based on content criticality',
+          'Pilot Migration: Test with small group before full rollout',
+          'Content Freeze: Lock source during migration vs. continuous sync approaches'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Selecting Migration Tools'
+      },
+      {
+        type: 'paragraph',
+        content: 'The right migration tool can make the difference between success and failure. Evaluate tools based on your specific requirements, budget, and technical capabilities.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Native Microsoft Tools'
+      },
+      {
+        type: 'paragraph',
+        content: 'Microsoft provides several built-in migration solutions that work well for straightforward scenarios:'
+      },
+      {
+        type: 'list',
+        content: [
+          'SharePoint Migration Tool (SPMT): Free, supports on-premises to cloud, file shares to SharePoint',
+          'Migration Manager: Cloud-based migration orchestration in SharePoint Admin Center',
+          'PowerShell with PnP: Programmatic control for complex migrations',
+          'Microsoft 365 Admin Center: Basic file share migrations'
+        ]
+      },
+      {
+        type: 'code',
+        language: 'powershell',
+        content: '# Example: Using SharePoint Migration Tool via PowerShell\n# Install SPMT PowerShell module\nInstall-Module -Name Microsoft.SharePoint.MigrationTool.PowerShell\n\n# Register SPMT session\nRegister-SPMTMigration -SPOCredential $credential -Force\n\n# Add migration task\n$sourceFiles = "C:\\\\FileShare\\\\Documents"\n$targetSite = "https://contoso.sharepoint.com/sites/targetsite"\n$targetLib = "Documents"\n\nAdd-SPMTTask -FileShareSource $sourceFiles `\n             -TargetSiteUrl $targetSite `\n             -TargetList $targetLib `\n             -MigrateWithoutRootFolder\n\n# Start migration\nStart-SPMTMigration'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Third-Party Migration Platforms'
+      },
+      {
+        type: 'paragraph',
+        content: 'For complex migrations with legacy systems, custom metadata, or advanced requirements, third-party tools offer additional capabilities:'
+      },
+      {
+        type: 'list',
+        content: [
+          'Sharegate: User-friendly interface, excellent for permissions and metadata mapping',
+          'AvePoint: Enterprise-grade with advanced reporting and compliance features',
+          'Metalogix (Quest): Strong for large-scale migrations and structured data',
+          'SysKit Point: Migration with governance and management capabilities',
+          'CloudM Migrate: Good for Google Workspace to SharePoint migrations'
+        ]
+      },
+      {
+        type: 'callout',
+        calloutType: 'warning',
+        content: 'Free tools work for simple migrations, but complex scenarios (custom metadata, workflows, permissions) often justify the investment in commercial solutions.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Tool Selection Criteria'
+      },
+      {
+        type: 'list',
+        content: [
+          'Source compatibility: Supports your current SharePoint version or file system',
+          'Metadata preservation: Maintains custom columns, content types, and taxonomy',
+          'Permission migration: Accurately transfers security settings and sharing',
+          'Performance: Migration speed for your data volume',
+          'Incremental migration: Ability to sync changes and run multiple passes',
+          'Reporting: Detailed logs and error tracking',
+          'Support: Vendor assistance and documentation quality',
+          'Cost: Licensing model and total cost of ownership'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Data Preparation and Cleanup'
+      },
+      {
+        type: 'paragraph',
+        content: 'Migration is the perfect opportunity to clean house. Do not simply lift-and-shift years of digital clutter to your new environment.'
+      },
+      {
+        type: 'callout',
+        calloutType: 'success',
+        content: 'Organizations that invest in pre-migration cleanup typically reduce migration time by 30-50% and improve post-migration user satisfaction significantly.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Content Cleanup Strategies'
+      },
+      {
+        type: 'list',
+        content: [
+          'Archive inactive content: Move content not accessed in 2+ years to separate archive',
+          'Delete redundant files: Remove duplicates, temp files, and obsolete versions',
+          'Fix file naming issues: Remove special characters (#, %, &, *, etc.)',
+          'Shorten file paths: Ensure paths under 400 characters for SharePoint Online limits',
+          'Update broken links: Fix or remove dead hyperlinks and references',
+          'Consolidate sites: Merge underutilized sites to reduce sprawl',
+          'Standardize metadata: Normalize custom columns before migration',
+          'Remove or update workflows: SharePoint 2010/2013 workflows need replacement'
+        ]
+      },
+      {
+        type: 'code',
+        language: 'powershell',
+        content: '# PowerShell script to identify files with problematic characters\nConnect-PnPOnline -Url "https://contoso.sharepoint.com/sites/source" -Interactive\n\n$list = Get-PnPList -Identity "Documents"\n$items = Get-PnPListItem -List $list -PageSize 1000\n\n$problematicFiles = @()\n$invalidChars = @(\'#\', \'%\', \'&\', \'*\', \':\', \'<\', \'>\', \'?\', \'/\', \'\\\\\', \'{\', \'}\', \'|\', \'"\')\n\nforeach ($item in $items) {\n    $fileName = $item["FileLeafRef"]\n    foreach ($char in $invalidChars) {\n        if ($fileName -contains $char) {\n            $problematicFiles += [PSCustomObject]@{\n                FileName = $fileName\n                Issue = "Contains: $char"\n                Path = $item["FileRef"]\n            }\n            break\n        }\n    }\n}\n\n$problematicFiles | Export-Csv -Path "ProblematicFiles.csv" -NoTypeInformation\nWrite-Host "Found $($problematicFiles.Count) files with naming issues"'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Handle SharePoint Limitations Proactively'
+      },
+      {
+        type: 'paragraph',
+        content: 'SharePoint Online has specific limits that differ from on-premises environments. Address these before migration:'
+      },
+      {
+        type: 'list',
+        content: [
+          'File size limit: 250 GB per file (but 100 GB recommended maximum)',
+          'Path length: 400 characters total for URL + path + filename',
+          'List view threshold: 5,000 items without indexed columns',
+          'Sync library limit: 300,000 items per library',
+          'Special characters: Many characters invalid in file/folder names',
+          'File types: .exe, .com, and other executable types blocked',
+          'Versions: Version history limits (major + minor)',
+          'Site collection storage: Default 25 TB, can be increased'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Permission and Security Migration'
+      },
+      {
+        type: 'paragraph',
+        content: 'Permission migration is often the most complex and error-prone aspect of SharePoint migrations. Improperly migrated permissions can create security vulnerabilities or block legitimate access.'
+      },
+      {
+        type: 'callout',
+        calloutType: 'warning',
+        content: 'Never assume permission migration tools are 100% accurate. Always conduct post-migration permission audits on critical sites and sensitive content.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Permission Migration Best Practices'
+      },
+      {
+        type: 'list',
+        content: [
+          'Map Active Directory groups to Azure AD/Microsoft 365 groups beforehand',
+          'Document all custom permission levels before migration',
+          'Test permission migration with pilot sites first',
+          'Consider simplifying permission structures during migration',
+          'Use modern SharePoint groups over individual user permissions',
+          'Migrate permissions separately from content for better control',
+          'Validate owner permissions on all migrated sites',
+          'Remove inactive users and clean up before migrating permissions',
+          'Document any permission changes required during migration'
+        ]
+      },
+      {
+        type: 'code',
+        language: 'powershell',
+        content: '# Export permissions report before migration\nConnect-PnPOnline -Url "https://contoso.sharepoint.com/sites/source" -Interactive\n\n# Get all unique permissions\n$web = Get-PnPWeb\n$lists = Get-PnPList\n\n$permissionsReport = @()\n\nforeach ($list in $lists) {\n    if ($list.HasUniqueRoleAssignments) {\n        $roleAssignments = Get-PnPProperty -ClientObject $list -Property RoleAssignments\n\n        foreach ($ra in $roleAssignments) {\n            Get-PnPProperty -ClientObject $ra -Property RoleDefinitionBindings, Member\n\n            $permissionsReport += [PSCustomObject]@{\n                Location = "List: $($list.Title)"\n                Principal = $ra.Member.Title\n                PrincipalType = $ra.Member.PrincipalType\n                Permissions = ($ra.RoleDefinitionBindings | Select-Object -ExpandProperty Name) -join ", "\n            }\n        }\n    }\n}\n\n$permissionsReport | Export-Csv -Path "PermissionsAudit.csv" -NoTypeInformation\nWrite-Host "Permissions audit exported to PermissionsAudit.csv"'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Security Considerations'
+      },
+      {
+        type: 'list',
+        content: [
+          'Review and revoke external sharing before migration',
+          'Identify and secure sensitive content with DLP policies post-migration',
+          'Enable versioning and retention policies in target environment',
+          'Configure audit logging to track post-migration activities',
+          'Implement sensitivity labels for classified content',
+          'Review and update access request settings',
+          'Enable MFA for all users before granting SharePoint access',
+          'Configure Conditional Access policies for SharePoint Online'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Executing the Migration'
+      },
+      {
+        type: 'paragraph',
+        content: 'With planning complete and content prepared, execute your migration methodically following these proven practices.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Migration Execution Workflow'
+      },
+      {
+        type: 'list',
+        content: [
+          'Run pilot migration with non-critical site (validate process, timing, issues)',
+          'Schedule production migrations during off-hours to minimize user impact',
+          'Communicate blackout windows clearly to all stakeholders',
+          'Freeze source content during migration (read-only mode)',
+          'Run initial migration pass (content and structure)',
+          'Verify data integrity with checksum validation',
+          'Migrate permissions in separate pass',
+          'Run delta/incremental sync to capture any changes',
+          'Perform comprehensive validation testing',
+          'Coordinate cutover and redirect users to new environment'
+        ]
+      },
+      {
+        type: 'callout',
+        calloutType: 'tip',
+        content: 'Always perform at least two migration passes: initial migration and a delta sync before cutover to ensure no content is missed.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Monitoring and Validation'
+      },
+      {
+        type: 'paragraph',
+        content: 'Active monitoring during migration prevents small issues from becoming major problems.'
+      },
+      {
+        type: 'list',
+        content: [
+          'Monitor migration progress dashboards in real-time',
+          'Watch for error patterns (permissions, file locks, naming issues)',
+          'Track migration speed and adjust throttling if needed',
+          'Validate item counts match between source and destination',
+          'Check file size totals for accuracy',
+          'Test random sampling of migrated files for integrity',
+          'Review migration logs for warnings and errors',
+          'Document all issues encountered for post-migration analysis'
+        ]
+      },
+      {
+        type: 'code',
+        language: 'powershell',
+        content: '# Post-migration validation script\nConnect-PnPOnline -Url "https://contoso.sharepoint.com/sites/target" -Interactive\n\n# Compare item counts\n$targetList = Get-PnPList -Identity "Documents"\n$targetCount = $targetList.ItemCount\n\nWrite-Host "Target library item count: $targetCount"\n\n# Verify recent items migrated\n$recentItems = Get-PnPListItem -List "Documents" -PageSize 100 |\n    Sort-Object -Property Created -Descending |\n    Select-Object -First 10 @{Name="FileName";Expression={$_["FileLeafRef"]}}, Created\n\nWrite-Host "\\nMost recently migrated files:"\n$recentItems | Format-Table -AutoSize\n\n# Check for migration errors in list\n$errors = Get-PnPListItem -List "Documents" -PageSize 1000 |\n    Where-Object {$_["_MigrationStatus"] -eq "Failed"}\n\nif ($errors.Count -gt 0) {\n    Write-Host "\\nWARNING: Found $($errors.Count) failed migrations" -ForegroundColor Red\n} else {\n    Write-Host "\\nSUCCESS: No migration errors detected" -ForegroundColor Green\n}'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Post-Migration Activities'
+      },
+      {
+        type: 'paragraph',
+        content: 'Migration completion is not the finish line. Post-migration activities ensure long-term success and user adoption.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Validation and Testing'
+      },
+      {
+        type: 'list',
+        content: [
+          'Conduct user acceptance testing (UAT) with stakeholders',
+          'Verify all critical workflows and integrations function correctly',
+          'Test search functionality and verify all content is indexed',
+          'Validate custom solutions, web parts, and apps work as expected',
+          'Check all navigation, links, and menus point to correct locations',
+          'Review and fix any broken metadata or content type associations',
+          'Test permissions with different user roles and access levels',
+          'Verify external sharing settings match requirements'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'User Communication and Training'
+      },
+      {
+        type: 'paragraph',
+        content: 'Even the most technically perfect migration fails if users cannot adapt to the new environment.'
+      },
+      {
+        type: 'list',
+        content: [
+          'Announce migration completion and provide new URLs/access points',
+          'Offer hands-on training sessions for key users and departments',
+          'Create quick reference guides and video tutorials',
+          'Set up help desk or support channels for migration questions',
+          'Communicate what changed vs. what stayed the same',
+          'Highlight new features and capabilities users can leverage',
+          'Address common issues and FAQs proactively',
+          'Establish feedback channels to capture user concerns'
+        ]
+      },
+      {
+        type: 'callout',
+        calloutType: 'success',
+        content: 'Organizations that invest in comprehensive user training see 3x higher adoption rates and 50% fewer support tickets post-migration.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Decommissioning Source Environment'
+      },
+      {
+        type: 'paragraph',
+        content: 'Do not rush to shut down the old environment. A measured approach prevents data loss and provides a safety net.'
+      },
+      {
+        type: 'list',
+        content: [
+          'Set source environment to read-only mode (not immediate deletion)',
+          'Maintain source access for 30-90 days for reference and verification',
+          'Redirect users to new environment with clear messaging',
+          'Archive source data for compliance and disaster recovery',
+          'Document decommissioning timeline and communicate to all users',
+          'Perform final data export/backup before complete shutdown',
+          'Update all external links, bookmarks, and documentation',
+          'Revoke licenses and deallocate resources only after validation period'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Common Migration Challenges and Solutions'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Challenge: Large File Volumes'
+      },
+      {
+        type: 'paragraph',
+        content: 'Solution: Break migrations into smaller batches, use incremental sync, leverage migration tool throttling, consider overnight/weekend migrations, use Azure Data Box for massive datasets (TB+).'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Challenge: Custom Workflows and Solutions'
+      },
+      {
+        type: 'paragraph',
+        content: 'Solution: SharePoint 2010/2013 workflows do not migrate directly. Rebuild using Power Automate, document business logic before migration, consider third-party workflow migration tools, prioritize critical workflows for early conversion.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Challenge: Permission Complexity'
+      },
+      {
+        type: 'paragraph',
+        content: 'Solution: Simplify permission structures before migration, use group-based permissions, document exceptions, run permission reports pre and post-migration, test with actual users from different roles.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Challenge: Metadata and Content Type Issues'
+      },
+      {
+        type: 'paragraph',
+        content: 'Solution: Pre-create content types in destination, map metadata fields explicitly, test with sample content, use migration tool field mapping features, accept some metadata cleanup post-migration may be necessary.'
+      },
+      {
+        type: 'callout',
+        calloutType: 'info',
+        content: 'Every migration encounters unexpected challenges. Build 20-30% buffer time into your project plan to address issues without derailing timelines.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Migration Checklist'
+      },
+      {
+        type: 'paragraph',
+        content: 'Use this comprehensive checklist to ensure nothing is overlooked during your SharePoint migration project:'
+      },
+      {
+        type: 'list',
+        content: [
+          '☐ Complete content inventory and assessment',
+          '☐ Define migration objectives and success criteria',
+          '☐ Select and configure migration tool',
+          '☐ Map Active Directory to Azure AD users/groups',
+          '☐ Clean up and prepare source content',
+          '☐ Configure destination environment (sites, permissions, policies)',
+          '☐ Create communication plan for stakeholders and users',
+          '☐ Run pilot migration and document lessons learned',
+          '☐ Train IT staff on new environment administration',
+          '☐ Schedule production migration windows',
+          '☐ Execute initial migration pass',
+          '☐ Validate data integrity and permissions',
+          '☐ Run delta sync before cutover',
+          '☐ Conduct user acceptance testing',
+          '☐ Provide user training and documentation',
+          '☐ Cutover and redirect users to new environment',
+          '☐ Monitor for issues and address tickets',
+          '☐ Set source to read-only',
+          '☐ Plan and execute source decommissioning',
+          '☐ Document migration outcomes and lessons learned'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Conclusion'
+      },
+      {
+        type: 'paragraph',
+        content: 'SharePoint migration is a complex undertaking that requires meticulous planning, the right tools, and disciplined execution. By following these best practices—comprehensive planning, thorough data cleanup, careful tool selection, proper permission handling, and robust validation—you significantly increase the likelihood of a successful migration.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Remember that migration is not just a technical project; it is an organizational change initiative. Success depends equally on technical execution and user adoption. Invest time in communication, training, and support to ensure your new SharePoint Online environment delivers the productivity and collaboration benefits your organization expects.'
+      },
+      {
+        type: 'callout',
+        calloutType: 'success',
+        content: 'A well-executed SharePoint migration transforms your collaboration infrastructure and sets the foundation for modern workplace productivity. Take the time to do it right.'
+      }
+    ]
   }
 ];
