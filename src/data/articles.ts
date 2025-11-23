@@ -1389,5 +1389,433 @@ catch {
         content: 'A well-executed SharePoint migration transforms your collaboration infrastructure and sets the foundation for modern workplace productivity. Take the time to do it right.'
       }
     ]
+  },
+  {
+    id: '6',
+    slug: 'implementing-rag-best-practices-python',
+    title: 'Implementing RAG (Retrieval-Augmented Generation): Best Practices with Python',
+    description: 'A comprehensive guide to building production-ready RAG systems using Python, covering architecture, embedding strategies, vector databases, and optimization techniques.',
+    category: 'AI & Machine Learning',
+    tags: ['RAG', 'AI', 'Python', 'LLM', 'Vector Database', 'Machine Learning'],
+    datePublished: '2025-11-23',
+    readTime: '20 min',
+    author: {
+      name: 'Joseph H Dunn II',
+      title: 'Cloud Systems Engineer'
+    },
+    content: [
+      {
+        type: 'paragraph',
+        content: 'Retrieval-Augmented Generation (RAG) has emerged as a powerful technique for enhancing Large Language Models (LLMs) with external knowledge, reducing hallucinations, and providing up-to-date information without retraining. This comprehensive guide walks through implementing production-ready RAG systems using Python, covering architecture decisions, best practices, and optimization techniques.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Understanding RAG Architecture'
+      },
+      {
+        type: 'paragraph',
+        content: 'RAG combines the strengths of retrieval-based and generative AI systems. Instead of relying solely on the LLM\'s training data, RAG retrieves relevant context from external knowledge bases and augments the prompt with this information before generation.'
+      },
+      {
+        type: 'callout',
+        calloutType: 'info',
+        content: 'RAG is particularly valuable for domain-specific applications, frequently updated information, and reducing the computational cost of fine-tuning large models.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Core Components of a RAG System'
+      },
+      {
+        type: 'list',
+        content: [
+          'Document Loader: Ingests and processes various document formats (PDF, HTML, TXT, etc.)',
+          'Text Splitter: Chunks documents into manageable segments for embedding',
+          'Embedding Model: Converts text chunks into dense vector representations',
+          'Vector Database: Stores and enables efficient similarity search of embeddings',
+          'Retriever: Finds most relevant chunks based on query similarity',
+          'LLM: Generates responses using retrieved context',
+          'Orchestration Layer: Coordinates the retrieval and generation pipeline'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Setting Up Your Python Environment'
+      },
+      {
+        type: 'paragraph',
+        content: 'Start by installing the essential libraries for building RAG systems. We will use LangChain for orchestration, OpenAI for embeddings and LLM, and ChromaDB for vector storage.'
+      },
+      {
+        type: 'code',
+        language: 'python',
+        content: '# Install required packages\n# pip install langchain langchain-openai chromadb pypdf python-dotenv tiktoken\n\nimport os\nfrom dotenv import load_dotenv\nfrom langchain.document_loaders import PyPDFLoader, DirectoryLoader\nfrom langchain.text_splitter import RecursiveCharacterTextSplitter\nfrom langchain_openai import OpenAIEmbeddings, ChatOpenAI\nfrom langchain.vectorstores import Chroma\nfrom langchain.chains import RetrievalQA\nfrom langchain.prompts import PromptTemplate\n\n# Load environment variables\nload_dotenv()\nopenai_api_key = os.getenv("OPENAI_API_KEY")'
+      },
+      {
+        type: 'callout',
+        calloutType: 'tip',
+        content: 'Always store API keys in environment variables, never hardcode them in your source code. Use python-dotenv to manage configuration across environments.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Document Ingestion and Processing'
+      },
+      {
+        type: 'paragraph',
+        content: 'The first step in building a RAG system is loading and processing your knowledge base. Proper document handling ensures high-quality embeddings and accurate retrieval.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Loading Documents from Multiple Sources'
+      },
+      {
+        type: 'code',
+        language: 'python',
+        content: 'class DocumentIngestionPipeline:\n    """Handles loading documents from various sources."""\n    \n    def __init__(self, data_directory: str):\n        self.data_directory = data_directory\n        self.documents = []\n    \n    def load_pdfs(self):\n        """Load all PDF files from directory."""\n        loader = DirectoryLoader(\n            self.data_directory,\n            glob="**/*.pdf",\n            loader_cls=PyPDFLoader,\n            show_progress=True\n        )\n        pdf_docs = loader.load()\n        self.documents.extend(pdf_docs)\n        print(f"Loaded {len(pdf_docs)} PDF documents")\n        return pdf_docs\n    \n    def load_text_files(self):\n        """Load text files from directory."""\n        from langchain.document_loaders import TextLoader\n        loader = DirectoryLoader(\n            self.data_directory,\n            glob="**/*.txt",\n            loader_cls=TextLoader,\n            show_progress=True\n        )\n        text_docs = loader.load()\n        self.documents.extend(text_docs)\n        print(f"Loaded {len(text_docs)} text documents")\n        return text_docs\n    \n    def get_all_documents(self):\n        """Load all supported document types."""\n        self.load_pdfs()\n        self.load_text_files()\n        print(f"Total documents loaded: {len(self.documents)}")\n        return self.documents\n\n# Usage\npipeline = DocumentIngestionPipeline("./knowledge_base")\ndocuments = pipeline.get_all_documents()'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Text Chunking Strategies'
+      },
+      {
+        type: 'paragraph',
+        content: 'Chunking is critical for RAG performance. Chunks must be small enough for efficient retrieval but large enough to maintain context. The optimal chunk size depends on your use case and embedding model.'
+      },
+      {
+        type: 'callout',
+        calloutType: 'warning',
+        content: 'Chunk size significantly impacts retrieval quality. Too small and you lose context; too large and relevant information gets diluted. Start with 500-1000 characters and adjust based on testing.'
+      },
+      {
+        type: 'code',
+        language: 'python',
+        content: 'def create_text_chunks(documents, chunk_size=1000, chunk_overlap=200):\n    """\n    Split documents into chunks with overlap for context preservation.\n    \n    Args:\n        documents: List of loaded documents\n        chunk_size: Maximum characters per chunk\n        chunk_overlap: Character overlap between chunks\n    \n    Returns:\n        List of document chunks\n    """\n    text_splitter = RecursiveCharacterTextSplitter(\n        chunk_size=chunk_size,\n        chunk_overlap=chunk_overlap,\n        length_function=len,\n        separators=["\\n\\n", "\\n", ". ", " ", ""]  # Split on natural boundaries\n    )\n    \n    chunks = text_splitter.split_documents(documents)\n    \n    # Add metadata for tracking\n    for i, chunk in enumerate(chunks):\n        chunk.metadata[\'chunk_id\'] = i\n        chunk.metadata[\'chunk_size\'] = len(chunk.page_content)\n    \n    print(f"Created {len(chunks)} chunks from {len(documents)} documents")\n    print(f"Average chunk size: {sum(len(c.page_content) for c in chunks) / len(chunks):.0f} characters")\n    \n    return chunks\n\n# Create chunks with optimal parameters\ntext_chunks = create_text_chunks(\n    documents,\n    chunk_size=1000,\n    chunk_overlap=200\n)'
+      },
+      {
+        type: 'list',
+        content: [
+          'RecursiveCharacterTextSplitter: Best for general text, splits on natural boundaries',
+          'TokenTextSplitter: Splits based on token count, useful for LLM context limits',
+          'MarkdownTextSplitter: Preserves markdown structure and headers',
+          'PythonCodeTextSplitter: Maintains code block integrity',
+          'Custom splitters: Build domain-specific splitters for specialized content'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Embedding and Vector Storage'
+      },
+      {
+        type: 'paragraph',
+        content: 'Embeddings transform text into numerical vectors that capture semantic meaning. The choice of embedding model and vector database impacts both retrieval quality and system performance.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Choosing an Embedding Model'
+      },
+      {
+        type: 'paragraph',
+        content: 'Popular embedding options include OpenAI text-embedding-ada-002, sentence-transformers, Cohere embeddings, and open-source alternatives like BGE and E5.'
+      },
+      {
+        type: 'code',
+        language: 'python',
+        content: 'class EmbeddingManager:\n    """Manages embedding generation with multiple model support."""\n    \n    def __init__(self, model_type="openai"):\n        self.model_type = model_type\n        self.embeddings = self._initialize_embeddings()\n    \n    def _initialize_embeddings(self):\n        """Initialize embedding model based on type."""\n        if self.model_type == "openai":\n            return OpenAIEmbeddings(\n                model="text-embedding-3-small",  # Latest OpenAI embedding model\n                openai_api_key=os.getenv("OPENAI_API_KEY")\n            )\n        elif self.model_type == "huggingface":\n            from langchain.embeddings import HuggingFaceEmbeddings\n            return HuggingFaceEmbeddings(\n                model_name="sentence-transformers/all-MiniLM-L6-v2",\n                model_kwargs={\'device\': \'cpu\'},\n                encode_kwargs={\'normalize_embeddings\': True}\n            )\n        else:\n            raise ValueError(f"Unsupported model type: {self.model_type}")\n    \n    def get_embeddings(self):\n        return self.embeddings\n\n# Initialize embeddings\nembedding_manager = EmbeddingManager(model_type="openai")\nembeddings = embedding_manager.get_embeddings()'
+      },
+      {
+        type: 'callout',
+        calloutType: 'tip',
+        content: 'OpenAI embeddings offer excellent quality but have API costs. HuggingFace models run locally and are free but may require more computational resources.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Vector Database Setup'
+      },
+      {
+        type: 'paragraph',
+        content: 'Vector databases enable efficient similarity search across millions of embeddings. Choose based on scale, performance requirements, and deployment constraints.'
+      },
+      {
+        type: 'code',
+        language: 'python',
+        content: 'class VectorStoreManager:\n    """Manages vector database operations."""\n    \n    def __init__(self, embeddings, persist_directory="./chroma_db"):\n        self.embeddings = embeddings\n        self.persist_directory = persist_directory\n        self.vectorstore = None\n    \n    def create_vectorstore(self, documents, collection_name="knowledge_base"):\n        """\n        Create and persist vector store from documents.\n        \n        Args:\n            documents: List of document chunks\n            collection_name: Name for the collection\n        \n        Returns:\n            Chroma vectorstore instance\n        """\n        print(f"Creating vector store with {len(documents)} documents...")\n        \n        self.vectorstore = Chroma.from_documents(\n            documents=documents,\n            embedding=self.embeddings,\n            collection_name=collection_name,\n            persist_directory=self.persist_directory\n        )\n        \n        # Persist to disk\n        self.vectorstore.persist()\n        print(f"Vector store created and persisted to {self.persist_directory}")\n        \n        return self.vectorstore\n    \n    def load_vectorstore(self, collection_name="knowledge_base"):\n        """\n        Load existing vector store from disk.\n        \n        Args:\n            collection_name: Name of the collection to load\n        \n        Returns:\n            Loaded Chroma vectorstore instance\n        """\n        self.vectorstore = Chroma(\n            collection_name=collection_name,\n            embedding_function=self.embeddings,\n            persist_directory=self.persist_directory\n        )\n        \n        print(f"Vector store loaded from {self.persist_directory}")\n        return self.vectorstore\n\n# Create vector store\nvectorstore_manager = VectorStoreManager(embeddings)\nvectorstore = vectorstore_manager.create_vectorstore(text_chunks)'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Vector Database Comparison'
+      },
+      {
+        type: 'list',
+        content: [
+          'ChromaDB: Easy setup, great for prototypes, good for < 1M vectors, local or client-server',
+          'Pinecone: Managed cloud service, excellent performance, scales to billions of vectors',
+          'Weaviate: Open-source, supports hybrid search, good for production deployments',
+          'Qdrant: Fast, supports filtering, good Rust performance, Docker-friendly',
+          'FAISS: Facebook\'s library, fastest for in-memory search, requires manual management',
+          'Milvus: Enterprise-grade, highly scalable, supports multiple index types'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Building the Retrieval Pipeline'
+      },
+      {
+        type: 'paragraph',
+        content: 'The retrieval component finds the most relevant document chunks for a given query. Advanced techniques improve retrieval accuracy beyond simple similarity search.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Basic Similarity Search Retriever'
+      },
+      {
+        type: 'code',
+        language: 'python',
+        content: 'def create_basic_retriever(vectorstore, k=4):\n    """\n    Create a basic similarity search retriever.\n    \n    Args:\n        vectorstore: Vector database instance\n        k: Number of documents to retrieve\n    \n    Returns:\n        Retriever instance\n    """\n    retriever = vectorstore.as_retriever(\n        search_type="similarity",\n        search_kwargs={"k": k}\n    )\n    return retriever\n\n# Test retrieval\nretriever = create_basic_retriever(vectorstore, k=4)\nquery = "What are the best practices for data migration?"\nretrieved_docs = retriever.get_relevant_documents(query)\n\nprint(f"Retrieved {len(retrieved_docs)} documents for query: {query}")\nfor i, doc in enumerate(retrieved_docs):\n    print(f"\\nDocument {i+1}:")\n    print(f"Content: {doc.page_content[:200]}...")\n    print(f"Metadata: {doc.metadata}")'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Advanced Retrieval Techniques'
+      },
+      {
+        type: 'paragraph',
+        content: 'Enhance retrieval quality with advanced techniques like Maximum Marginal Relevance (MMR), hybrid search, and re-ranking.'
+      },
+      {
+        type: 'code',
+        language: 'python',
+        content: 'def create_advanced_retriever(vectorstore, k=4, fetch_k=20, lambda_mult=0.5):\n    """\n    Create retriever with Maximum Marginal Relevance for diversity.\n    \n    Args:\n        vectorstore: Vector database instance\n        k: Number of final documents to return\n        fetch_k: Number of documents to fetch before MMR\n        lambda_mult: Diversity parameter (0=max diversity, 1=max relevance)\n    \n    Returns:\n        Advanced retriever instance\n    """\n    retriever = vectorstore.as_retriever(\n        search_type="mmr",\n        search_kwargs={\n            "k": k,\n            "fetch_k": fetch_k,\n            "lambda_mult": lambda_mult\n        }\n    )\n    return retriever\n\nclass HybridRetriever:\n    """Combines semantic and keyword-based search."""\n    \n    def __init__(self, vectorstore, k=4):\n        self.vectorstore = vectorstore\n        self.k = k\n    \n    def retrieve(self, query: str):\n        """\n        Perform hybrid retrieval combining vector and keyword search.\n        \n        Args:\n            query: Search query string\n        \n        Returns:\n            List of retrieved documents\n        """\n        # Semantic search via embeddings\n        semantic_docs = self.vectorstore.similarity_search(query, k=self.k)\n        \n        # You can add BM25 keyword search here for true hybrid\n        # For now, using similarity with higher k for diversity\n        keyword_docs = self.vectorstore.similarity_search(\n            query, \n            k=self.k * 2\n        )\n        \n        # Combine and deduplicate\n        all_docs = semantic_docs + keyword_docs\n        unique_docs = self._deduplicate(all_docs)\n        \n        return unique_docs[:self.k]\n    \n    def _deduplicate(self, docs):\n        """Remove duplicate documents based on content."""\n        seen = set()\n        unique = []\n        for doc in docs:\n            content_hash = hash(doc.page_content)\n            if content_hash not in seen:\n                seen.add(content_hash)\n                unique.append(doc)\n        return unique\n\n# Create advanced retriever\nadvanced_retriever = create_advanced_retriever(vectorstore, k=4, lambda_mult=0.7)'
+      },
+      {
+        type: 'callout',
+        calloutType: 'success',
+        content: 'MMR reduces redundancy in retrieved documents by balancing relevance and diversity. This prevents retrieving multiple similar chunks and provides more comprehensive context.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Integrating with LLMs'
+      },
+      {
+        type: 'paragraph',
+        content: 'The final step combines retrieved context with an LLM to generate informed responses. Prompt engineering and chain configuration are critical for quality outputs.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Custom Prompt Templates'
+      },
+      {
+        type: 'code',
+        language: 'python',
+        content: 'def create_custom_prompt():\n    """\n    Create a custom prompt template for RAG.\n    \n    Returns:\n        PromptTemplate instance\n    """\n    template = """You are an AI assistant helping users with technical questions.\n    Use the following context to answer the question accurately and concisely.\n    If you cannot find the answer in the context, say so honestly - do not make up information.\n    \n    Context:\n    {context}\n    \n    Question: {question}\n    \n    Instructions:\n    1. Answer based solely on the provided context\n    2. Cite specific parts of the context when possible\n    3. If the context doesn\'t contain the answer, state: "I don\'t have enough information in the provided context to answer this question."\n    4. Be specific and avoid vague statements\n    5. Use technical terminology appropriately\n    \n    Answer:\"\"\"\n    \n    prompt = PromptTemplate(\n        template=template,\n        input_variables=["context", "question"]\n    )\n    \n    return prompt\n\ncustom_prompt = create_custom_prompt()'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Building the RAG Chain'
+      },
+      {
+        type: 'code',
+        language: 'python',
+        content: 'class RAGSystem:\n    """Complete RAG system with retrieval and generation."""\n    \n    def __init__(self, vectorstore, llm_model="gpt-4", temperature=0):\n        self.vectorstore = vectorstore\n        self.llm = ChatOpenAI(\n            model=llm_model,\n            temperature=temperature,\n            openai_api_key=os.getenv("OPENAI_API_KEY")\n        )\n        self.prompt = create_custom_prompt()\n        self.qa_chain = None\n        self._build_chain()\n    \n    def _build_chain(self):\n        """Build the RetrievalQA chain."""\n        self.qa_chain = RetrievalQA.from_chain_type(\n            llm=self.llm,\n            chain_type="stuff",  # Options: stuff, map_reduce, refine, map_rerank\n            retriever=self.vectorstore.as_retriever(\n                search_kwargs={"k": 4}\n            ),\n            return_source_documents=True,\n            chain_type_kwargs={"prompt": self.prompt}\n        )\n    \n    def query(self, question: str, return_sources=True):\n        """\n        Query the RAG system.\n        \n        Args:\n            question: User question\n            return_sources: Whether to return source documents\n        \n        Returns:\n            Dictionary with answer and optional source documents\n        """\n        result = self.qa_chain({"query": question})\n        \n        response = {\n            "question": question,\n            "answer": result["result"]\n        }\n        \n        if return_sources and "source_documents" in result:\n            response["sources"] = [\n                {\n                    "content": doc.page_content,\n                    "metadata": doc.metadata\n                }\n                for doc in result["source_documents"]\n            ]\n        \n        return response\n    \n    def query_with_chat_history(self, question: str, chat_history: list):\n        """\n        Query with conversation context.\n        \n        Args:\n            question: Current question\n            chat_history: List of (question, answer) tuples\n        \n        Returns:\n            Response with conversational context\n        """\n        from langchain.chains import ConversationalRetrievalChain\n        \n        conv_chain = ConversationalRetrievalChain.from_llm(\n            llm=self.llm,\n            retriever=self.vectorstore.as_retriever(),\n            return_source_documents=True\n        )\n        \n        result = conv_chain({\n            "question": question,\n            "chat_history": chat_history\n        })\n        \n        return result\n\n# Initialize RAG system\nrag_system = RAGSystem(vectorstore, llm_model="gpt-4", temperature=0)\n\n# Query the system\nresponse = rag_system.query("What are best practices for SharePoint migration?")\nprint(f"Question: {response[\'question\']}")\nprint(f"Answer: {response[\'answer\']}")\nprint(f"\\nSources: {len(response.get(\'sources\', []))} documents used")'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Optimization and Production Considerations'
+      },
+      {
+        type: 'paragraph',
+        content: 'Moving from prototype to production requires careful attention to performance, cost, monitoring, and error handling.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Caching and Performance'
+      },
+      {
+        type: 'code',
+        language: 'python',
+        content: 'import hashlib\nfrom functools import lru_cache\nimport pickle\nfrom pathlib import Path\n\nclass CachedRAGSystem(RAGSystem):\n    """RAG system with response caching for performance."""\n    \n    def __init__(self, *args, cache_dir="./cache", **kwargs):\n        super().__init__(*args, **kwargs)\n        self.cache_dir = Path(cache_dir)\n        self.cache_dir.mkdir(exist_ok=True)\n    \n    def _get_cache_key(self, question: str) -> str:\n        """Generate cache key from question."""\n        return hashlib.md5(question.encode()).hexdigest()\n    \n    def _get_from_cache(self, cache_key: str):\n        """Retrieve cached response if exists."""\n        cache_file = self.cache_dir / f"{cache_key}.pkl"\n        if cache_file.exists():\n            with open(cache_file, \'rb\') as f:\n                return pickle.load(f)\n        return None\n    \n    def _save_to_cache(self, cache_key: str, response: dict):\n        """Save response to cache."""\n        cache_file = self.cache_dir / f"{cache_key}.pkl"\n        with open(cache_file, \'wb\') as f:\n            pickle.dump(response, f)\n    \n    def query(self, question: str, use_cache=True, **kwargs):\n        """Query with caching support."""\n        if use_cache:\n            cache_key = self._get_cache_key(question)\n            cached_response = self._get_from_cache(cache_key)\n            \n            if cached_response:\n                print(f"Cache hit for question: {question[:50]}...")\n                return cached_response\n        \n        # No cache hit, query normally\n        response = super().query(question, **kwargs)\n        \n        if use_cache:\n            self._save_to_cache(cache_key, response)\n        \n        return response\n\n# Use cached RAG system\ncached_rag = CachedRAGSystem(vectorstore, llm_model="gpt-4")\nresponse = cached_rag.query("What is RAG?")  # First call - no cache\nresponse = cached_rag.query("What is RAG?")  # Second call - from cache'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Error Handling and Logging'
+      },
+      {
+        type: 'code',
+        language: 'python',
+        content: 'import logging\nfrom typing import Optional\nimport time\n\n# Configure logging\nlogging.basicConfig(\n    level=logging.INFO,\n    format=\'%(asctime)s - %(name)s - %(levelname)s - %(message)s\',\n    handlers=[\n        logging.FileHandler(\'rag_system.log\'),\n        logging.StreamHandler()\n    ]\n)\n\nclass ProductionRAGSystem(CachedRAGSystem):\n    """Production-ready RAG system with comprehensive error handling."""\n    \n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.logger = logging.getLogger(self.__class__.__name__)\n    \n    def query(self, question: str, max_retries=3, **kwargs) -> Optional[dict]:\n        """\n        Query with error handling and retries.\n        \n        Args:\n            question: User question\n            max_retries: Maximum retry attempts on failure\n        \n        Returns:\n            Response dictionary or None on failure\n        """\n        self.logger.info(f"Received query: {question[:100]}")\n        \n        for attempt in range(max_retries):\n            try:\n                start_time = time.time()\n                \n                # Validate input\n                if not question or len(question.strip()) == 0:\n                    raise ValueError("Question cannot be empty")\n                \n                if len(question) > 10000:\n                    raise ValueError("Question exceeds maximum length")\n                \n                # Execute query\n                response = super().query(question, **kwargs)\n                \n                # Log success metrics\n                elapsed_time = time.time() - start_time\n                self.logger.info(\n                    f"Query successful in {elapsed_time:.2f}s "\n                    f"(attempt {attempt + 1}/{max_retries})"\n                )\n                \n                return response\n            \n            except Exception as e:\n                self.logger.error(\n                    f"Query failed on attempt {attempt + 1}/{max_retries}: {str(e)}",\n                    exc_info=True\n                )\n                \n                if attempt == max_retries - 1:\n                    self.logger.error("Max retries reached, returning error response")\n                    return {\n                        "question": question,\n                        "answer": "I apologize, but I encountered an error processing your question. Please try again later.",\n                        "error": str(e)\n                    }\n                \n                # Exponential backoff\n                time.sleep(2 ** attempt)\n        \n        return None\n    \n    def health_check(self) -> dict:\n        """Perform system health check."""\n        health = {\n            "status": "healthy",\n            "vectorstore": False,\n            "llm": False,\n            "timestamp": time.time()\n        }\n        \n        try:\n            # Check vector store\n            test_results = self.vectorstore.similarity_search("test", k=1)\n            health["vectorstore"] = len(test_results) > 0\n            \n            # Check LLM\n            test_response = self.llm.predict("Say \'OK\' if you can read this.")\n            health["llm"] = "ok" in test_response.lower()\n            \n            if not (health["vectorstore"] and health["llm"]):\n                health["status"] = "degraded"\n        \n        except Exception as e:\n            health["status"] = "unhealthy"\n            health["error"] = str(e)\n            self.logger.error(f"Health check failed: {e}")\n        \n        return health\n\n# Production RAG instance\nproduction_rag = ProductionRAGSystem(\n    vectorstore,\n    llm_model="gpt-4",\n    temperature=0,\n    cache_dir="./cache"\n)\n\n# Health check\nhealth = production_rag.health_check()\nprint(f"System Health: {health}")'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Evaluation and Monitoring'
+      },
+      {
+        type: 'paragraph',
+        content: 'Measuring RAG system performance is essential for continuous improvement. Track both retrieval quality and generation accuracy.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Retrieval Metrics'
+      },
+      {
+        type: 'code',
+        language: 'python',
+        content: 'from typing import List, Tuple\nimport numpy as np\n\nclass RAGEvaluator:\n    """Evaluate RAG system performance."""\n    \n    def __init__(self, rag_system):\n        self.rag_system = rag_system\n    \n    def evaluate_retrieval(\n        self,\n        test_cases: List[Tuple[str, List[str]]]\n    ) -> dict:\n        """\n        Evaluate retrieval quality.\n        \n        Args:\n            test_cases: List of (query, relevant_doc_ids) tuples\n        \n        Returns:\n            Dictionary of metrics\n        """\n        precisions = []\n        recalls = []\n        \n        for query, relevant_ids in test_cases:\n            retrieved = self.rag_system.vectorstore.similarity_search(query, k=10)\n            retrieved_ids = [doc.metadata.get(\'chunk_id\') for doc in retrieved]\n            \n            # Calculate precision and recall\n            true_positives = len(set(retrieved_ids) & set(relevant_ids))\n            precision = true_positives / len(retrieved_ids) if retrieved_ids else 0\n            recall = true_positives / len(relevant_ids) if relevant_ids else 0\n            \n            precisions.append(precision)\n            recalls.append(recall)\n        \n        return {\n            "mean_precision": np.mean(precisions),\n            "mean_recall": np.mean(recalls),\n            "mean_f1": 2 * np.mean(precisions) * np.mean(recalls) / \n                      (np.mean(precisions) + np.mean(recalls))\n        }\n    \n    def evaluate_answer_quality(\n        self,\n        test_cases: List[Tuple[str, str]]\n    ) -> dict:\n        """\n        Evaluate answer generation quality.\n        \n        Args:\n            test_cases: List of (question, expected_answer) tuples\n        \n        Returns:\n            Dictionary of quality metrics\n        """\n        from langchain.evaluation import load_evaluator\n        \n        # Use LLM-based evaluation\n        evaluator = load_evaluator("qa")\n        scores = []\n        \n        for question, expected_answer in test_cases:\n            response = self.rag_system.query(question)\n            actual_answer = response["answer"]\n            \n            # Evaluate with LLM\n            eval_result = evaluator.evaluate_strings(\n                prediction=actual_answer,\n                reference=expected_answer,\n                input=question\n            )\n            \n            scores.append(eval_result.get("score", 0))\n        \n        return {\n            "mean_score": np.mean(scores),\n            "total_evaluated": len(test_cases)\n        }\n\n# Usage example\nevaluator = RAGEvaluator(production_rag)\n\ntest_retrieval = [\n    ("What is RAG?", [1, 5, 12]),  # Query with relevant chunk IDs\n    ("How to implement embeddings?", [3, 8, 15])\n]\n\nretrieval_metrics = evaluator.evaluate_retrieval(test_retrieval)\nprint(f"Retrieval Metrics: {retrieval_metrics}")'
+      },
+      {
+        type: 'callout',
+        calloutType: 'tip',
+        content: 'Create a diverse test set covering common queries, edge cases, and domain-specific questions. Regularly re-evaluate as your knowledge base grows.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Advanced RAG Techniques'
+      },
+      {
+        type: 'paragraph',
+        content: 'Beyond basic RAG, advanced techniques can significantly improve system performance for complex use cases.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Query Transformation and Expansion'
+      },
+      {
+        type: 'list',
+        content: [
+          'Multi-Query: Generate multiple variations of the user query for better recall',
+          'HyDE (Hypothetical Document Embeddings): Generate hypothetical answers and search for them',
+          'Query Decomposition: Break complex queries into sub-questions',
+          'Step-back Prompting: Ask higher-level questions first for better context',
+          'Query Rewriting: Use LLM to clarify or expand ambiguous queries'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Re-ranking Retrieved Documents'
+      },
+      {
+        type: 'code',
+        language: 'python',
+        content: 'from langchain.retrievers import ContextualCompressionRetriever\nfrom langchain.retrievers.document_compressors import LLMChainExtractor\n\ndef create_reranking_retriever(llm, base_retriever):\n    """\n    Create a retriever with LLM-based re-ranking.\n    \n    Args:\n        llm: Language model instance\n        base_retriever: Base retriever to wrap\n    \n    Returns:\n        Contextual compression retriever with re-ranking\n    """\n    compressor = LLMChainExtractor.from_llm(llm)\n    \n    compression_retriever = ContextualCompressionRetriever(\n        base_compressor=compressor,\n        base_retriever=base_retriever\n    )\n    \n    return compression_retriever\n\n# Create re-ranking retriever\nbase_retriever = vectorstore.as_retriever(search_kwargs={"k": 10})\nreranking_retriever = create_reranking_retriever(\n    production_rag.llm,\n    base_retriever\n)\n\n# This retriever fetches more documents then uses LLM to extract only relevant parts'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Parent Document Retrieval'
+      },
+      {
+        type: 'paragraph',
+        content: 'Retrieve small chunks for accuracy but return larger parent documents for context, improving both precision and completeness.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Production Deployment Checklist'
+      },
+      {
+        type: 'list',
+        content: [
+          '☐ Implement comprehensive error handling and retry logic',
+          '☐ Add logging and monitoring for all components',
+          '☐ Set up response caching for frequently asked questions',
+          '☐ Configure rate limiting to prevent API quota exhaustion',
+          '☐ Implement authentication and authorization for API access',
+          '☐ Create health check endpoints for monitoring',
+          '☐ Set up vector database backups and recovery procedures',
+          '☐ Optimize chunk size and overlap based on evaluation metrics',
+          '☐ Implement streaming responses for better user experience',
+          '☐ Add content filtering and safety checks',
+          '☐ Create admin interface for knowledge base updates',
+          '☐ Set up A/B testing framework for prompt variations',
+          '☐ Implement feedback collection for continuous improvement',
+          '☐ Document API endpoints and usage examples',
+          '☐ Configure cost tracking and budget alerts'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Common Pitfalls and Solutions'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Pitfall: Poor Retrieval Quality'
+      },
+      {
+        type: 'paragraph',
+        content: 'Solution: Experiment with chunk sizes (500-1500 chars), use metadata filtering, try different embedding models, implement hybrid search combining semantic and keyword matching, and add query expansion.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Pitfall: High API Costs'
+      },
+      {
+        type: 'paragraph',
+        content: 'Solution: Implement aggressive caching, use smaller/faster models for embeddings, batch process documents, consider open-source alternatives for embeddings, and use GPT-3.5 for non-critical queries.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Pitfall: Slow Response Times'
+      },
+      {
+        type: 'paragraph',
+        content: 'Solution: Optimize vector database indexes, reduce number of retrieved chunks, use faster embedding models, implement async/parallel processing, cache common queries, and consider streaming responses.'
+      },
+      {
+        type: 'heading',
+        level: 3,
+        content: 'Pitfall: Hallucinations Despite RAG'
+      },
+      {
+        type: 'paragraph',
+        content: 'Solution: Use lower temperature (0-0.3), strengthen prompt instructions to only use provided context, implement confidence scoring, add citation requirements, and use chain-of-thought prompting to show reasoning.'
+      },
+      {
+        type: 'callout',
+        calloutType: 'warning',
+        content: 'RAG does not eliminate hallucinations entirely. Always validate critical outputs and consider adding human-in-the-loop verification for high-stakes applications.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Conclusion'
+      },
+      {
+        type: 'paragraph',
+        content: 'Implementing production-ready RAG systems requires careful attention to document processing, embedding quality, retrieval accuracy, and generation parameters. By following these best practices—proper chunking strategies, appropriate vector database selection, advanced retrieval techniques, comprehensive error handling, and continuous evaluation—you can build reliable, scalable RAG applications.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Remember that RAG is an evolving field. Stay current with new embedding models, vector databases, and retrieval techniques. Start simple, measure everything, and iterate based on real-world performance. The key to success is continuous monitoring, evaluation, and refinement of your RAG pipeline.'
+      },
+      {
+        type: 'callout',
+        calloutType: 'success',
+        content: 'A well-implemented RAG system combines the best of retrieval and generation, providing accurate, grounded, and contextually relevant responses that significantly outperform standalone LLMs for knowledge-intensive tasks.'
+      }
+    ]
   }
 ];
