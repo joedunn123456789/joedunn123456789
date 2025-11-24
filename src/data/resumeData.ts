@@ -53,7 +53,7 @@ export const keyAchievements: string[] = [
 export const experiences: Experience[] = [
   {
     company: "Tactis LLC (Remote, HQ Washington, D.C.)",
-    role: "Systems Engineer, AI",
+    role: "Senior Systems Engineer, AI",
     date: "January 2024 – October 2025",
     administeredSystems: "Microsoft 365 Tenant, Azure, Microsoft Copilot Studio, MacOS",
     bullets: [
