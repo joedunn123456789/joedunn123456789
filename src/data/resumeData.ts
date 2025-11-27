@@ -28,7 +28,7 @@ export interface Experience {
 
 export const personalInfo: PersonalInfo = {
   name: "Joseph Henry Dunn II",
-  title: "AI Engineer | Systems Engineer | Cloud Architect",
+  title: "AI Engineer | Systems Administrator | Cloud Engineer",
   location: "Wildomar, CA",
   phone: "830-666-2525",
   email: "jdunn0423@gmail.com",
@@ -43,7 +43,7 @@ export const personalInfo: PersonalInfo = {
 };
 
 export const summary: Summary = {
-  main: "AI Engineer | Systems Engineer | Cloud Architect with 10+ years designing enterprise infrastructure and pioneering AI/ML automation solutions. Expert in machine learning operations (MLOps), cloud architecture (AWS, Azure), and DevOps automation. Proven track record delivering scalable AI systems, maintaining 99.9% uptime, and achieving 8x productivity gains through intelligent automation and infrastructure as code. Specialized in generative AI integration (ChatGPT, Claude, Amazon Q, Microsoft Copilot Studio), RAG implementation, and multi-cloud environments while ensuring strict compliance (FedRAMP, NIST 800-53, DoD STIGs)."
+  main: "AI Engineer | Systems Administrator | Cloud Engineer with 10+ years designing enterprise infrastructure and pioneering AI/ML automation solutions. Expert in machine learning operations (MLOps), cloud administration (AWS, Azure), and DevOps automation. Proven track record delivering scalable AI systems, maintaining 99.9% uptime, and achieving 8x productivity gains through intelligent automation and infrastructure as code. Specialized in generative AI integration (ChatGPT, Claude, Amazon Q, Microsoft Copilot Studio), RAG implementation, and multi-cloud environments while ensuring strict compliance (FedRAMP, NIST 800-53, DoD STIGs)."
 };
 
 export const keyAchievements: string[] = [
