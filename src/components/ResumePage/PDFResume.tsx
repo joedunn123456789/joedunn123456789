@@ -37,13 +37,13 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
   },
   summaryText: {
-    fontSize: 8.5,
+    fontSize: 7.5,
     marginBottom: 3,
     textAlign: 'justify',
   },
   summaryLabel: {
     fontWeight: 'bold',
-    fontSize: 8.5,
+    fontSize: 7.5,
   },
   categoryTitle: {
     fontSize: 8.5,
