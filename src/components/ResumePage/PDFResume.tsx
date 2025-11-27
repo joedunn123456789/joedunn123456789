@@ -1,5 +1,5 @@
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
-import { skillCategories, education, personalInfo, summary, experiences, keyAchievements } from '../../data/resumeData';
+import { skillCategories, education, personalInfo, summary, experiences, keyAchievements, certifications } from '../../data/resumeData';
 
 const styles = StyleSheet.create({
   page: {
@@ -149,6 +149,11 @@ const PDFResume = () => (
       {/* Header */}
       <View style={[styles.section, { borderBottom: '2pt solid #1F2937', paddingBottom: 6 }]}>
         <Text style={styles.name}>{personalInfo.name}</Text>
+        {personalInfo.title && (
+          <Text style={[styles.contact, { fontWeight: 'bold', fontSize: 9, marginBottom: 3 }]}>
+            {personalInfo.title}
+          </Text>
+        )}
         <Text style={styles.contact}>
           {personalInfo.location} | {personalInfo.phone} | {personalInfo.email}
         </Text>
@@ -216,6 +221,18 @@ const PDFResume = () => (
           <Text style={{ fontWeight: 'bold' }}>{education.degree}</Text>{'\n'}
           {education.institution} | {education.date}
         </Text>
+      </View>
+
+      {/* Certifications */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Certifications</Text>
+        <View style={styles.certificationGrid}>
+          {certifications.map((cert, index) => (
+            <View key={index} style={styles.certificationTag}>
+              <Text style={styles.certificationText}>{cert}</Text>
+            </View>
+          ))}
+        </View>
       </View>
     </Page>
   </Document>
