@@ -1,5 +1,6 @@
 export interface PersonalInfo {
   name: string;
+  title?: string;
   location: string;
   phone: string;
   email: string;
@@ -27,6 +28,7 @@ export interface Experience {
 
 export const personalInfo: PersonalInfo = {
   name: "Joseph Henry Dunn II",
+  title: "AI Engineer | Systems Engineer | Cloud Architect",
   location: "Wildomar, CA",
   phone: "830-666-2525",
   email: "jdunn0423@gmail.com",
@@ -41,7 +43,7 @@ export const personalInfo: PersonalInfo = {
 };
 
 export const summary: Summary = {
-  main: "AI-Augmented Systems Engineer with 10+ years designing, deploying, and optimizing enterprise IT infrastructure. Hand-selected by CTO to pioneer AI adoption initiative, achieving 8x productivity gains and completing 120+ hours of infrastructure work in 14 days through AI-assisted automation, code generation, and problem-solving. Expert in cloud platforms (Microsoft Azure, AWS), enterprise AI integration (ChatGPT, Claude, Amazon Q, Microsoft Copilot Studio), and RAG implementation. Proven track record architecting scalable cloud solutions, maintaining 99.9% uptime, and reducing costs while meeting FedRAMP, NIST 800-53, and DoD STIG compliance."
+  main: "AI Engineer | Systems Engineer | Cloud Architect with 10+ years designing enterprise infrastructure and pioneering AI/ML automation solutions. Expert in machine learning operations (MLOps), cloud architecture (AWS, Azure), and DevOps automation. Proven track record delivering scalable AI systems, maintaining 99.9% uptime, and achieving 8x productivity gains through intelligent automation and infrastructure as code. Specialized in generative AI integration (ChatGPT, Claude, Amazon Q, Microsoft Copilot Studio), RAG implementation, and multi-cloud environments while ensuring strict compliance (FedRAMP, NIST 800-53, DoD STIGs)."
 };
 
 export const keyAchievements: string[] = [
@@ -107,51 +109,52 @@ export const experiences: Experience[] = [
 ];
 
 export const skillCategories = {
-  "Artificial Intelligence & Automation": [
-    "ChatGPT",
-    "Claude AI",
+  "AI/ML & Intelligent Automation": [
+    "Generative AI (ChatGPT, Claude AI, LLMs)",
+    "Machine Learning Operations (MLOps)",
     "Microsoft Copilot Studio",
-    "Amazon Q Developer",
-    "LangChain",
+    "Amazon Q Developer, Bedrock, SageMaker",
+    "LangChain, PyTorch",
     "RAG (Retrieval-Augmented Generation)"
   ],
-  "Cloud Platforms": [
+  "Cloud & DevOps": [
+    "AWS (EC2, S3, RDS, IAM, VPC, CloudWatch, Lambda)",
     "Microsoft Azure (Azure AD, Sentinel, Conditional Access)",
-    "AWS (EC2, S3, RDS, IAM, VPC, CloudWatch)",
+    "Infrastructure as Code (Terraform, Ansible)",
+    "CI/CD Pipeline, GitOps",
+    "Docker, Kubernetes",
+    "Multi-cloud Architecture"
+  ],
+  "Development & Automation": [
+    "PowerShell, Python, Bash",
+    "REST API Development, Microservices",
+    "SQL, NoSQL, JSON",
+    "Git, JavaScript",
+    "Configuration Management",
+    "Power Automate, ServiceNow Flow Designer"
+  ],
+  "Systems & Infrastructure": [
+    "Windows Server, Linux (RHEL, Ubuntu, CentOS), MacOS",
     "Microsoft 365 (Exchange, SharePoint, Teams)",
-    "VMware ESXi",
-    "Docker"
-  ],
-  "Operating Systems & Endpoint": [
-    "Windows Server",
-    "Linux (RHEL, Ubuntu, CentOS)",
-    "MacOS",
-    "Microsoft Intune",
-    "JumpCloud MDM",
-    "Ansible"
-  ],
-  "Scripting & Development": [
-    "PowerShell",
-    "Python",
-    "Bash",
-    "REST API",
-    "Git",
-    "JavaScript"
-  ],
-  "Enterprise Platforms": [
-    "ServiceNow (Admin, Flow Designer)",
-    "Salesforce (API Integration, Service Cloud)",
-    "NICE CXone",
-    "Atlassian Suite (Jira, Confluence)",
-    "Power Automate"
+    "VMware ESXi, Virtualization",
+    "Microsoft Intune, JumpCloud MDM",
+    "Monitoring & Observability",
+    "Network Administration"
   ],
   "Security & Compliance": [
-    "Azure Sentinel (SIEM)",
-    "FedRAMP (Medium/High)",
-    "NIST SP 800-53",
-    "DoD STIGs",
-    "RMF",
-    "Zero Trust Architecture"
+    "Azure Sentinel (SIEM), Vulnerability Management",
+    "Zero Trust Architecture, DevSecOps",
+    "FedRAMP (Medium/High), NIST SP 800-53",
+    "DoD STIGs, RMF",
+    "Incident Response, Security Compliance",
+    "Identity & Access Management (IAM)"
+  ],
+  "Enterprise Platforms": [
+    "ServiceNow (Admin, ITSM, Flow Designer)",
+    "Salesforce (API Integration, Service Cloud)",
+    "Atlassian Suite (Jira, Confluence)",
+    "NICE CXone, Zendesk",
+    "ITIL v4"
   ]
 };
 
