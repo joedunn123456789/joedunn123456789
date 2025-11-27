@@ -1,4 +1,4 @@
-import { skillCategories, education, summary, personalInfo, keyAchievements, experiences } from '../data/resumeData';
+import { skillCategories, education, summary, personalInfo, keyAchievements, experiences, certifications } from '../data/resumeData';
 import { usePDFExport } from '../hooks/ResumePage/usePDFExport';
 
 const Resume: React.FC = () => {
@@ -22,6 +22,9 @@ const Resume: React.FC = () => {
           {/* Header */}
           <header className="space-y-1 border-b-2 border-gray-800 pb-3">
             <h1 className="text-3xl font-bold uppercase">{personalInfo.name}</h1>
+            {personalInfo.title && (
+              <p className="text-base font-bold text-gray-800">{personalInfo.title}</p>
+            )}
             <p className="text-sm text-gray-700">
               {personalInfo.location} | {personalInfo.phone} | {personalInfo.email}
             </p>
@@ -102,6 +105,23 @@ const Resume: React.FC = () => {
             <div className="text-sm text-gray-800">
               <p className="font-bold">{education.degree}</p>
               <p>{education.institution} | {education.date}</p>
+            </div>
+          </section>
+
+          {/* Certifications */}
+          <section>
+            <h2 className="text-lg font-bold uppercase border-b-2 border-gray-800 pb-1 mb-2">
+              Certifications
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {certifications.map((cert, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-100 border border-gray-300 rounded-lg px-4 py-2 text-sm text-gray-800"
+                >
+                  {cert}
+                </div>
+              ))}
             </div>
           </section>
         </main>
