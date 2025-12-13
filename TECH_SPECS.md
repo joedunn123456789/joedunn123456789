@@ -6,7 +6,7 @@ A comprehensive React-based professional portfolio and business management appli
 
 This is a multifunctional professional suite combining a personal portfolio showcase with interactive business tools. The application demonstrates full-stack development capabilities while serving as both a working business tool suite and a portfolio of technical skills.
 
-**Live Site**: https://joedunn123456789.github.io/joedunn123456789/
+**Live Site**: https://joevisualstoryteller.github.io/joevisualstoryteller/
 **Owner**: Joseph Henry Dunn II
 **Status**: Production-ready with active development
 
@@ -102,7 +102,7 @@ npm run lint       # Run ESLint checks
 ```
 
 **GitHub Pages Configuration:**
-- Base path: `/joedunn123456789/`
+- Base path: `/joevisualstoryteller/`
 - Automatic deployment via `gh-pages` package
 
 ### Technical Highlights

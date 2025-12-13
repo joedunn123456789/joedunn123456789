@@ -74,7 +74,7 @@ There are many ways to contribute:
 
 ### 1. Fork the Repository
 
-Click the "Fork" button at the top right of the [repository page](https://github.com/joedunn123456789/joedunn123456789).
+Click the "Fork" button at the top right of the [repository page](https://github.com/joevisualstoryteller/joevisualstoryteller).
 
 ### 2. Clone Your Fork
 
@@ -86,7 +86,7 @@ cd joedunn123456789
 ### 3. Add Upstream Remote
 
 ```bash
-git remote add upstream https://github.com/joedunn123456789/joedunn123456789.git
+git remote add upstream https://github.com/joevisualstoryteller/joevisualstoryteller.git
 ```
 
 ### 4. Install Dependencies
@@ -462,12 +462,12 @@ Thank you for contributing to make this project better!
 ## Questions?
 
 If you have questions:
-- Open a [Discussion](https://github.com/joedunn123456789/joedunn123456789/discussions)
+- Open a [Discussion](https://github.com/joevisualstoryteller/joevisualstoryteller/discussions)
 - Comment on an existing issue
 - Review existing documentation
 
 ---
 
 **Project Maintainer**: Joseph Henry Dunn II
-**Repository**: https://github.com/joedunn123456789/joedunn123456789
+**Repository**: https://github.com/joevisualstoryteller/joevisualstoryteller
 **Last Updated**: October 2025

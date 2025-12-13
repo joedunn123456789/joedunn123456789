@@ -28,7 +28,7 @@ Building intelligent systems, managing infrastructure, and crafting stories thro
 
 ## 🌐 Connect With Me
 📧 jdunn0423@gmail.com
-🌐 [Portfolio](https://joedunn123456789.github.io/joedunn123456789)
+🌐 [Portfolio](https://joevisualstoryteller.github.io/joevisualstoryteller)
 
 <p align="center">
 <em>"The intersection of artificial intelligence and human creativity."</em>

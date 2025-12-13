@@ -37,8 +37,8 @@ export const personalInfo: PersonalInfo = {
     url: "https://www.linkedin.com/in/joevisualstoryteller/"
   },
   github: {
-    display: "github.com/joedunn123456789",
-    url: "https://github.com/joedunn123456789"
+    display: "github.com/joevisualstoryteller",
+    url: "https://github.com/joevisualstoryteller"
   }
 };
 

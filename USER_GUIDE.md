@@ -2,7 +2,7 @@
 
 Welcome to my professional portfolio and business tools suite! This guide will help you navigate and use all the features available on the website.
 
-**Live Site**: https://joedunn123456789.github.io/joedunn123456789/
+**Live Site**: https://joevisualstoryteller.github.io/joevisualstoryteller/
 
 ---
 
@@ -234,7 +234,7 @@ A: Yes! The site is fully responsive and works on tablets and smartphones, thoug
 
 If you encounter issues or have questions:
 - Check this user guide first
-- Open an issue on the [GitHub repository](https://github.com/joedunn123456789/joedunn123456789/issues)
+- Open an issue on the [GitHub repository](https://github.com/joevisualstoryteller/joevisualstoryteller/issues)
 - Review the technical README for developer information
 
 ---
@@ -254,7 +254,7 @@ If you encounter issues or have questions:
 This is a multifunctional professional portfolio demonstrating full-stack development capabilities. It combines a personal showcase with interactive business tools built using React, TypeScript, and Tailwind CSS.
 
 **Developer**: Joseph Henry Dunn II
-**Repository**: https://github.com/joedunn123456789/joedunn123456789
+**Repository**: https://github.com/joevisualstoryteller/joevisualstoryteller
 **Status**: Production-ready with active development
 
 ---
