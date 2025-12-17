@@ -1,16 +1,6 @@
 <div align="center">
 
-```
-╔════════════════════════════════════════════════════════╗
-║                                                        ║
-║        ⚔️  THE CHRONICLES OF JOSEPH DUNN  ⚔️            ║
-║                                                        ║
-║         Master Artificer of the Digital Realm          ║
-║                                                        ║
-╚════════════════════════════════════════════════════════╝
-```
-
-### *"In the Age of Cloud Kingdoms & Intelligent Automatons"*
+<img src="./assets/medieval-header.svg" alt="The Chronicles of Joseph Dunn" width="100%"/>
 
 [![Enter the Realm](https://img.shields.io/badge/⚔️_Enter_The_Realm-Visit_Portfolio-8B0000?style=for-the-badge)](https://joevisualstoryteller.github.io/joevisualstoryteller)
 [![React Forge](https://img.shields.io/badge/⚒️_React_Forge-18.3-61dafb?style=for-the-badge&logo=react)](https://reactjs.org)
