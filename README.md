@@ -3,9 +3,9 @@
 ```
 ╔════════════════════════════════════════════════════════╗
 ║                                                        ║
-║        ⚔️  THE CHRONICLES OF JOSEPH DUNN  ⚔️           ║
+║        ⚔️  THE CHRONICLES OF JOSEPH DUNN  ⚔️            ║
 ║                                                        ║
-║         Master Artificer of the Digital Realm         ║
+║         Master Artificer of the Digital Realm          ║
 ║                                                        ║
 ╚════════════════════════════════════════════════════════╝
 ```
@@ -97,10 +97,10 @@ Witness our [legendary quests](https://github.com/JoeVisualStoryteller/joevisual
 ```
 ╔═════════════════════════════════════════════════════╗
 ║                                                     ║
-║      ⚔️  Forged in the Fires of Innovation  ⚔️      ║
+║      ⚔️  Forged in the Fires of Innovation  ⚔️       ║
 ║                                                     ║
-║   "Transforming chaos into elegant order since     ║
-║           the Year of Our Code 2012"               ║
+║   "Transforming chaos into elegant order since      ║
+║           the Year of Our Code 2012"                ║
 ║                                                     ║
 ╚═════════════════════════════════════════════════════╝
 ```
