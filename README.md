@@ -86,7 +86,7 @@ Witness our [legendary quests](https://github.com/JoeVisualStoryteller/joevisual
 
 ## 📯 Summon the Architect
 
-**Lord Joseph Dunn** - Master Artificer & Guardian of Cloud Kingdoms
+**Ser Joseph Dunn** - Master Artificer & Guardian of Cloud Kingdoms
 
 📧 jdunn0423@gmail.com | 🌐 [Portfolio](https://joevisualstoryteller.github.io/joevisualstoryteller) | 💼 [LinkedIn](https://www.linkedin.com/in/josephdunn0423)
 
