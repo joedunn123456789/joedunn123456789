@@ -1,11 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* Define your theme here */
 @theme {
-  --color-brand: #4f46e5;
+  /* Brand color in oklch for P3 color space (converted from #4f46e5) */
+  --color-brand: oklch(0.567 0.177 271.06);
   --font-sans: ui-sans-serif, system-ui, sans-serif;
   --breakpoint-md: 48rem; /* 768px */
   --breakpoint-lg: 64rem; /* 1024px */
+}
+
+/* Fix for Tailwind v4 button cursor change */
+@layer base {
+  button {
+    cursor: pointer;
+  }
 }
