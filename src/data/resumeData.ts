@@ -54,9 +54,24 @@ export const keyAchievements: string[] = [
 
 export const experiences: Experience[] = [
   {
+    company: "Briviant",
+    role: "Senior Systems Engineer",
+    date: "January 2026 – Present",
+    administeredSystems: "Proxmox, VMware ESXi, MacOS, Linux, Android Emulation Infrastructure, Multi-tenant Cloud Platform",
+    bullets: [
+      "Architect cross-departmental automation solutions as CEO-appointed technical lead, driving infrastructure modernization and intelligent workflow optimization across engineering, finance, and operations",
+      "Engineer AI-powered systems including RAG implementation for internal knowledge management, reducing information retrieval time and enhancing decision-making capabilities company-wide",
+      "Design and deploy intelligent VM orchestration system with automatic host selection algorithm, optimizing resource utilization by distributing workloads based on real-time health metrics",
+      "Develop Android emulation infrastructure on macOS VM platform, packaging as commercial SaaS addon and generating new revenue stream through innovative virtualization solution",
+      "Lead enterprise hypervisor migration from VMware to Proxmox, reducing licensing costs while maintaining zero-downtime transition for production workloads",
+      "Build finance automation pipeline integrating subscription API with internal verification systems, eliminating manual license validation and reducing customer onboarding friction",
+      "Monitor and maintain automated systems infrastructure, ensuring 99%+ uptime across multi-tenant environments while continuously identifying optimization opportunities"
+    ],
+  },
+  {
     company: "Tactis LLC (Remote, HQ Washington, D.C.)",
     role: "Senior Systems Engineer, AI",
-    date: "January 2024 – Present",
+    date: "January 2024 – October 2025",
     administeredSystems: "Microsoft 365 Tenant, Azure, Microsoft Copilot Studio, MacOS",
     bullets: [
       "Spearheaded company-wide AI transformation as CTO-selected lead, achieving 8x productivity gains and completing 120+ hours of infrastructure work in 14 days",
